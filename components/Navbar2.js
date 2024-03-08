@@ -1,28 +1,32 @@
-import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React from "react";
+import { signOut, useSession } from "next-auth/react";
 
-function logout() {
+async function logout() {
   signOut();
 }
 
 function Navbar2() {
   let { data: session } = useSession();
+  console.log(session?.user);
   return (
-    <nav className="bg-black text-white p-3 flex gap-2 justify-between">
+    <nav className="bg-white text-white p-3 flex gap-2 justify-between border border-black">
       <div className="flex gap-3 items-center">
-        <Link href="/">
+        <Link
+          href="/"
+          className="flex items-center text-decoration-none text-black font-bold mr-4"
+        >
           <img
-            src="/images/logo_inverted.png"
+            src="/images/logo.png"
             alt="image"
-            width={30}
+            width={40}
             height={10}
-            className="mr-4"
+            className="mr-1"
           />
+          <h>VERSUS</h>
         </Link>
 
-        <Link href="/" className="flex gap-1 text-decoration-none text-white">
+        <Link href="/" className="flex gap-1 text-decoration-none text-black">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -42,7 +46,7 @@ function Navbar2() {
 
         <Link
           href="/Courses"
-          className="flex gap-1 text-decoration-none text-white"
+          className="flex gap-1 text-decoration-none text-black"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +67,7 @@ function Navbar2() {
 
         <Link
           href="/Test"
-          className="flex gap-1 text-decoration-none text-white"
+          className="flex gap-1 text-decoration-none text-black"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +88,7 @@ function Navbar2() {
 
         <Link
           href="/Score"
-          className="flex gap-1 text-decoration-none text-white"
+          className="flex gap-1 text-decoration-none text-black"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -106,37 +110,29 @@ function Navbar2() {
 
       <div className="flex gap-2 items-center">
         <div class="dropdown flex items-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-            />
-          </svg>
+          <img
+            src={session?.user?.image}
+            className="rounded w-10 h-10 border"
+          />
           <button
-            class="flex btn dropdown-toggle text-white"
+            class="flex p-2 dropdown-toggle text-black"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           ></button>
 
           <ul class="dropdown-menu p-2">
-            <div className="bg-gray-300 p-2 mb-3 rounded-lg font-bold justify-center flex">
-              {session?.user?.name}
+            <div className="change flex flex-col justify-center bg-gray-300 p-2 mb-3 rounded-lg font-bold justify-center flex">
+              <img className="rounded-lg" src={session?.user?.image} />
+              <p className="flex justify-center shdg"> {session?.user?.name}</p>
             </div>
+            <hr />
             <li>
               <Link
                 href="/"
                 className=" dropdown-item text-decoration-none text-black"
               >
-                hey
+                Profile
               </Link>
             </li>
             <li>
@@ -144,7 +140,7 @@ function Navbar2() {
                 href="/"
                 className="dropdown-item text-decoration-none text-black"
               >
-                hey
+                Enrolled Courses
               </Link>
             </li>
             <li>
@@ -152,18 +148,18 @@ function Navbar2() {
                 href="/"
                 className="dropdown-item text-decoration-none text-black"
               >
-                hey
+                Settings
               </Link>
             </li>
           </ul>
         </div>
 
-        <Link href="/Help&Support" className=" text-decoration-none text-white">
+        <Link href="/Help&Support" className="text-decoration-none text-black">
           Support
         </Link>
 
         <button
-          className=" bg-red-500 rounded-md px-3 p-1 ml-4"
+          className="border border-black text-black hover:bg-red-400 rounded-md p-2 px-3 p-1 ml-4"
           onClick={logout}
         >
           LogOut

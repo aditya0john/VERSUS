@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Navbar2 from "./Navbar2";
 import Itemstrip from "./Itemstrip";
-import { useState } from "react";
 import { useSession } from "next-auth/react";
 
 export default function Layout3({ children }) {
@@ -9,22 +8,22 @@ export default function Layout3({ children }) {
   if (session) {
     return (
       <>
-        <div className="bg-white">
+        <div>
           <Navbar2 />
           <div>
             <Itemstrip />
           </div>
 
-          <div className="bg-gray-400 p-1 text-black h-screen rounded-top">
+          <div className="bg-black p-1 text-black h-screen rounded-top">
             <div className="gridd h-100">
-              <aside className="bg-white rounded-md box ml-1 mt-1 h-80">
+              <aside className="bg-white rounded-lg ml-1 mt-1 h-80">
                 <hr />
-                <div className="bg-white p-2 rounded-lg flex items-center justify-center">
+                <div className="bg-white p-2 rounded-lg flex items-center justify-center ">
                   <form>
                     <label className="text-uppercase">date :</label>
                     <input
                       type="date"
-                      className="bg-purple-300 rounded-lg p-2 ml-2 box"
+                      className=" border border-black rounded-lg p-2 ml-2 box"
                     />
                   </form>
                 </div>
@@ -37,7 +36,7 @@ export default function Layout3({ children }) {
 
                 <div className="pl-3 pr-3">
                   <Link href="/" className="text-decoration-none text-black">
-                    <div className=" box bg-purple-300 rounded-full p-2 flex gap-2 items-center shdg">
+                    <div className="change border border-black bradius p-2 flex gap-2 items-center shdg">
                       <button>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"

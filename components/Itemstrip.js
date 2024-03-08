@@ -6,9 +6,20 @@ function Itemstrip() {
 
   if (route.asPath == "/Courses") {
     return (
-      <div className="itemstrip_course flex">
-        <div className="w-full h-40">
-          <h1 className="pl-4 hdg text-black text-uppercase text-decoration-underline">
+      <div className="flex" style={{ position: "relative" }}>
+        <div
+          className="bg-repeat bg-center"
+          style={{
+            position: "absolute",
+            backgroundImage: "url('/images/Un2.png')",
+            width: "100%",
+            height: "100%",
+            opacity: 0.5,
+            zIndex: -1,
+          }}
+        />
+        <div className="w-full h-40 flex justify-center items-center">
+          <h1 className="p-4 boxx hdg text-black bg-white text-uppercase bradius border border-4 border-black">
             courses
           </h1>
         </div>
@@ -16,29 +27,62 @@ function Itemstrip() {
     );
   } else if (route.asPath == "/Test") {
     return (
-      <div className="itemstrip_test flex">
-        <div className="w-full h-40">
-          <h1 className="pl-4 hdg text-black text-uppercase text-decoration-underline">
-            tests
+      <div className="flex" style={{ position: "relative" }}>
+        <div
+          className="bg-repeat bg-center"
+          style={{
+            position: "absolute",
+            backgroundImage: "url('/images/Un2.png')",
+            width: "100%",
+            height: "100%",
+            opacity: 0.5,
+            zIndex: -1,
+          }}
+        />
+        <div className="w-full h-40 flex justify-center items-center">
+          <h1 className="p-4 boxx hdg text-black bg-white text-uppercase bradius border border-4 border-black">
+            Test
           </h1>
         </div>
       </div>
     );
   } else if (route.asPath == "/ProgLabs") {
     return (
-      <div className="itemstrip_labs flex">
-        <div className="w-full h-40">
-          <h1 className="pl-4 hdg text-black text-uppercase text-decoration-underline">
-            Program Labs
+      <div className="flex" style={{ position: "relative" }}>
+        <div
+          className="bg-repeat bg-center"
+          style={{
+            position: "absolute",
+            backgroundImage: "url('/images/Un2.png')",
+            width: "100%",
+            height: "100%",
+            opacity: 0.5,
+            zIndex: -1,
+          }}
+        />
+        <div className="w-full h-40 flex justify-center items-center">
+          <h1 className="p-4 boxx hdg text-black bg-white text-uppercase bradius border border-4 border-black">
+            ProgLabs
           </h1>
         </div>
       </div>
     );
   } else if (route.asPath == "/Tools") {
     return (
-      <div className="itemstrip_tools flex">
-        <div className="w-full h-40">
-          <h1 className="pl-4 hdg text-black text-uppercase text-decoration-underline">
+      <div className="flex" style={{ position: "relative" }}>
+        <div
+          className="bg-repeat bg-center"
+          style={{
+            position: "absolute",
+            backgroundImage: "url('/images/Un2.png')",
+            width: "100%",
+            height: "100%",
+            opacity: 0.5,
+            zIndex: -1,
+          }}
+        />
+        <div className="w-full h-40 flex justify-center items-center">
+          <h1 className="p-4 boxx hdg text-black bg-white text-uppercase bradius border border-4 border-black">
             Tools
           </h1>
         </div>
@@ -46,10 +90,23 @@ function Itemstrip() {
     );
   } else if (route.asPath == "/Help&Support") {
     return (
-      <div className="itemstrip_hs flex">
-        <div className="w-full h-40">
-          <h1 className="pl-4 hdg text-black text-uppercase text-decoration-underline">
-            help & support
+      <div className="flex" style={{ position: "relative" }}>
+        <div
+          className="bg-repeat bg-center"
+          style={{
+            position: "absolute",
+            backgroundImage: "url('/images/Un2.png')",
+            width: "100%",
+            height: "100%",
+            opacity: 0.5,
+          }}
+        />
+        <div className="w-full h-40 flex justify-center items-center">
+          <h1
+            style={{ zIndex: 1 }}
+            className="p-4 boxx hdg text-black bg-white text-uppercase bradius border border-4 border-black"
+          >
+            Help and Support
           </h1>
         </div>
       </div>

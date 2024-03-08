@@ -4,21 +4,25 @@ import React from "react";
 
 function Navbar1() {
   return (
-    <div className="bg-white text-black p-3 flex items-center gap-2 justify-between">
-      <Link href="/">
+    <div className="sticky top-0 z-1 bg-white text-black p-3 flex items-center gap-2 justify-between border border-black">
+      <Link
+        href="/"
+        className="flex items-center text-decoration-none text-black font-bold"
+      >
         <img
           src="/images/logo.png"
           alt="image"
-          width={30}
+          width={40}
           height={10}
-          className="mr-4"
+          className="mr-1"
         />
+        <h>VERSUS</h>
       </Link>
 
       <div className="flex gap-20 items-center">
         <div class="dropdown nav_text">
           <button
-            class="btn dropdown-toggle"
+            class=" dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -55,7 +59,7 @@ function Navbar1() {
 
         <div class="dropdown nav_text items-center">
           <button
-            class="btn dropdown-toggle"
+            class="dropdown-toggle"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -101,7 +105,7 @@ function Navbar1() {
 
       <div className="flex gap-2">
         <button
-          className="bg-green-500 rounded-md px-3 p-1 hover:bg-green-400"
+          className="border border-black rounded-md px-3 p-2 hover:bg-green-500"
           onClick={() => signIn("google")}
         >
           Log In

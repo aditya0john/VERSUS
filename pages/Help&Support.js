@@ -1,11 +1,15 @@
+import Itemstrip from "@/components/Itemstrip";
 import Layout2 from "@/components/Layout2";
 
 export default function Courses() {
   return (
     <main>
       <Layout2>
-        <div className="bg-white rounded-lg flex flex-col gap-20 items-center p-3">
-          <div className="bg-purple-200 rounded-lg w-full ">
+        <div className="bg-white">
+          <Itemstrip />
+        </div>
+        <div className="grid gap-1 bg-black rounded-lg flex flex-col items-center p-3">
+          <div className="bg-white border border-black rounded-lg w-full ">
             <ul className="shdg font-bold text-uppercase flex justify-center p-2">
               complaint form
             </ul>
@@ -14,23 +18,23 @@ export default function Courses() {
               <div className="flex flex-col gap-2">
                 <input
                   type="text"
-                  className="bg-purple-300 rounded-lg p-2"
-                  placeholder="ENTER YOUR NAME"
+                  className="border border-black rounded-lg p-2 hover:bg-black hover:placeholder-white"
+                  placeholder="NAME"
                 />
                 <input
                   type="email"
-                  className="bg-purple-300 rounded-lg p-2"
-                  placeholder="ENTER YOUR E-mail"
+                  className="border border-black rounded-lg p-2 hover:bg-black hover:placeholder-white"
+                  placeholder="E-mail"
                 />
                 <textarea
-                  className="bg-purple-300 rounded-lg p-2"
-                  placeholder="ENTER YOUR Complaint"
+                  className="border border-black rounded-lg p-2 placeholder-black hover:bg-black hover:placeholder-white"
+                  placeholder="Complaint"
                 />
               </div>
 
               <button
                 type="submit"
-                className=" bg-purple-400 rounded flex items-center justify-center"
+                className="hdg border border-black rounded flex items-center justify-center hover:bg-black hover:text-white hover:bg-black"
               >
                 SUBMIT{" "}
                 <svg
@@ -38,7 +42,7 @@ export default function Courses() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
-                  stroke="black"
+                  stroke="white"
                   class="w-20 h-20"
                 >
                   <path
@@ -51,7 +55,7 @@ export default function Courses() {
             </form>
           </div>
 
-          <div className="bg-purple-200 rounded-lg w-full ">
+          <div className="bg-gray-200 border border-black rounded-lg w-full ">
             <ul className="shdg font-bold text-uppercase flex justify-center p-2">
               contact us
             </ul>
@@ -102,7 +106,7 @@ export default function Courses() {
             </ul>
           </div>
 
-          <div className="bg-purple-200 rounded-lg w-full ">
+          <div className="bg-gray-200 border border-black rounded-lg w-full ">
             <ul className="shdg font-bold text-uppercase flex justify-center p-2">
               follow us on
             </ul>
