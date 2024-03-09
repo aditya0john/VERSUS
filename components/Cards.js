@@ -19,7 +19,7 @@ function Cards({ text, button, src, href }) {
             <path stroke-linecap="round" stroke-linejoin="round" d={src} />
           </svg>
         </div>
-        <div className="card-body mt-10 p-0 con_lower">
+        <div className="card-body p-0 con_lower">
           <div className="card-text text-center p-1 h-20">{text}</div>
           <div className=" items-center justify-center rounded-md flex card-body bg-white text-black">
             <Link href={href} className="text-decoration-none text-black">
