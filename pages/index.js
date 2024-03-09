@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 import Table from "@/components/Table";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -31,6 +32,12 @@ export default function Home() {
   if (!session) {
     return (
       <main className="w-full h-full">
+        <Helmet>
+          <meta
+            name="google-site-verification"
+            content="J_0M0hd_RSV3Hh9FuXKVfvIYDNJAiG1JHd0ylGrP3tk"
+          />
+        </Helmet>
         <Layout>
           <div className="bg-white  gridd boxx p-4 gap-5 bottom_round">
             <div className="flex items-center">
