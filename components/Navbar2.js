@@ -122,9 +122,12 @@ function Navbar2() {
           ></button>
 
           <ul class="dropdown-menu p-2">
-            <div className="change flex flex-col justify-center bg-gray-300 p-2 mb-3 rounded-lg font-bold justify-center flex">
+            <div className="change flex flex-col justify-center bg-gray-200 p-2 rounded-lg font-bold justify-center flex">
               <img className="rounded-lg" src={session?.user?.image} />
-              <p className="flex justify-center shdg"> {session?.user?.name}</p>
+              <p className="flex justify-center shdg mb-0">
+                {" "}
+                {session?.user?.name}
+              </p>
             </div>
             <hr />
             <li>

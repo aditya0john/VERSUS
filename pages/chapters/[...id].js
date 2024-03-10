@@ -33,7 +33,7 @@ export default function LearnCPP() {
   return (
     <>
       <Layout2>
-        <div className="grid">
+        <div className=" grid">
           <div className="bg-white rounded-l-lg p-3">
             <div className="flex justify-between">
               <p className="text-uppercase hdg">chapters</p>
@@ -92,11 +92,11 @@ export default function LearnCPP() {
                           <div>
                             chapter:{j + 1}
                             <div className="hdg font-bold pl-4 uppercase">
-                              {chapter.chapterName}
+                              {chapter?.chapterName}
                             </div>
                             <hr />
                             <p className="text-uppercase pl-4">
-                              {chapter.content}
+                              {chapter?.content}
                             </p>
                           </div>
                         </Link>
