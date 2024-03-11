@@ -43,7 +43,9 @@ function Learning() {
                   <div className="m-2 h-screen grido scrollbar">
                     <div className="bg-gray-300 box flex items-center justify-center p-2 rounded-lg border border-black m-1 mb-2 change_button">
                       <p className="p-3 m-1 rounded-lg shdg">
-                        {chapter.content}
+                        <pre
+                          dangerouslySetInnerHTML={{ __html: chapter.content }}
+                        ></pre>
                       </p>
                     </div>
 
@@ -63,7 +65,9 @@ function Learning() {
                       <div className="bg-gray-300 flex box items-center justify-center p-2 rounded-lg border border-black m-1 mb-2 change_button">
                         <div className="p-3 pb-0 ">
                           <p className="shdg text-uppercase">chapter summary</p>
-                          <p className="p-3 m-1">{chapter.content}</p>
+                          <p className="p-3 m-1">
+                            <pre>{chapter.content}</pre>{" "}
+                          </p>
                         </div>
                       </div>
                     </div>

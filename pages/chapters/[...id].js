@@ -34,7 +34,7 @@ export default function LearnCPP() {
     <>
       <Layout2>
         <div className=" grid">
-          <div className="bg-white rounded-l-lg p-3">
+          <div className="bg-white h-screen rounded-l-lg p-3">
             <div className="flex justify-between">
               <p className="text-uppercase hdg">chapters</p>
               <div className="grid grid-cols-2 gap-2">
