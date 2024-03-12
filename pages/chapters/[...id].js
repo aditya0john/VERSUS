@@ -96,7 +96,7 @@ export default function LearnCPP() {
                             </div>
                             <hr />
                             <p className="text-uppercase pl-4">
-                              {chapter?.content}
+                              {chapter?.chapterDescription}
                             </p>
                           </div>
                         </Link>
