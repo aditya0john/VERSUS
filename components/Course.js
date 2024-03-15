@@ -35,7 +35,7 @@ export default function Course() {
           <div className="p-3 flex gap-2">
             <input
               onChange={(e) => setSearch(e.target.value)}
-              className="text-white rounded-md border border-black p-2 w-full hover:bg-black hover:placeholder-white"
+              className="text-black rounded-md border border-black p-2 w-full change"
               type="text"
               placeholder="Enter Course name"
             />

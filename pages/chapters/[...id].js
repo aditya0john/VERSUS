@@ -36,7 +36,14 @@ export default function LearnCPP() {
         <div className=" grid">
           <div className="bg-white h-screen rounded-l-lg p-3">
             <div className="flex justify-between">
-              <p className="text-uppercase hdg">chapters</p>
+              {Course.filter((x) => x._id == id).map((product, i) => (
+                <div key={i}>
+                  <p className="text-uppercase hdg">
+                    {product.title} for {product.description}
+                  </p>
+                </div>
+              ))}
+
               <div className="grid grid-cols-2 gap-2">
                 <Link href="/Score" className="text-decoration-none text-black">
                   <div className="p-3 rounded-lg border border-black box hover:bg-black hover:text-white">
@@ -87,10 +94,10 @@ export default function LearnCPP() {
                         <Link
                           className="text-decoration-none rect box change_button"
                           key={j}
-                          href={"/learning/" + chapter?._id}
+                          href={`/learning/chapterId=${chapter?._id}&courseId=${id}`}
                         >
                           <div>
-                            chapter:{j + 1}
+                            chapter: {j + 1}
                             <div className="hdg font-bold pl-4 uppercase">
                               {chapter?.chapterName}
                             </div>
