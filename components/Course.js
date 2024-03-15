@@ -70,7 +70,7 @@ export default function Course() {
                   href={"/chapters/" + Course?._id}
                   className="text-decoration-none rect box change_button"
                 >
-                  <span className="mt-3 text-center box ">
+                  <span className="mt-3 text-center box">
                     <p className="hdg font-bold flex gap-3">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

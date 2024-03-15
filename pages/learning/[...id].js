@@ -3,7 +3,6 @@ import axios from "axios";
 import Loading from "@/components/Loading";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { Route } from "react-router-dom";
 
 function Learning() {
   const [isLoading, setLoading] = useState(true);
@@ -67,7 +66,7 @@ function Learning() {
             {product.chapters
               .filter((product) => product._id == chapterId)
               .map((chapter, j) => (
-                <div key={j} className="bg-white rounded-lg">
+                <div key={j} className="bg-white rounded-lg ">
                   <div className="flex justify-between mr-10 items-center">
                     <div className="shdg p-3 pb-0 text-uppercase font-bold">
                       <p className="hdg">{chapter.chapterName}</p>
@@ -113,7 +112,7 @@ function Learning() {
                   <hr />
                   <div className="m-2 h-screen grido scrollbar">
                     <div className="bg-gray-300 box flex items-center justify-center p-2 rounded-lg border border-black m-1 mb-2 change_button">
-                      <p className="p-3 m-1 rounded-lg shdg">
+                      <p className="p-3 m-1 rounded-lg shdg user-select-none">
                         <pre
                           dangerouslySetInnerHTML={{ __html: chapter.content }}
                         ></pre>
@@ -122,7 +121,7 @@ function Learning() {
 
                     <div className="griddr overflow-y-scroll">
                       <div className="bg-gray-300 box flex items-center justify-center p-2 rounded-lg border border-black m-1 mb-2 change_button">
-                        <div className="shdg p-3 pb-0 text-uppercase">
+                        <div className="shdg p-3 pb-0 text-uppercase user-select-none">
                           code example with output
                         </div>
                         <hr />
@@ -130,13 +129,16 @@ function Learning() {
                           className="p-3 border border black m-1 rounded-lg"
                           src=""
                           alt="images"
+                          F
                         />
                       </div>
 
                       <div className="bg-gray-300 flex box items-center justify-center p-2 rounded-lg border border-black m-1 mb-2 change_button">
                         <div className="p-3 pb-0 ">
-                          <p className="shdg text-uppercase">chapter summary</p>
-                          <p className="p-3 m-1">
+                          <p className="shdg text-uppercase user-select-none">
+                            chapter summary
+                          </p>
+                          <p className="p-3 m-1 user-select-none">
                             <pre>{chapter.content}</pre>{" "}
                           </p>
                         </div>

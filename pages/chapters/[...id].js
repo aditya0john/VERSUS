@@ -33,8 +33,8 @@ export default function LearnCPP() {
   return (
     <>
       <Layout2>
-        <div className=" grid">
-          <div className="bg-white h-screen rounded-l-lg p-3">
+        <div className="grid">
+          <div className="bg-white rounded-lg p-3">
             <div className="flex justify-between">
               {Course.filter((x) => x._id == id).map((product, i) => (
                 <div key={i}>
