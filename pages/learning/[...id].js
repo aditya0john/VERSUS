@@ -11,7 +11,6 @@ function Learning() {
   let { id } = router.query;
 
   let chapterId, courseId;
-
   // Ensure router.query.id is defined and is an array with at least one element
   if (Array.isArray(router.query.id) && router.query.id.length > 0) {
     // Access the first element of the array
@@ -71,78 +70,85 @@ function Learning() {
                     <div className="shdg p-3 pb-0 text-uppercase font-bold">
                       <p className="hdg">{chapter.chapterName}</p>
                     </div>
-                    <div className="dropdown bg-gray-200 rounded-lg change p-2">
-                      <button
-                        classname="p-2 dropdown-toggle text-black"
-                        type="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                        Select Chapter
-                      </button>
-                      <ul className="dropdown-menu">
-                        {Course.filter(
-                          (product) => product._id == courseId
-                        ).map((product, i) => (
-                          <div key={i}>
-                            {product.chapters.map((chapter, j) => {
-                              {
-                                return (
-                                  <>
-                                    <li className="flex justi">
-                                      <button
-                                        className=" dropdown-item"
-                                        onClick={() =>
-                                          (window.location.href = `/learning/chapterId=${chapter?._id}&courseId=${id}`)
-                                        }
-                                      >
-                                        <b>{product?.title}</b>{" "}
-                                        <i>Chapter: {j + 1}</i>
-                                      </button>
-                                    </li>
-                                  </>
-                                );
-                              }
-                            })}
-                          </div>
-                        ))}
-                      </ul>
+                    <div className="flex gap-4">
+                      <div className="dropdown bg-gray-200 rounded-lg change p-2">
+                        <button
+                          classname="p-2 dropdown-toggle text-black"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Chapter Summary
+                        </button>
+                        <ul className="dropdown-menu">
+                          <li className="dropdown-item ">{chapter?.summary}</li>
+                        </ul>
+                      </div>
+                      <div className="flex gap-2 dropdown bg-gray-200 rounded-lg change p-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-6 h-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+                          />
+                        </svg>
+
+                        <button
+                          classname="p-2 dropdown-toggle text-black"
+                          type="button"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Select Chapter
+                        </button>
+
+                        <ul className="dropdown-menu">
+                          {Course.filter(
+                            (product) => product._id == courseId
+                          ).map((product, i) => (
+                            <div key={i}>
+                              {product.chapters.map((chapter, j) => {
+                                {
+                                  return (
+                                    <>
+                                      <li>
+                                        <button
+                                          className="p-0 dropdown-item"
+                                          onClick={() =>
+                                            (window.location.href = `/learning/chapterId=${chapter?._id}&courseId=${id}`)
+                                          }
+                                        >
+                                          <p className="flex justify-center pt-1">
+                                            <b>{product?.title}</b>{" "}
+                                            <i>Chapter: {j + 1}</i>
+                                          </p>
+                                          <hr />
+                                        </button>
+                                      </li>
+                                    </>
+                                  );
+                                }
+                              })}
+                            </div>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
                   <hr />
-                  <div className="m-2 h-screen grido scrollbar">
-                    <div className="bg-gray-300 box flex items-center justify-center p-2 rounded-lg border border-black m-1 mb-2 change_button">
-                      <p className="p-3 m-1 rounded-lg shdg user-select-none">
-                        <pre
-                          dangerouslySetInnerHTML={{ __html: chapter.content }}
-                        ></pre>
-                      </p>
-                    </div>
-
-                    <div className="griddr overflow-y-scroll">
-                      <div className="bg-gray-300 box flex items-center justify-center p-2 rounded-lg border border-black m-1 mb-2 change_button">
-                        <div className="shdg p-3 pb-0 text-uppercase user-select-none">
-                          code example with output
-                        </div>
-                        <hr />
-                        <img
-                          className="p-3 border border black m-1 rounded-lg"
-                          src=""
-                          alt="images"
-                          F
-                        />
-                      </div>
-
-                      <div className="bg-gray-300 flex box items-center justify-center p-2 rounded-lg border border-black m-1 mb-2 change_button">
-                        <div className="p-3 pb-0 ">
-                          <p className="shdg text-uppercase user-select-none">
-                            chapter summary
-                          </p>
-                          <p className="p-3 m-1 user-select-none">
-                            <pre>{chapter.content}</pre>{" "}
-                          </p>
-                        </div>
-                      </div>
+                  <div className="m-2 h-screen scrollbar">
+                    <div className="scale-95 bg-gray-200 rounded-lg p-4">
+                      <p
+                        className="rounded-lg shdg user-select-none"
+                        dangerouslySetInnerHTML={{ __html: chapter.content }}
+                      ></p>
                     </div>
                   </div>
                 </div>
