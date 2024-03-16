@@ -68,7 +68,9 @@ function Learning() {
                 <div key={j} className="bg-white rounded-lg ">
                   <div className="flex justify-between mr-10 items-center">
                     <div className="shdg p-3 pb-0 text-uppercase font-bold">
-                      <p className="hdg">{chapter.chapterName}</p>
+                      <p className="hdg user-select-none">
+                        {chapter?.chapterName}
+                      </p>
                     </div>
                     <div className="flex gap-4">
                       <div className="dropdown bg-gray-200 rounded-lg change p-2">
@@ -80,8 +82,8 @@ function Learning() {
                         >
                           Chapter Summary
                         </button>
-                        <ul className="dropdown-menu">
-                          <li className="dropdown-item ">{chapter?.summary}</li>
+                        <ul className="dropdown-menu border border-black">
+                          <li className="dropdown-item">{chapter?.summary}</li>
                         </ul>
                       </div>
                       <div className="flex gap-2 dropdown bg-gray-200 rounded-lg change p-2">
@@ -109,7 +111,7 @@ function Learning() {
                           Select Chapter
                         </button>
 
-                        <ul className="dropdown-menu ">
+                        <ul className="dropdown-menu border border-black">
                           {Course.filter(
                             (product) => product._id == courseId
                           ).map((product, i) => (
@@ -117,22 +119,19 @@ function Learning() {
                               {product.chapters.map((chapter, j) => {
                                 {
                                   return (
-                                    <>
-                                      <li>
-                                        <button
-                                          className="p-0 dropdown-item"
-                                          onClick={() =>
-                                            (window.location.href = `/learning/chapterId=${chapter?._id}&courseId=${id}`)
-                                          }
-                                        >
-                                          <p className="flex justify-center pt-1">
-                                            <b>{product?.title}</b>{" "}
-                                            <i>Chapter: {j + 1}</i>
-                                          </p>
-                                          <hr />
-                                        </button>
-                                      </li>
-                                    </>
+                                    <li className="border" key={j}>
+                                      <button
+                                        className="p-0 dropdown-item"
+                                        onClick={() =>
+                                          (window.location.href = `/learning/chapterId=${chapter?._id}&courseId=${id}`)
+                                        }
+                                      >
+                                        <p className="flex justify-center pt-1">
+                                          <b>{product?.title}</b>{" "}
+                                          <i>Chapter: {j + 1}</i>
+                                        </p>
+                                      </button>
+                                    </li>
                                   );
                                 }
                               })}
@@ -147,7 +146,7 @@ function Learning() {
                     <div className="scale-95 bg-gray-200 rounded-lg p-4">
                       <p
                         className="rounded-lg shdg user-select-none"
-                        dangerouslySetInnerHTML={{ __html: chapter.content }}
+                        dangerouslySetInnerHTML={{ __html: chapter?.content }}
                       ></p>
                     </div>
                   </div>

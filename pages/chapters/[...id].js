@@ -38,7 +38,7 @@ export default function LearnCPP() {
             <div className="flex justify-between">
               {Course.filter((x) => x._id == id).map((product, i) => (
                 <div key={i}>
-                  <p className="text-uppercase hdg">
+                  <p className="text-uppercase hdg user-select-none">
                     {product.title} for {product.description}
                   </p>
                 </div>
