@@ -27,7 +27,7 @@ function Navbar1() {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Products
+            PRODUCTS
           </button>
           <ul class="dropdown-menu nav_text p-0">
             <li>
@@ -64,7 +64,7 @@ function Navbar1() {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Help and Support
+            HELP & SUPPORT
           </button>
           <ul class="dropdown-menu p-0">
             <li>

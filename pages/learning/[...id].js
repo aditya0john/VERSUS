@@ -109,7 +109,7 @@ function Learning() {
                           Select Chapter
                         </button>
 
-                        <ul className="dropdown-menu">
+                        <ul className="dropdown-menu ">
                           {Course.filter(
                             (product) => product._id == courseId
                           ).map((product, i) => (
@@ -143,7 +143,7 @@ function Learning() {
                     </div>
                   </div>
                   <hr />
-                  <div className="m-2 h-screen scrollbar">
+                  <div className="m-2 h-full max-h-full">
                     <div className="scale-95 bg-gray-200 rounded-lg p-4">
                       <p
                         className="rounded-lg shdg user-select-none"
