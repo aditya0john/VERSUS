@@ -69,7 +69,7 @@ function Navbar1() {
           <ul class="dropdown-menu p-0">
             <li>
               <Link
-                href="/"
+                href="/Help&Support"
                 className=" dropdown-item text-decoration-none text-black"
               >
                 <p className="nav_text">Call customer care</p>
@@ -77,7 +77,7 @@ function Navbar1() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/Help&Support"
                 className=" dropdown-item text-decoration-none text-black"
               >
                 <p className="nav_text">File a Report</p>
@@ -85,7 +85,7 @@ function Navbar1() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/Help&Support"
                 className=" dropdown-item text-decoration-none text-black"
               >
                 <p className="nav_text">E-mail us</p>
@@ -93,7 +93,7 @@ function Navbar1() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/Help&Support"
                 className=" dropdown-item text-decoration-none text-black"
               >
                 <p className="nav_text">Ask us anything</p>

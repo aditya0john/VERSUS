@@ -3,7 +3,7 @@ import React from "react";
 
 function Table() {
   return (
-    <table className="bg-gray-300 table w-full border border-black">
+    <table className="bg-gray-300 table">
       <tbody>
         <tr>
           <td>

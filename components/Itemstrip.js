@@ -31,10 +31,7 @@ function Itemstrip() {
   } else if (route.asPath == "/Help&Support") {
     return (
       <div className="flex justify-center items-center">
-        <h1
-          style={{ zIndex: 1 }}
-          className="p-4 hdg text-black bg-white text-uppercase rounded-lg user-select-none"
-        >
+        <h1 className="p-4 hdg text-black bg-white text-uppercase rounded-lg user-select-none">
           Help and Support
         </h1>
       </div>

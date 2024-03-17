@@ -5,7 +5,6 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 import Table from "@/components/Table";
-import { Helmet } from "react-helmet";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -31,7 +30,7 @@ export default function Home() {
 
   if (!session) {
     return (
-      <main className="w-full h-full">
+      <main className="user-select-none">
         <Layout>
           <div className="bg-white  gridd boxx p-4 gap-5 bottom_round">
             <div className="flex items-center">
@@ -40,10 +39,12 @@ export default function Home() {
 
             <div className="flex gap-20 justify-center text-center items-center">
               <div className="uppercase text-black hdg flex-row">
-                Your Virtual University, in minutes!
+                <i>Your Virtual University, in minutes!</i>
                 <p className="lowercase shdg text-black">
-                  Online Classes, Assesments, proctored Exams, Assignments, Auto
-                  Grading, Plagrism check ----All in one platform.
+                  <i>
+                    Online Classes, Assesments, proctored Exams, Assignments,
+                    Auto Grading, Plagrism check ----All in one platform.
+                  </i>
                 </p>
                 <hr className="border border-black" />
                 <Link
@@ -235,7 +236,7 @@ export default function Home() {
             </div>
             <hr className="border border-black" />
 
-            <div className="scale-95 grid grid-cols-2 items-center h-screen">
+            <div className="scale-95 grid grid-cols-2 items-center">
               <div className="flex justify-center">
                 <img
                   src="/images/practoring.gif"
@@ -311,7 +312,7 @@ export default function Home() {
               </div>
             </div>
             <hr className="border border-black border-5" />
-            <div className="scale-95 grid grid-cols-2 items-center h-screen">
+            <div className="scale-95 grid grid-cols-2 items-center">
               <div className="grid grid-rows-2">
                 <h3 className="hdg text-black">Live Meetings</h3>
 
@@ -364,7 +365,7 @@ export default function Home() {
               </div>
             </div>
             <hr className="border border-black border-5" />
-            <div className="scale-95 grid grid-cols-2 items-center h-screen">
+            <div className="scale-95 grid grid-cols-2 items-center">
               <div className="flex justify-center">
                 <img
                   src="/images/University.gif"
@@ -438,8 +439,8 @@ export default function Home() {
     return (
       <main className="w-full h-full">
         <Layout2>
-          <div className="bg-white m-0 rounded">
-            <div className="scale-50 grid grid-cols-3 gap-10 ml-5 mr-5">
+          <div className="bg-white m-0 rounded h-screen">
+            <div className="scale-95 grid grid-cols-4 gap-10 ml-5 mr-5 pt-10">
               <Cards
                 text="click here to view all your courses/subjects"
                 button="COURSES"
