@@ -10,6 +10,7 @@ import { useRouter } from "next/router";
 export default function LearnCPP() {
   const [isLoading, setLoading] = useState(true);
   let [Course, setCourse] = useState([]);
+  let [testId, setTestId] = useState("");
   let router = useRouter();
   const { id } = router.query;
 
@@ -63,7 +64,11 @@ export default function LearnCPP() {
                     <p className="flex justify-center">Check Score</p>
                   </div>
                 </Link>
-                <Link href="/Test" className="text-decoration-none text-black">
+
+                <Link
+                  href={"/test/" + id}
+                  className="text-decoration-none text-black"
+                >
                   <div className="p-3 rounded-lg border border-black box hover:bg-black hover:text-white box">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

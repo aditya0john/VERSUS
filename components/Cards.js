@@ -20,7 +20,7 @@ function Cards({ text, button, src, href }) {
           </svg>
         </div>
         <div className="card-body p-0 con_lower">
-          <div className="card-text text-center p-1 h-20">{text}</div>
+          <div className="card-text text-center p-1 h-20 uppercase">{text}</div>
           <div className=" items-center justify-center rounded-md flex card-body bg-white text-black">
             <Link href={href} className="text-decoration-none text-black">
               {button}

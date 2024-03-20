@@ -5,9 +5,7 @@ export default function Courses() {
   return (
     <main>
       <Layout3>
-        <div>
-          <Link href="/doc">asd</Link>
-        </div>
+        <div></div>
       </Layout3>
     </main>
   );

@@ -217,19 +217,23 @@ img {
 }
 
 .con_lower {
+  opacity: 0;
   z-index: -1;
   transform: translateY(-100%);
 }
 
+.con:hover .con_lower {
+  opacity: 1;
+}
 .con:hover div {
   z-index: 1;
   transform: translateY(0%);
-  transition: 0.3s ease 0ms;
+  transition: 0.2s ease 0ms;
 }
 
 .con:hover {
   transform: scale(1.1);
-  transition: 0.3s ease 0ms;
+  transition: 0.2s ease 0ms;
 }
 
 .itemstrip_course {

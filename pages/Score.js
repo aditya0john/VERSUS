@@ -86,7 +86,7 @@ export default function Score() {
                       No OOP : this is the biggest setback that made it less
                       real world applicable because OOP is a real world concept
                       which you can think of as inheritance (example :Family
-                      etc) or connections (example: Friends etc)without which
+                      etc) or connections (example: Friends etc) without which
                       real world is empty.
                     </i>
                   </li>
@@ -116,7 +116,26 @@ export default function Score() {
                     </i>
                   </li>
                 </p>
-                <p>Now WHY?? C++ over C </p>
+                <p className="phdg font-bold flex flex-col items-center">
+                  Now WHY?? C++ over C
+                </p>
+                <p className="p-3 pt-0 shdg">
+                  To answer this we can simply understand the diffences between
+                  two types of programming cultures:-
+                  <table className="flex justify-center mt-4">
+                    <tbody className="border border-black p-3">
+                      <th>
+                        <tr className="grid grid-cols-2">
+                          <td>Procedural Programming</td>
+                          <td>Object Oriented Programming</td>
+                        </tr>
+                      </th>
+                      <tr className="grid grid-cols-2">
+                        <td>1. Main emphasis is </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </p>
               </p>
             </div>
           </div>

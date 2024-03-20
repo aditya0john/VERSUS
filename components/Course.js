@@ -5,9 +5,9 @@ import axios from "axios";
 import Loading from "./Loading";
 
 export default function Course() {
-  let [Course, setCourse] = useState([]);
   const [search, setSearch] = useState("");
   const [isLoading, setLoading] = useState(true);
+  let [Course, setCourse] = useState([]);
 
   useEffect(() => {
     axios.get("/api/courses").then((response) => {
