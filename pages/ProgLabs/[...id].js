@@ -153,20 +153,41 @@ export default function ProgLabs() {
                     test.questions
                       .filter((x) => x._id == ques)
                       .map((question, j) => (
-                        <div key={j}>
+                        <div key={j} className="bg-gray-200 p-3 rounded-lg">
                           <i className="phdg uppercase">
                             Q. {question.question}.{console.log(question)}
                           </i>
-                          <div>
+                          <div className="bg-gray-200 mt-3">
                             {question.options.map((option) => {
                               return (
-                                <div>
-                                  <input type="radio" className="options" />
-                                  a;
-                                  <input type="radio" className="options" />
-                                  b;
-                                  <input type="radio" className="options" />
-                                  c;
+                                <div class="custom-radio">
+                                  <input
+                                    type="radio"
+                                    id="radio-1"
+                                    name="tabs"
+                                  />
+                                  <label class="radio-label" for="radio-1">
+                                    <div class="radio-circle"></div>
+                                    <span class="radio-text">Option 1</span>
+                                  </label>
+                                  <input
+                                    type="radio"
+                                    id="radio-2"
+                                    name="tabs"
+                                  />
+                                  <label class="radio-label" for="radio-2">
+                                    <div class="radio-circle"></div>
+                                    <span class="radio-text">Option 2</span>
+                                  </label>
+                                  <input
+                                    type="radio"
+                                    id="radio-3"
+                                    name="tabs"
+                                  />
+                                  <label class="radio-label" for="radio-3">
+                                    <div class="radio-circle"></div>
+                                    <span class="radio-text">Option 3</span>
+                                  </label>
                                 </div>
                               );
                             })}
