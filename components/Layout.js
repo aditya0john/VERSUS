@@ -6,7 +6,7 @@ export default function Layout({ children }) {
     <>
       <div className="bg-white">
         <Navbar1 />
-        <div className="bg-black p-1 text-white h-full rounded-top ">
+        <div className=" bg-black p-1 text-white h-full rounded-top ">
           {children}
         </div>
         <footer className="bg-white flex justify-evenly p-3">

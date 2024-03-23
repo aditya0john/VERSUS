@@ -25,7 +25,7 @@ export default function CodeEditor({ onCompile }) {
             <span>
               <label className="font-bold shdg">Languge :</label>
               <select
-                className="border border-black p-2 rounded ml-1 uppercase"
+                className="border border-black p-2 rounded ml-1 uppercase bg-black text-white"
                 onChange={(e) => setLanguage(e.target.value)}
               >
                 <option value={"c_cpp"}>C & C++</option>

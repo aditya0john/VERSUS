@@ -2,14 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (max-width: 600px) {
-  main {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-::-webkit-scrollbar {
+kit-scrollbar {
   width: 18px;
 }
 
@@ -83,6 +76,41 @@ p {
 
 .custom-radio input[type="radio"]:checked + .radio-label .radio-text {
   color: #000000;
+}
+
+.makeLine {
+  color: #000000;
+  font-family: inherit;
+  cursor: pointer;
+  position: relative;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+}
+
+.makeLine:focus,
+.makeLine:hover {
+  color: #000000;
+}
+
+.makeLine:focus:after,
+.makeLine:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+.makeLine:after {
+  margin-bottom: -10px;
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #000000;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
 }
 
 .change {

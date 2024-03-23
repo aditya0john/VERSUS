@@ -40,16 +40,16 @@ export default function Home() {
             <div className="flex gap-20 justify-center text-center items-center">
               <div className="uppercase text-black hdg flex-row">
                 <i>Your Virtual University, in minutes!</i>
-                <p className="lowercase shdg text-black">
+                <p className="lowercase shdg text-gray-400">
                   <i>
                     Online Classes, Assesments, proctored Exams, Assignments,
-                    Auto Grading, Plagrism check ----All in one platform.
+                    Auto Grading, Plagrism check ---- All in one platform.
                   </i>
                 </p>
                 <hr className="border border-black" />
                 <Link
                   href="/"
-                  className="box text-decoration-none border border-black rounded-lg p-3 px-4 shdg change_button"
+                  className=" makeLine text-decoration-none border border-black rounded-lg p-3 px-4 shdg change_button"
                 >
                   BECOME A STUDENT
                 </Link>
@@ -59,7 +59,7 @@ export default function Home() {
 
           <div className="bg-white rounded-full text-black p-3 mt-3">
             <div className="gridd-data gap-4 p-10 boxx rounded-full">
-              <span className="border border-black shdg round text-center box change_button">
+              <span className="border border-black shdg bradius flex flex-col items-center p-3 text-center box change_button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -79,7 +79,7 @@ export default function Home() {
                 <p className="font-bold">Institution's</p>
               </span>
 
-              <span className="border border-black shdg round text-center box change_button">
+              <span className="border border-black shdg bradius flex flex-col items-center p-3 text-center box change_button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -99,7 +99,7 @@ export default function Home() {
                 <p className="font-bold"> Teacher's</p>
               </span>
 
-              <span className="border border-black shdg round text-center box change_button">
+              <span className="border border-black shdg bradius flex flex-col items-center p-3 text-center box change_button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -119,7 +119,7 @@ export default function Home() {
                 <p className="font-bold">Learner's</p>
               </span>
 
-              <span className="border border-black shdg round text-center box change_button">
+              <span className="border border-black shdg bradius flex flex-col items-center p-3 text-center box change_button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -139,7 +139,7 @@ export default function Home() {
                 <p className="font-bold">Meeting's</p>
               </span>
 
-              <span className="border border-black shdg round text-center box change_button">
+              <span className="border border-black shdg bradius flex flex-col items-center p-3 text-center box change_button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -159,7 +159,7 @@ export default function Home() {
                 <p className="font-bold">Test's</p>
               </span>
 
-              <span className="border border-black shdg round text-center box change_button">
+              <span className="border border-black shdg bradius flex flex-col items-center p-3 text-center box change_button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -231,8 +231,8 @@ export default function Home() {
           </div> */}
 
           <div className="mt-3 bg-white bradius">
-            <div className="pt-3 text-black hdg uppercase font-bold justify-center flex">
-              versus
+            <div className="p-5 text-black hdg uppercase font-bold">
+              <p className="hdg flex items-center justify-center">versus</p>
             </div>
             <hr className="border border-black" />
 
@@ -253,7 +253,7 @@ export default function Home() {
                     Proctoring
                   </h3>
 
-                  <h3 className="shdg text-gray-400 ">
+                  <h3 className="phdg text-gray-400 ">
                     Comprehensive remote Assessment platform with support for a
                     variety of tests & an ultra-powerful remote proctoring
                     solution for uncontrollable test-taker environments.
@@ -379,7 +379,7 @@ export default function Home() {
                 <div className="grid grid-rows-2">
                   <p className="hdg text-black"> Virtual University</p>
 
-                  <p className="shdg text-gray-400">
+                  <p className="phdg text-gray-400">
                     Online Classes + LMS + Assessments + Remote Proctoring +
                     Interactive Courses
                   </p>

@@ -101,17 +101,16 @@ export default function ProgLabs() {
                     .map((test) =>
                       test.questions.map((question, j) => (
                         <div key={j}>
-                          <span key={j} className="round">
-                            <Link
+                          <span key={j} className="flex">
+                            <button
                               onClick={() => setQuestion(question._id)}
-                              href={`/ProgLabs/testId=${test?._id}&courseId=${courseId}`}
                               className={
                                 ques == question._id ? active : inactive
                               }
                             >
                               {j + 1}
                               {console.log("NUMBER", ques)}
-                            </Link>
+                            </button>
                           </span>
                         </div>
                       ))
@@ -128,14 +127,13 @@ export default function ProgLabs() {
                     .filter((x) => x._id == testId)
                     .map((test) =>
                       test.problems.map((problem, j) => (
-                        <span key={j} className="round">
-                          <Link
+                        <span key={j} className="flex">
+                          <button
                             onClick={() => setQuestion(problem._id)}
-                            href={`/ProgLabs/testId=${test?._id}&courseId=${courseId}`}
                             className={ques == problem._id ? active : inactive}
                           >
                             {j + 1}
-                          </Link>
+                          </button>
                         </span>
                       ))
                     )
@@ -165,29 +163,51 @@ export default function ProgLabs() {
                                     type="radio"
                                     id="radio-1"
                                     name="tabs"
+                                    value={option.a}
                                   />
                                   <label class="radio-label" for="radio-1">
                                     <div class="radio-circle"></div>
-                                    <span class="radio-text">Option 1</span>
+                                    <span class="radio-text">{option.a}</span>
                                   </label>
                                   <input
                                     type="radio"
                                     id="radio-2"
                                     name="tabs"
+                                    value={option.b}
                                   />
                                   <label class="radio-label" for="radio-2">
                                     <div class="radio-circle"></div>
-                                    <span class="radio-text">Option 2</span>
+                                    <span class="radio-text">{option.b}</span>
                                   </label>
                                   <input
                                     type="radio"
                                     id="radio-3"
                                     name="tabs"
+                                    value={option.c}
                                   />
                                   <label class="radio-label" for="radio-3">
                                     <div class="radio-circle"></div>
-                                    <span class="radio-text">Option 3</span>
+                                    <span class="radio-text">{option.c}</span>
                                   </label>
+                                  <div className="flex justify-center items-center gap-3 p-4">
+                                    <button className="border bg-gray-200 change p-3 bradius flex gap-2">
+                                      <i className="shdg"> SUBMIT</i>
+                                      <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke-width="1.5"
+                                        stroke="currentColor"
+                                        class="w-7 h-7"
+                                      >
+                                        <path
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          d="m4.5 12.75 6 6 9-13.5"
+                                        />
+                                      </svg>
+                                    </button>
+                                  </div>
                                 </div>
                               );
                             })}

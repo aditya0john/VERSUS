@@ -6,7 +6,7 @@ export default function Layout2({ children }) {
     <>
       <div className="bg-black">
         <Navbar2 />
-        <div className="bg-black p-1 ">{children}</div>
+        <div className=" bg-black p-1 ">{children}</div>
       </div>
     </>
   );
