@@ -152,9 +152,11 @@ export default function ProgLabs() {
                       .filter((x) => x._id == ques)
                       .map((question, j) => (
                         <div key={j} className="bg-gray-200 p-3 rounded-lg">
-                          <i className="phdg uppercase">
-                            Q. {question.question}.{console.log(question)}
-                          </i>
+                          <pre>
+                            <i className="phdg uppercase">
+                              Q. {question.question}.{console.log(question)}
+                            </i>
+                          </pre>
                           <div className="bg-gray-200 mt-3">
                             {question.options.map((option) => {
                               return (

@@ -249,7 +249,7 @@ export default function Home() {
               <div className="grid">
                 <div className="grid grid-rows-2">
                   <h3 className="hdg text-black">
-                    AI assisted assessment platform with :- Online Remote
+                    AI Assisted Assessment Platform With :- Online Remote
                     Proctoring
                   </h3>
 
