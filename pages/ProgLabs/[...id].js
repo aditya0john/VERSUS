@@ -2,7 +2,6 @@ import CodeEditor from "@/components/CodeEditor";
 import Layout2 from "@/components/Layout2";
 import Loading from "@/components/Loading";
 import axios from "axios";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -154,7 +153,7 @@ export default function ProgLabs() {
                         <div key={j} className="bg-gray-200 p-3 rounded-lg">
                           <pre>
                             <p className="shdg font-bold uppercase">
-                              Q. {question.question}.{console.log(question)}
+                              Q. {question.question}
                             </p>
                           </pre>
                           <div className="bg-gray-200 mt-3">
@@ -191,8 +190,8 @@ export default function ProgLabs() {
                                     <div class="radio-circle"></div>
                                     <span class="radio-text">{option.c}</span>
                                   </label>
-                                  <div className="flex justify-center items-center gap-3 p-4">
-                                    <button className="border bg-gray-200 change p-3 bradius flex gap-2">
+                                  <div className=" flex justify-center items-center gap-3 p-4">
+                                    <button className="border border-black bg-gray-200 change p-3 bradius flex gap-2">
                                       <i className="shdg"> SUBMIT</i>
                                       <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -200,12 +199,12 @@ export default function ProgLabs() {
                                         viewBox="0 0 24 24"
                                         stroke-width="1.5"
                                         stroke="currentColor"
-                                        class="w-7 h-7"
+                                        class="w-8 h-8"
                                       >
                                         <path
                                           stroke-linecap="round"
                                           stroke-linejoin="round"
-                                          d="m4.5 12.75 6 6 9-13.5"
+                                          d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
                                         />
                                       </svg>
                                     </button>

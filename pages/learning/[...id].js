@@ -66,7 +66,7 @@ function Learning() {
               .filter((product) => product._id == chapterId)
               .map((chapter, j) => (
                 <div key={j} className="bg-white rounded-lg ">
-                  <div className="flex justify-between mr-10 items-center">
+                  <div className="grido mr-10 items-center">
                     <div className="shdg p-3 pb-0 text-uppercase font-bold">
                       <p className="hdg user-select-none">
                         {chapter?.chapterName}

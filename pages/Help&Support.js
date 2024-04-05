@@ -13,10 +13,10 @@ export default function Courses() {
             <Itemstrip />
           </div>
           <div className="grid gap-1 bg-black rounded-lg flex flex-col items-center p-3">
-            <div className="bg-gray-200 border border-black rounded-lg w-full ">
-              <ul className="text-black shdg font-bold text-uppercase flex justify-center p-2">
+            <div className=" border border-black rounded-lg w-full ">
+              <p className="text-black shdg font-bold text-uppercase flex justify-center p-2">
                 complaint form
-              </ul>
+              </p>
               <hr className="border border-black" />
               <form className="grid grid-cols-2 gap-2 p-2">
                 <div className="flex flex-col gap-2">
@@ -194,7 +194,7 @@ export default function Courses() {
           <Itemstrip />
         </div>
         <div className="grid gap-1 bg-black rounded-lg flex flex-col items-center p-3">
-          <div className="bg-gray-200 border border-black rounded-lg w-full ">
+          <div className="bg-white border border-black rounded-lg w-full ">
             <ul className="text-black shdg font-bold text-uppercase flex justify-center p-2">
               complaint form
             </ul>
