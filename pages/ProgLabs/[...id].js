@@ -153,9 +153,9 @@ export default function ProgLabs() {
                       .map((question, j) => (
                         <div key={j} className="bg-gray-200 p-3 rounded-lg">
                           <pre>
-                            <i className="phdg uppercase">
+                            <p className="shdg font-bold uppercase">
                               Q. {question.question}.{console.log(question)}
-                            </i>
+                            </p>
                           </pre>
                           <div className="bg-gray-200 mt-3">
                             {question.options.map((option) => {

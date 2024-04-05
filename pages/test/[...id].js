@@ -44,7 +44,7 @@ export default function Test() {
           <hr className="mb-10" />
           <div>
             {Course.filter((product) => product._id == id).map((product, i) => (
-              <div className="grid grid-cols-2 gap-2" key={i}>
+              <div className="grid grid-cols-2 gap-3" key={i}>
                 {product.tests.map((test, j) => (
                   <>
                     <Link

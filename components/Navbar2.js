@@ -10,7 +10,7 @@ function Navbar2() {
   let { data: session } = useSession();
   console.log(session?.user);
   return (
-    <nav className="bg-white text-white p-3 flex gap-2 justify-between">
+    <nav className="bg-white text-black p-3 flex gap-2 justify-between">
       <div className="flex gap-3 items-center">
         <Link
           href="/"

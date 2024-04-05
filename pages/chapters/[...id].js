@@ -93,7 +93,7 @@ export default function LearnCPP() {
             <div>
               {Course.filter((product) => product._id == id).map(
                 (product, i) => (
-                  <div className="grid grid-cols-2 gap-2" key={i}>
+                  <div className="grid grid-cols-2 gap-3" key={i}>
                     {product.chapters.map((chapter, j) => (
                       <>
                         <Link

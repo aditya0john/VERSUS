@@ -10,11 +10,8 @@ export default function Layout3({ children }) {
       <>
         <div>
           <Navbar2 />
-          <div>
+          <div className="bg-black p-1 text-black rounded-top">
             <Itemstrip />
-          </div>
-
-          <div className="bg-black p-1 text-black h-screen rounded-top">
             <div className="gridd h-100">
               <aside className="bg-white rounded-lg ml-1 mt-1 h-80">
                 <hr />
@@ -64,7 +61,7 @@ export default function Layout3({ children }) {
                 </div>
               </aside>
 
-              <div className=" p-3 bg-white ml-2 mt-1 mr-1 mb-1 rounded-md scrollbar ">
+              <div className="h-screen p-3 bg-white ml-2 mt-1 mr-1 mb-1 rounded-md scrollbar ">
                 {children}
               </div>
             </div>
