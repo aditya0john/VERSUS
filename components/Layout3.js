@@ -67,7 +67,7 @@ export default function Layout3({ children }) {
             </div>
           </div>
         </div>
-
+        <hr />
         <footer className="bg-white flex justify-evenly p-3">
           <Link href="/" className="text-decoration-none text-black">
             @Copyright "Versus.com"

@@ -15,7 +15,15 @@ kit-scrollbar {
 }
 
 .image-resize {
-  width: 300px;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: top;
+  mix-blend-mode: multiply;
+}
+
+.image-change {
+  width: 100%;
   height: 150px;
   object-fit: contain;
   object-position: center;

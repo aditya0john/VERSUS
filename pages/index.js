@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 import Table from "@/components/Table";
+import Carousel from "@/components/Carousel";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -56,7 +57,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <div className="bg-white gridd-data gap-4 p-10  rounded-full mb-10">
             <span className="border border-black shdg round flex flex-col items-center p-3 text-center box change_button">
               <svg
@@ -178,6 +178,8 @@ export default function Home() {
               <p className="font-bold">Assignment's</p>
             </span>
           </div>
+
+          <Carousel />
 
           <div className="mt-3 bg-white bradius">
             <div className="scale-95 grid grid-cols-2 items-center">
@@ -365,7 +367,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <div className="bg-white p-5 mt-3 up_round">
             <div className="text-black phdg">
               Customers

@@ -9,6 +9,7 @@ export default function Layout({ children }) {
         <div className="bg-white p-1 text-white h-full rounded-top body">
           {children}
         </div>
+        <hr />
         <footer className="bg-white flex justify-evenly p-3">
           <Link href="/" className="texFt-decoration-none text-black">
             @Copyright "Versus.com"
