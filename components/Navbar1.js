@@ -4,7 +4,7 @@ import React from "react";
 
 function Navbar1() {
   return (
-    <div className="sticky top-0 z-1 bg-white text-black p-3 flex items-center gap-2 justify-between border border-black">
+    <div className="sticky top-0 z-1 bg-white text-black p-3 flex items-center gap-2 justify-between border-bottom">
       <Link
         href="/"
         className="flex items-center text-decoration-none text-black font-bold"

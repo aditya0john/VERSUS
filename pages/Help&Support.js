@@ -3,6 +3,28 @@ import Layout from "@/components/Layout";
 import Layout2 from "@/components/Layout2";
 import { useSession } from "next-auth/react";
 
+function copyPhoneNumber() {
+  let num = "123-456-7890";
+
+  navigator.clipboard
+    .writeText(num)
+    .then(() => {
+      alert("phone number copied");
+      if (
+        confirm(
+          "Phone number copied to clipboard. Do you want to call or save it?"
+        )
+      ) {
+        // Open phone dialer with the phone number
+        window.open("tel:" + num, "_self");
+      }
+    })
+    .catch((Error) => {
+      alert("Failed to copy phone number", Error);
+      console.log(Error);
+    });
+}
+
 export default function Courses() {
   const { data: session } = useSession();
   if (!session) {
@@ -60,6 +82,7 @@ export default function Courses() {
             </div>
 
             <div className="bg-gray-300 border border-black rounded-lg w-full ">
+              <button onClick={copyPhoneNumber}>copy</button>
               <ul className="shdg font-bold text-uppercase flex justify-center p-2">
                 contact us
               </ul>
@@ -193,8 +216,8 @@ export default function Courses() {
         <div className="bg-white">
           <Itemstrip />
         </div>
-        <div className="grid gap-1 bg-black rounded-lg flex flex-col items-center p-3">
-          <div className="bg-white border border-black rounded-lg w-full ">
+        <div className="grid gap-1 bg-white rounded-lg flex flex-col items-center p-3">
+          <div className="bg-gray-100 border border-black rounded-lg w-full ">
             <ul className="text-black shdg font-bold text-uppercase flex justify-center p-2">
               complaint form
             </ul>
@@ -219,7 +242,7 @@ export default function Courses() {
 
               <button
                 type="submit"
-                className="bg-gray-300 hdg border border-black rounded flex items-center justify-center hover:bg-black hover:text-white hover:bg-black"
+                className="bg-gray-200 hdg border border-black rounded flex items-center justify-center hover:bg-black hover:text-white hover:bg-black"
               >
                 SUBMIT{" "}
                 <svg
@@ -227,7 +250,7 @@ export default function Courses() {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
-                  stroke="white"
+                  stroke="currentColor"
                   class="w-20 h-20"
                 >
                   <path
@@ -240,58 +263,62 @@ export default function Courses() {
             </form>
           </div>
 
-          <div className="bg-gray-300 border border-black rounded-lg w-full ">
+          <div className="bg-gray-100 border border-black rounded-lg w-full ">
             <ul className="shdg font-bold text-uppercase flex justify-center p-2">
               contact us
             </ul>
             <hr className="border border-black" />
             <ul class="wrapper">
-              <li class="icon Telephone">
-                <span class="tooltip">Telephone</span>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="black"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
-                    />
-                  </svg>
+              <button onClick={copyPhoneNumber}>
+                <li class="icon Telephone">
+                  <span class="tooltip">Telephone</span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="black"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
+                      />
+                    </svg>
 
-                  <i class="fab fa-facebook-f"></i>
-                </span>
-              </li>
-              <li class="icon email">
-                <span class="tooltip">E-mail</span>
-                <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="black"
-                    class="w-6 h-6"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-                    />
-                  </svg>
+                    <i class="fab fa-facebook-f"></i>
+                  </span>
+                </li>
+              </button>
+              <button>
+                <li class="icon email">
+                  <span class="tooltip">E-mail</span>
+                  <span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="black"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+                      />
+                    </svg>
 
-                  <i class="fab fa-twitter"></i>
-                </span>
-              </li>
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </li>
+              </button>
             </ul>
           </div>
 
-          <div className="bg-gray-300 border border-black rounded-lg w-full ">
+          <div className="bg-gray-100 border border-black rounded-lg w-full ">
             <ul className="shdg font-bold text-uppercase flex justify-center p-2">
               follow us on
             </ul>

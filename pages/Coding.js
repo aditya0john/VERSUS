@@ -1,5 +1,5 @@
 import CodeEditor from "@/components/CodeEditor";
-import Layout2 from "@/components/Layout2";
+import Layout4 from "@/components/Layout4";
 import Loading from "@/components/Loading";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -52,7 +52,7 @@ function Coding() {
 
   return (
     <main>
-      <Layout2>
+      <Layout4>
         <div className="bg-white p-3">
           <CodeEditor onCompile={handleCompile} />
           <div>
@@ -66,7 +66,7 @@ function Coding() {
             </div>
           </div>
         </div>
-      </Layout2>
+      </Layout4>
     </main>
   );
 }

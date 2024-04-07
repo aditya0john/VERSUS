@@ -1,5 +1,5 @@
 import CodeEditor from "@/components/CodeEditor";
-import Layout2 from "@/components/Layout2";
+import Layout4 from "@/components/Layout4";
 import Loading from "@/components/Loading";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -87,7 +87,7 @@ export default function ProgLabs() {
 
   return (
     <main className="user-select-none">
-      <Layout2>
+      <Layout4>
         <div className="h-full bg-white rounded-lg p-1 gride">
           <aside className="border border-black  border-3 rounded-lg m-1">
             <div>
@@ -100,7 +100,7 @@ export default function ProgLabs() {
                     .map((test) =>
                       test.questions.map((question, j) => (
                         <div key={j}>
-                          <span key={j} className="flex">
+                          <span key={j} className="">
                             <button
                               onClick={() => setQuestion(question._id)}
                               className={
@@ -284,7 +284,7 @@ export default function ProgLabs() {
             </div>
           </div>
         </div>
-      </Layout2>
+      </Layout4>
     </main>
   );
 }

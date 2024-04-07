@@ -61,7 +61,7 @@ export default function Layout3({ children }) {
                 </div>
               </aside>
 
-              <div className="h-screen p-3 bg-white ml-2 mt-1 mr-1 mb-1 rounded-md scrollbar ">
+              <div className="h-screen p-3 bg-white ml-2 mt-1 mr-1 mb-1 rounded-md scrollbar">
                 {children}
               </div>
             </div>

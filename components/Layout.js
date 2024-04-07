@@ -6,11 +6,11 @@ export default function Layout({ children }) {
     <>
       <div className="bg-white">
         <Navbar1 />
-        <div className=" bg-black p-1 text-white h-full rounded-top ">
+        <div className="bg-white p-1 text-white h-full rounded-top body">
           {children}
         </div>
         <footer className="bg-white flex justify-evenly p-3">
-          <Link href="/" className="text-decoration-none text-black">
+          <Link href="/" className="texFt-decoration-none text-black">
             @Copyright "Versus.com"
           </Link>
           <Link
