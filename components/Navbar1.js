@@ -35,7 +35,7 @@ function Navbar1() {
                 href="/"
                 className="dropdown-item text-decoration-none text-black"
               >
-                <p className="nav_text">hey</p>
+                <p className="nav_text">product 1</p>
               </Link>
             </li>
             <li>
@@ -43,7 +43,7 @@ function Navbar1() {
                 href="/"
                 className="dropdown-item text-decoration-none text-black"
               >
-                <p className="nav_text">hey</p>
+                <p className="nav_text">product 2</p>
               </Link>
             </li>
             <li>
@@ -51,7 +51,7 @@ function Navbar1() {
                 href="/"
                 className="dropdown-item text-decoration-none text-black"
               >
-                <p className="nav_text">hey</p>
+                <p className="nav_text">product 3</p>
               </Link>
             </li>
           </ul>
@@ -102,14 +102,23 @@ function Navbar1() {
           </ul>
         </div>
       </div>
-
-      <div className="flex gap-2">
-        <button
-          className="border border-black rounded-md px-3 p-2 hover:bg-green-500"
-          onClick={() => signIn("google")}
-        >
-          Log In
-        </button>
+      <div className="flex gap-3">
+        <div className="flex gap-2">
+          <button
+            className="border border-black rounded-md px-3 p-2 hover:bg-yellow-300"
+            onClick={() => signIn("google")}
+          >
+            Sign In
+          </button>
+        </div>
+        <div className="flex gap-2">
+          <button
+            className="border border-black rounded-md px-3 p-2 hover:bg-green-500"
+            onClick={() => signIn("google")}
+          >
+            Log In
+          </button>
+        </div>
       </div>
     </div>
   );

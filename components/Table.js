@@ -7,7 +7,7 @@ function Table() {
       <tbody>
         <tr>
           <td>
-            <article className="justify-center flex ">
+            <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/IIIT GUWAHATI.jpeg"
@@ -16,7 +16,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex">
+            <article className="justify-center flex cursor-pointer">
               <img
                 class="con image-change"
                 src="/images/IIIT HYDRABAD.png"
@@ -25,7 +25,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex">
+            <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/IIIT KOTA.png"
@@ -34,7 +34,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex">
+            <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/IIITDM KURNOOL.jpg"
@@ -48,7 +48,7 @@ function Table() {
       <tbody>
         <tr>
           <td>
-            <article className="justify-center flex ">
+       <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/IISER PUNE.jpg"
@@ -57,7 +57,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex items-center">
+       <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/VIT VELLORE.png"
@@ -66,7 +66,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex ">
+       <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/IISER TIRUPATI.jpg"
@@ -75,7 +75,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex ">
+       <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/IIT BANGALORE.png"
@@ -88,7 +88,7 @@ function Table() {
       <tbody>
         <tr>
           <td>
-            <article className="justify-center flex ">
+       <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/IIT BOMBAY.png"
@@ -97,7 +97,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex ">
+       <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/SRM.png"
@@ -106,7 +106,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex ">
+       <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/IIT GUWAHATI.png"
@@ -115,7 +115,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex">
+            <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/IIT KANPUR.png"
@@ -128,7 +128,7 @@ function Table() {
       <tbody>
         <tr>
           <td>
-            <article className="justify-center flex ">
+       <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/IIT TIRUPATI.jpg"
@@ -137,7 +137,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex">
+            <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/INDIAN MARITIME UNIVERSITY.png"
@@ -146,7 +146,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex ">
+       <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/LPU.png"
@@ -155,7 +155,7 @@ function Table() {
             </article>
           </td>
           <td>
-            <article className="justify-center flex ">
+       <article className="justify-center flex cursor-pointer">
               <img
                 class=" con image-change"
                 src="/images/UPES.png"

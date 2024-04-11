@@ -1,14 +1,23 @@
 import Link from "next/link";
 import React from "react";
 import { signOut, useSession } from "next-auth/react";
+import { data } from "autoprefixer";
 
 async function logout() {
-  signOut();
+  await signOut();
+  localStorage.removeItem("authToken");
+  location.reload(true);
+  window.location.href = "/";
 }
 
 function Navbar2() {
   let { data: session } = useSession();
-  console.log(session?.user);
+  console.log(
+    "SESSION USER -",
+    session?.user?.name,
+    "\nSESSION EXPIRES -",
+    session?.expires
+  );
   return (
     <nav className="bg-white text-black p-3 flex gap-2 justify-between border-bottom">
       <div className="flex gap-3 items-center">
