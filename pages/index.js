@@ -384,7 +384,7 @@ export default function Home() {
     return (
       <main className="w-full h-full">
         <Layout2>
-          <div className=" bg-white m-0 rounded h-screen">
+          <div className="seashell m-0 rounded h-screen">
             <div className="scale-95 grid grid-cols-4 gap-10 ml-5 mr-5 pt-10">
               <Cards
                 text="click here to view all your courses/subjects"

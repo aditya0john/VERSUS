@@ -35,7 +35,7 @@ export default function LearnCPP() {
     <>
       <Layout2>
         <div className="grid">
-          <div className="bg-white rounded-lg p-3">
+          <div className="seashell rounded-lg p-3">
             <div className="flex justify-between">
               {Course.filter((x) => x._id == id).map((product, i) => (
                 <div key={i}>
@@ -47,7 +47,7 @@ export default function LearnCPP() {
 
               <div className="grid grid-cols-2 gap-2">
                 <Link href="/Score" className="text-decoration-none text-black">
-                  <div className="p-3 rounded-lg border border-black box hover:bg-black hover:text-white">
+                  <div className="bg-white p-3 rounded-lg border border-black change box ">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -69,7 +69,7 @@ export default function LearnCPP() {
                   href={"/test/" + id}
                   className="text-decoration-none text-black"
                 >
-                  <div className="p-3 rounded-lg border border-black box hover:bg-black hover:text-white box">
+                  <div className="bg-white p-3 rounded-lg border border-black box change box">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

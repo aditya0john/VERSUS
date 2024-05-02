@@ -109,11 +109,10 @@ function Navbar2() {
             aria-expanded="false"
           ></button>
 
-          <ul class="dropdown-menu p-2">
-            <div className="change flex flex-col justify-center bg-gray-200 p-2 rounded-lg font-bold justify-center flex">
+          <ul class="dropdown-menu pt-0">
+            <div className="flex flex-col justify-center bg-gray-200 p-3 change">
               <img className="rounded-lg" src={session?.user?.image} />
               <p className="flex justify-center shdg mb-0">
-                {" "}
                 {session?.user?.name}
               </p>
             </div>

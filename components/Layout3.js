@@ -13,14 +13,14 @@ export default function Layout3({ children }) {
           <div className="bg-black p-1 text-black rounded-top">
             <Itemstrip />
             <div className="gridd h-100">
-              <aside className="bg-white rounded-lg ml-1 mt-1 h-80">
+              <aside className="seashell rounded-lg ml-1 mt-1 h-80">
                 <hr />
-                <div className="bg-white p-2 rounded-lg flex items-center justify-center ">
+                <div className="seashell p-2 rounded-lg flex items-center justify-center">
                   <form>
                     <label className="text-uppercase">date :</label>
                     <input
                       type="date"
-                      className=" border border-black rounded-lg p-2 ml-2 box"
+                      className="border border-black rounded-lg p-2 ml-2 box"
                     />
                   </form>
                 </div>
@@ -33,7 +33,7 @@ export default function Layout3({ children }) {
 
                 <div className="pl-3 pr-3">
                   <Link href="/" className="text-decoration-none text-black">
-                    <div className="change border border-black bradius p-2 flex gap-2 items-center shdg">
+                    <div className="bg-white change border border-black bradius p-2 flex gap-2 items-center shdg">
                       <button>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -61,27 +61,12 @@ export default function Layout3({ children }) {
                 </div>
               </aside>
 
-              <div className="h-screen p-3 bg-white ml-2 mt-1 mr-1 mb-1 rounded-md scrollbar">
+              <div className="h-screen p-3 seashell ml-2 mt-1 mr-1 mb-1 rounded-md scrollbar">
                 {children}
               </div>
             </div>
           </div>
         </div>
-        <hr />
-        <footer className="bg-white flex justify-evenly p-3">
-          <Link href="/" className="text-decoration-none text-black">
-            @Copyright "Versus.com"
-          </Link>
-          <Link
-            href="/Help&Support"
-            className="text-decoration-none text-black"
-          >
-            Help & Support
-          </Link>
-          <Link href="/" className="text-decoration-none text-black">
-            About
-          </Link>
-        </footer>
       </>
     );
   }

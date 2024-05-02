@@ -30,9 +30,9 @@ function Carousel() {
   ));
 
   return (
-    <div className="scale-75 text-black bg-gray-200 rounded-lg p-5 ">
+    <div className="scale-75 text-black bg-gray-200 rounded-lg p-5">
       <p className="hdg flex justify-center items-center">GALLERY</p>
-      <Slider {...settings} className=" overflow-hidden">
+      <Slider {...settings} className="overflow-hidden">
         {imageElements}
       </Slider>
     </div>

@@ -1,7 +1,10 @@
 import Navbar1 from "@/components/Navbar1";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Layout({ children }) {
+  const [isDropDownActive, setDropDownActive] = useState(false);
+
   return (
     <>
       <div className="bg-white">
@@ -9,9 +12,10 @@ export default function Layout({ children }) {
         <div className="bg-white p-1 text-white h-full rounded-top body">
           {children}
         </div>
+
         <hr />
         <footer className="bg-white flex justify-evenly p-3">
-          <Link href="/" className="texFt-decoration-none text-black">
+          <Link href="/" className="text-decoration-none text-black">
             @Copyright "Versus.com"
           </Link>
           <Link

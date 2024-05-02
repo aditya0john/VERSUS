@@ -59,7 +59,7 @@ function Coding() {
             <h3>Output</h3>
             <div>
               <textarea
-                className="border border-black rounded-lg w-full p-2 hover:bg-black hover:text-white hover:placeholder-white"
+                className="border border-black rounded-lg w-full p-2 bg-white change"
                 placeholder="//the output is shown here"
                 value={output}
               />

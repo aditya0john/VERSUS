@@ -6,7 +6,7 @@ function Cards({ text, button, src, href }) {
 
   if (session) {
     return (
-      <div className="card box con border border-black border-4 change_button ">
+      <div className="card box con change_button">
         <div className="con_upper p-1">
           <svg
             className="flex items-center"

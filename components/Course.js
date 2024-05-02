@@ -35,12 +35,12 @@ export default function Course() {
           <div className="p-3 flex gap-2">
             <input
               onChange={(e) => setSearch(e.target.value)}
-              className="text-black rounded-md border border-black p-2 w-full change"
+              className="bg-white text-black rounded-md border border-black p-2 w-full change hover:placeholder-white"
               type="text"
               placeholder="Enter Course name"
             />
 
-            <button className="border border-black rounded p-2 flex items-center hover:bg-black hover:text-white">
+            <button className="bg-white border border-black rounded p-2 flex items-center change">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

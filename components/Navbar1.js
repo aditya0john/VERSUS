@@ -1,10 +1,12 @@
-import { signIn } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
 
 function Navbar1() {
+  function signUp() {
+    window.location.href = "/SignUp";
+  }
   return (
-    <div className="sticky top-0 z-1 bg-white text-black p-3 flex items-center gap-2 justify-between border-bottom">
+    <div className="sticky top-0 z-1 seashell text-black p-3 flex items-center gap-2 justify-between border-bottom">
       <Link
         href="/"
         className="flex items-center text-decoration-none text-black font-bold"
@@ -29,35 +31,37 @@ function Navbar1() {
           >
             PRODUCTS
           </button>
-          <ul class="dropdown-menu nav_text p-0">
-            <li>
+          <ul class="bg-black dropdown-menu p-0 mt-4 nav_text w-screen">
+            <li className="mt-10 mb-10 ">
               <Link
                 href="/"
-                className="dropdown-item text-decoration-none text-black"
+                className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text">product 1</p>
+                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                  Product 1
+                </p>
               </Link>
-            </li>
-            <li>
               <Link
                 href="/"
-                className="dropdown-item text-decoration-none text-black"
+                className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text">product 2</p>
+                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                  Product 2
+                </p>
               </Link>
-            </li>
-            <li>
               <Link
                 href="/"
-                className="dropdown-item text-decoration-none text-black"
+                className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text">product 3</p>
+                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                  Product 3
+                </p>
               </Link>
             </li>
           </ul>
         </div>
 
-        <div class="dropdown nav_text items-center">
+        <div class="dropdown nav_text">
           <button
             class="dropdown-toggle"
             type="button"
@@ -66,37 +70,39 @@ function Navbar1() {
           >
             HELP & SUPPORT
           </button>
-          <ul class="dropdown-menu p-0">
-            <li>
+          <ul class="bg-black dropdown-menu p-0 mt-4 nav_text w-screen">
+            <li className="mt-10 mb-10">
               <Link
                 href="/Help&Support"
-                className=" dropdown-item text-decoration-none text-black"
+                className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text">Call customer care</p>
+                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                  Call customer care
+                </p>
               </Link>
-            </li>
-            <li>
               <Link
                 href="/Help&Support"
-                className=" dropdown-item text-decoration-none text-black"
+                className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text">File a Report</p>
+                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                  File a Report
+                </p>
               </Link>
-            </li>
-            <li>
               <Link
                 href="/Help&Support"
-                className=" dropdown-item text-decoration-none text-black"
+                className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text">E-mail us</p>
-              </Link>
-            </li>
-            <li>
+                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                  E-mail us
+                </p>
+              </Link>{" "}
               <Link
                 href="/Help&Support"
-                className=" dropdown-item text-decoration-none text-black"
+                className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text">Ask us anything</p>
+                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                  Ask us anything
+                </p>
               </Link>
             </li>
           </ul>
@@ -106,7 +112,7 @@ function Navbar1() {
         <div className="flex gap-2">
           <button
             className="border border-black rounded-md px-3 p-2 hover:bg-yellow-300"
-            onClick={() => signIn("google")}
+            onClick={signUp}
           >
             Sign In
           </button>
@@ -114,7 +120,7 @@ function Navbar1() {
         <div className="flex gap-2">
           <button
             className="border border-black rounded-md px-3 p-2 hover:bg-green-500"
-            onClick={() => signIn("google")}
+            onClick={() => (window.location.href = "/LogIn")}
           >
             Log In
           </button>

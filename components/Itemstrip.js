@@ -6,7 +6,7 @@ function Itemstrip() {
 
   if (route.asPath == "/Courses") {
     return (
-      <div className="m-1 bg-white rounded flex justify-center items-center">
+      <div className="m-1 seashell rounded flex justify-center items-center">
         <h1 className="p-4 hdg text-black text-uppercase rounded-lg user-select-none">
           courses
         </h1>
@@ -14,7 +14,7 @@ function Itemstrip() {
     );
   } else if (route.asPath == "/Test") {
     return (
-      <div className="m-1 bg-white rounded flex justify-center items-center">
+      <div className="m-1 seashell rounded flex justify-center items-center">
         <h1 className="p-4 hdg text-black text-uppercase rounded-lg user-select-none">
           Test
         </h1>
@@ -22,7 +22,7 @@ function Itemstrip() {
     );
   } else if (route.asPath == "/Tools") {
     return (
-      <div className="m-1 bg-white rounded flex justify-center items-center">
+      <div className="m-1 seashell rounded flex justify-center items-center">
         <h1 className="p-4 hdg text-black text-uppercase rounded-lg user-select-none">
           Tools
         </h1>

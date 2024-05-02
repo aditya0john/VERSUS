@@ -23,11 +23,11 @@ const ProbSchema = new Schema({
 
 const CourseSchema = new Schema({
   title: { type: String, required: true },
-  description: String,
+  description: { type: String },
   price: { type: String, required: true },
   chapters: [ChapterSchema],
   tests: {
-    testName: { type: String, required: true },
+    testName: { type: String },
     ques: [QuesSchema],
     prob: [ProbSchema],
   },

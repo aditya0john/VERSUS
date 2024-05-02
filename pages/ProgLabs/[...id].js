@@ -7,13 +7,14 @@ import { useEffect, useState } from "react";
 
 export default function ProgLabs() {
   const inactive =
-    "change text-black justify-center flex box border border-black p-3 text-decoration-none round";
+    "bg-white change text-black justify-center flex box border border-black p-3 text-decoration-none round";
   const active =
     "change bg-black text-white justify-center flex box border border-black p-3 text-decoration-none round";
 
   const [isLoading, setLoading] = useState(true);
   const [ques, setQuestion] = useState(null);
   const [output, setOutput] = useState(null);
+  let [answer, setAnswer] = useState(null);
   let [Course, setCourse] = useState([]);
   let router = useRouter();
 
@@ -85,15 +86,23 @@ export default function ProgLabs() {
     }
   };
 
+  function check(option, answer) {
+    if (option === answer && option != null && answer != null) {
+      alert("CORRECT");
+    } else if (option != answer && option != null && answer != null) {
+      alert("WRONG");
+    }
+  }
+
   return (
     <main className="user-select-none">
       <Layout4>
-        <div className="h-full bg-white rounded-lg p-1 gride">
-          <aside className="border border-black  border-3 rounded-lg m-1">
+        <div className="h-full seashell rounded-lg p-1 gride">
+          <aside className="border border-black border-3 rounded-lg m-1">
             <div>
               <p className="p-3 pb-0 mb-0 shdg font-bold">Questions</p>
               <hr />
-              <div className="bg-white rounded-lg m-2 flex gridd-cards">
+              <div className="seashell rounded-lg m-2 flex gridd-cards">
                 {Course.filter((x) => x._id == courseId).map((product) =>
                   product.tests
                     .filter((x) => x._id == testId)
@@ -120,7 +129,7 @@ export default function ProgLabs() {
             <div>
               <p className="p-3 pb-0 mb-0 shdg font-bold">Problems</p>
               <hr />
-              <div className="bg-white rounded-lg m-2 flex gridd-cards">
+              <div className="seashell rounded-lg m-2 flex gridd-cards">
                 {Course.filter((x) => x._id == courseId).map((product) =>
                   product.tests
                     .filter((x) => x._id == testId)
@@ -154,6 +163,7 @@ export default function ProgLabs() {
                           <pre>
                             <p className="shdg font-bold uppercase">
                               Q. {question.question}
+                              {console.log(question)}
                             </p>
                           </pre>
                           <div className="bg-gray-200 mt-3">
@@ -164,7 +174,7 @@ export default function ProgLabs() {
                                     type="radio"
                                     id="radio-1"
                                     name="tabs"
-                                    value={option.a}
+                                    value={"a"}
                                   />
                                   <label class="radio-label" for="radio-1">
                                     <div class="radio-circle"></div>
@@ -174,7 +184,7 @@ export default function ProgLabs() {
                                     type="radio"
                                     id="radio-2"
                                     name="tabs"
-                                    value={option.b}
+                                    value={"b"}
                                   />
                                   <label class="radio-label" for="radio-2">
                                     <div class="radio-circle"></div>
@@ -184,14 +194,17 @@ export default function ProgLabs() {
                                     type="radio"
                                     id="radio-3"
                                     name="tabs"
-                                    value={option.c}
+                                    value={"c"}
                                   />
                                   <label class="radio-label" for="radio-3">
                                     <div class="radio-circle"></div>
                                     <span class="radio-text">{option.c}</span>
                                   </label>
                                   <div className=" flex justify-center items-center gap-3 p-4">
-                                    <button className="border border-black bg-gray-200 change p-3 bradius flex gap-2">
+                                    <button
+                                      onClick={check()}
+                                      className="border border-black bg-gray-200 change p-3 bradius flex gap-2"
+                                    >
                                       <i className="shdg"> SUBMIT</i>
                                       <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +240,7 @@ export default function ProgLabs() {
                         <div key={j}>
                           <div id="root">
                             <i className="phdg uppercase">
-                              Q. {problem.problem}.
+                              Q. {problem.problem}.{console.log(problem)}
                             </i>
                             <hr />
                             <div className="bg-white rounded-lg">
