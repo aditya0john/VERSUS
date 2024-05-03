@@ -401,16 +401,6 @@ img {
   grid-template-columns: 2fr 1fr;
 }
 
-.gridd-data {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
-
-.gridd-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
 .gridd-courses {
   display: grid;
   grid-template-columns: 0.4fr 2fr 0.3fr;

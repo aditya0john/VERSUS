@@ -97,7 +97,7 @@ export default function LearnCPP() {
                     {product.chapters.map((chapter, j) => (
                       <>
                         <Link
-                          className="text-decoration-none rect box change_button"
+                          className="text-decoration-none bg-orange-100 p-3 rounded-lg box change_button"
                           key={j}
                           href={`/learning/chapterId=${chapter?._id}&courseId=${id}`}
                         >

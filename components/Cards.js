@@ -1,12 +1,12 @@
 import { useSession } from "next-auth/react";
 import Link from "next/link";
 
-function Cards({ text, button, src, href, color }) {
+function Cards({ text, button, src, href, color, SVG }) {
   const { data: session } = useSession();
 
   if (session) {
     return (
-      <div className={`box con change_button bg-${color}-100`}>
+      <div className={`box con change_button bg-${color}-100 rounded-lg`}>
         <Link href={href}>
           <div className="con_upper p-1">
             <svg
@@ -18,6 +18,16 @@ function Cards({ text, button, src, href, color }) {
               stroke={color}
             >
               <path stroke-linecap="round" stroke-linejoin="round" d={src} />
+              <text
+                x="12"
+                y="14"
+                font-size="5"
+                viewBox="0 0 24 24"
+                font-weight="100"
+                text-anchor="middle"
+              >
+                {SVG}
+              </text>
             </svg>
           </div>
         </Link>

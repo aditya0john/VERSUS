@@ -57,8 +57,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-white gridd-data gap-4 p-10  rounded-full mb-10">
-            <span className="bg-orange-100 shdg round flex flex-col items-center p-3 text-center box change_button">
+          <div className="grid grid-cols-6 gap-4 p-10 mb-10">
+            <span className="bg-orange-100 shdg round flex flex-col items-center p-3 text-center change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -78,7 +78,7 @@ export default function Home() {
               <p className="font-bold">Institution's</p>
             </span>
 
-            <span className="bg-purple-100 shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-purple-100 shdg round flex flex-col items-center p-3 text-center change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -98,7 +98,7 @@ export default function Home() {
               <p className="font-bold"> Teacher's</p>
             </span>
 
-            <span className="bg-blue-100 shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-blue-100 shdg round flex flex-col items-center p-3 text-center change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -118,7 +118,7 @@ export default function Home() {
               <p className="font-bold">Learner's</p>
             </span>
 
-            <span className="bg-gray-200 shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-gray-200 shdg round flex flex-col items-center p-3 text-center change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -138,7 +138,7 @@ export default function Home() {
               <p className="font-bold">Meeting's</p>
             </span>
 
-            <span className="bg-red-100 shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-red-100 shdg round flex flex-col items-center p-3 text-center change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -158,7 +158,7 @@ export default function Home() {
               <p className="font-bold">Test's</p>
             </span>
 
-            <span className="bg-green-100 shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-green-100 shdg round flex flex-col items-center p-3 text-center change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
