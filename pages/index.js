@@ -41,8 +41,8 @@ export default function Home() {
             <div className="flex gap-20 justify-center text-center items-center">
               <div className="uppercase text-black hdg flex-row">
                 <i>Your Virtual University, in minutes!</i>
-                <p className="lowercase shdg text-gray-400">
-                  <i>
+                <p className="lowercase shdg">
+                  <i className="text-gray-400">
                     Online Classes, Assesments, proctored Exams, Assignments,
                     Auto Grading, Plagrism check ---- All in one platform.
                   </i>
@@ -58,13 +58,13 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-white gridd-data gap-4 p-10  rounded-full mb-10">
-            <span className="border border-black shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-orange-100 shdg round flex flex-col items-center p-3 text-center box change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
-                stroke="currentColor"
+                stroke="orange"
                 class="w-20 h-20"
               >
                 <path
@@ -78,13 +78,13 @@ export default function Home() {
               <p className="font-bold">Institution's</p>
             </span>
 
-            <span className="border border-black shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-purple-100 shdg round flex flex-col items-center p-3 text-center box change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
-                stroke="currentColor"
+                stroke="purple"
                 class="w-20 h-20"
               >
                 <path
@@ -98,13 +98,13 @@ export default function Home() {
               <p className="font-bold"> Teacher's</p>
             </span>
 
-            <span className="border border-black shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-blue-100 shdg round flex flex-col items-center p-3 text-center box change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
-                stroke="currentColor"
+                stroke="blue"
                 class="w-20 h-20"
               >
                 <path
@@ -118,13 +118,13 @@ export default function Home() {
               <p className="font-bold">Learner's</p>
             </span>
 
-            <span className="border border-black shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-gray-200 shdg round flex flex-col items-center p-3 text-center box change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
-                stroke="currentColor"
+                stroke="gray"
                 class="w-20 h-20"
               >
                 <path
@@ -138,13 +138,13 @@ export default function Home() {
               <p className="font-bold">Meeting's</p>
             </span>
 
-            <span className="border border-black shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-red-100 shdg round flex flex-col items-center p-3 text-center box change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
-                stroke="currentColor"
+                stroke="red"
                 class="w-20 h-20"
               >
                 <path
@@ -158,13 +158,13 @@ export default function Home() {
               <p className="font-bold">Test's</p>
             </span>
 
-            <span className="border border-black shdg round flex flex-col items-center p-3 text-center box change_button">
+            <span className="bg-green-100 shdg round flex flex-col items-center p-3 text-center box change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
-                stroke="currentColor"
+                stroke="green"
                 class="w-20 h-20"
               >
                 <path
@@ -192,7 +192,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="grid">
+              <div className="grid scale-95">
                 <div className="grid grid-rows-2">
                   <h3 className="hdg text-black">
                     AI Assisted Assessment Platform With :- Online Remote
@@ -391,24 +391,28 @@ export default function Home() {
                 button="COURSES"
                 src="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
                 href="/Courses"
+                color="orange"
               />
               <Cards
                 text="click here to go to code editor"
                 button="CODE EDITOR"
                 src="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
                 href="/Coding"
+                color="purple"
               />
               <Cards
                 text="click here to access tools"
                 button="TOOLS"
                 src="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"
                 href="/Tools"
+                color="green"
               />
               <Cards
                 text="click here to reach us"
                 button="HELP AND SUPPORT"
                 src="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
                 href="/Help&Support"
+                color="gray"
               />
             </div>
           </div>

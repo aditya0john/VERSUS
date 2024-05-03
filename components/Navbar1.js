@@ -31,7 +31,7 @@ function Navbar1() {
           >
             PRODUCTS
           </button>
-          <ul class="bg-black dropdown-menu p-0 mt-4 nav_text w-screen">
+          <ul class="bg-black dropdown-menu p-0 mt-4 nav_text">
             <li className="mt-10 mb-10 ">
               <Link
                 href="/"
@@ -41,6 +41,7 @@ function Navbar1() {
                   Product 1
                 </p>
               </Link>
+              <hr className="text-white" />
               <Link
                 href="/"
                 className="dropdown-item text-decoration-none bg-black"
@@ -49,6 +50,7 @@ function Navbar1() {
                   Product 2
                 </p>
               </Link>
+              <hr className="text-white" />
               <Link
                 href="/"
                 className="dropdown-item text-decoration-none bg-black"
@@ -70,7 +72,7 @@ function Navbar1() {
           >
             HELP & SUPPORT
           </button>
-          <ul class="bg-black dropdown-menu p-0 mt-4 nav_text w-screen">
+          <ul class="bg-black dropdown-menu p-0 mt-4 nav_text">
             <li className="mt-10 mb-10">
               <Link
                 href="/Help&Support"
@@ -80,6 +82,7 @@ function Navbar1() {
                   Call customer care
                 </p>
               </Link>
+              <hr className="text-white" />
               <Link
                 href="/Help&Support"
                 className="dropdown-item text-decoration-none bg-black"
@@ -88,6 +91,7 @@ function Navbar1() {
                   File a Report
                 </p>
               </Link>
+              <hr className="text-white" />
               <Link
                 href="/Help&Support"
                 className="dropdown-item text-decoration-none bg-black"
@@ -95,7 +99,8 @@ function Navbar1() {
                 <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
                   E-mail us
                 </p>
-              </Link>{" "}
+              </Link>
+              <hr className="text-white" />
               <Link
                 href="/Help&Support"
                 className="dropdown-item text-decoration-none bg-black"

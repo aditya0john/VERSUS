@@ -31,7 +31,6 @@ kit-scrollbar {
   height: 150px;
   object-fit: contain;
   object-position: center;
-  mix-blend-mode: multiply;
 }
 
 .background {

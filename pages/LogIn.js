@@ -27,7 +27,7 @@ function LogIn() {
         <div className="border border-black flex flex-col mt-4 rounded-lg flex justify-center items-center">
           <form className="flex flex-col justify-center w-full items-center p-4 body">
             <label className="shdg uppercase font-bold">
-              <i>e-mail</i>
+              e-mail
               <hr />
             </label>
             <input
@@ -37,7 +37,7 @@ function LogIn() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <label className="shdg uppercase mt-4 font-bold">
-              <i>Password</i>
+              Password
               <hr />
             </label>
             <input
@@ -55,22 +55,29 @@ function LogIn() {
           </form>
         </div>
         <div className="flex flex-col items-center justify-center m-4 gap-3">
-          <button
-            className="w-full uppercase overflow-hidden flex gap-3 border border-black rounded-md p-3 font-bold shdg google_color"
-            onClick={() => signIn("google")}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
-              width="30"
-              height="30"
-              viewBox="0 0 50 50"
+          <span className="w-full makeLine">
+            <button
+              className="w-full  uppercase overflow-hidden flex justify-center gap-3 border border-black rounded-md p-3 font-bold shdg google_color"
+              onClick={() => signIn("google")}
             >
-              <path d="M 26 2 C 13.308594 2 3 12.308594 3 25 C 3 37.691406 13.308594 48 26 48 C 35.917969 48 41.972656 43.4375 45.125 37.78125 C 48.277344 32.125 48.675781 25.480469 47.71875 20.9375 L 47.53125 20.15625 L 46.75 20.15625 L 26 20.125 L 25 20.125 L 25 30.53125 L 36.4375 30.53125 C 34.710938 34.53125 31.195313 37.28125 26 37.28125 C 19.210938 37.28125 13.71875 31.789063 13.71875 25 C 13.71875 18.210938 19.210938 12.71875 26 12.71875 C 29.050781 12.71875 31.820313 13.847656 33.96875 15.6875 L 34.6875 16.28125 L 41.53125 9.4375 L 42.25 8.6875 L 41.5 8 C 37.414063 4.277344 31.960938 2 26 2 Z M 26 4 C 31.074219 4 35.652344 5.855469 39.28125 8.84375 L 34.46875 13.65625 C 32.089844 11.878906 29.199219 10.71875 26 10.71875 C 18.128906 10.71875 11.71875 17.128906 11.71875 25 C 11.71875 32.871094 18.128906 39.28125 26 39.28125 C 32.550781 39.28125 37.261719 35.265625 38.9375 29.8125 L 39.34375 28.53125 L 27 28.53125 L 27 22.125 L 45.84375 22.15625 C 46.507813 26.191406 46.066406 31.984375 43.375 36.8125 C 40.515625 41.9375 35.320313 46 26 46 C 14.386719 46 5 36.609375 5 25 C 5 13.390625 14.386719 4 26 4 Z"></path>
-            </svg>
-            Or Sign in with Google
-          </button>
+              <svg
+                class="w-10 h-10 text-gray-800 dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.037 21.998a10.313 10.313 0 0 1-7.168-3.049 9.888 9.888 0 0 1-2.868-7.118 9.947 9.947 0 0 1 3.064-6.949A10.37 10.37 0 0 1 12.212 2h.176a9.935 9.935 0 0 1 6.614 2.564L16.457 6.88a6.187 6.187 0 0 0-4.131-1.566 6.9 6.9 0 0 0-4.794 1.913 6.618 6.618 0 0 0-2.045 4.657 6.608 6.608 0 0 0 1.882 4.723 6.891 6.891 0 0 0 4.725 2.07h.143c1.41.072 2.8-.354 3.917-1.2a5.77 5.77 0 0 0 2.172-3.41l.043-.117H12.22v-3.41h9.678c.075.617.109 1.238.1 1.859-.099 5.741-4.017 9.6-9.746 9.6l-.215-.002Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </span>
+          <p className="shdg font-bold">SIGN IN WITH GOOGLE</p>
         </div>
       </div>
     </>

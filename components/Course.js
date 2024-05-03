@@ -8,12 +8,17 @@ export default function Course() {
   const [search, setSearch] = useState("");
   const [isLoading, setLoading] = useState(true);
   let [Course, setCourse] = useState([]);
+  const [randomColor, setRandomColor] = useState("");
 
   useEffect(() => {
     axios.get("/api/courses").then((response) => {
       setCourse(response.data);
       setLoading(false);
     });
+
+    const colors = ["red", "yellow", "green", "blue", "gray", "purple", "pink"];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    setRandomColor(colors[randomIndex]);
   }, []);
 
   if (isLoading) {
