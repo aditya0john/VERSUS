@@ -72,13 +72,13 @@ export default function Course() {
                 : items.title.toLocaleLowerCase().includes(search);
             }).map((Course) => {
               return (
-                <span>
+                <span className="card">
                   <Cards
                     SVG={Course?.title}
                     href={"/chapters/" + Course?._id}
                     color={"orange"}
-                    text={Course?.description + " Course"}
-                    button={Course?.title}
+                    text={Course?.title + " " + Course?.description + " Course"}
+                    button={"OPEN COURSE"}
                   />
                 </span>
               );

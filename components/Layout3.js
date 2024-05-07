@@ -13,9 +13,8 @@ export default function Layout3({ children }) {
           <div className="bg-black p-1 text-black rounded-top">
             <Itemstrip />
             <div className="gridd h-100">
-              <aside className="seashell rounded-lg ml-1 mt-1 h-80">
-                <hr />
-                <div className="seashell p-2 rounded-lg flex items-center justify-center">
+              <aside className="seashell rounded-lg p-3 ml-1 mt-1 h-80">
+                <div className="seashell p-3 rounded-lg flex items-center justify-center">
                   <form>
                     <label className="text-uppercase">date :</label>
                     <input

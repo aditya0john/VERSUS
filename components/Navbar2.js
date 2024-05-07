@@ -1,7 +1,5 @@
 import Link from "next/link";
-import React from "react";
 import { signOut, useSession } from "next-auth/react";
-import { data } from "autoprefixer";
 
 async function logout() {
   await signOut();
@@ -19,7 +17,7 @@ function Navbar2() {
     session?.expires
   );
   return (
-    <nav className="bg-white text-black p-3 flex gap-2 justify-between border-bottom">
+    <nav className=" text-black p-3 flex gap-2 justify-between border-bottom">
       <div className="flex gap-3 items-center">
         <Link
           href="/"
@@ -111,12 +109,12 @@ function Navbar2() {
 
           <ul class="dropdown-menu pt-0">
             <div className="flex flex-col justify-center bg-gray-200 p-3 change">
-              <img className="rounded-lg" src={session?.user?.image} />
+              <img className="rounded" src={session?.user?.image} />
               <p className="flex justify-center shdg mb-0">
                 {session?.user?.name}
               </p>
             </div>
-            <hr />
+            <hr className="mt-0" />
             <li>
               <Link
                 href="/"
@@ -125,6 +123,8 @@ function Navbar2() {
                 Profile
               </Link>
             </li>
+            <hr className="mt-0" />
+
             <li>
               <Link
                 href="/"
@@ -133,6 +133,7 @@ function Navbar2() {
                 Enrolled Courses
               </Link>
             </li>
+            <hr className="mt-0" />
             <li>
               <Link
                 href="/"

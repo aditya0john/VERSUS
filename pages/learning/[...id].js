@@ -4,6 +4,7 @@ import Loading from "@/components/Loading";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import ReactHtmlParser from "react-html-parser";
+import Timer from "@/components/Timer";
 
 function Learning() {
   const [isLoading, setLoading] = useState(true);
@@ -41,7 +42,6 @@ function Learning() {
           courseId = value;
         }
       }
-
       return { chapterId, courseId };
     } else {
       console.error(
@@ -85,6 +85,9 @@ function Learning() {
   return (
     <main>
       <Layout2>
+        <div className="sticky top-0 z-1 mt-5">
+          <Timer />
+        </div>
         {course.map((product, i) => (
           <div key={i}>
             {product.chapters
@@ -99,20 +102,22 @@ function Learning() {
                     </div>
                     <div className="flex gap-4">
                       {/* Render other content */}
-                      <div className="dropdown bg-gray-200 rounded-lg change p-2">
+                      <div className="dropdown bg-orange-100 rounded-lg p-2">
                         <button
-                          className="p-2 dropdown-toggle text-black"
+                          className="p-2 dropdown-toggle "
                           type="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
                         >
                           Chapter Summary
                         </button>
-                        <ul className="dropdown-menu border border-black">
-                          <li className="dropdown-item">{chapter?.summary}</li>
+                        <ul className="dropdown-menu">
+                          <li className="dropdown-item text-gray-400 hover:text-white">
+                            {chapter?.summary}
+                          </li>
                         </ul>
                       </div>
-                      <div className="flex gap-2 items-center dropdown bg-gray-200 rounded-lg change p-2">
+                      <div className="flex gap-2 items-center dropdown bg-orange-100 rounded-lg  p-2">
                         {/* Render other content */}
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -128,32 +133,34 @@ function Learning() {
                             d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
                           />
                         </svg>
-
                         <button
-                          className="p-2 dropdown-toggle text-black"
+                          className="p-2 dropdown-toggle"
                           type="button"
                           data-bs-toggle="dropdown"
                           aria-expanded="false"
                         >
                           Select Chapter
                         </button>
-
-                        <ul className="dropdown-menu border border-black">
+                        <ul className=" dropdown-menu">
                           {course
                             .filter((product) => product._id == courseId)
                             .map((product, i) => (
-                              <div key={i}>
+                              <div
+                                key={i}
+                                className="text-gray-400 hover:text-white"
+                              >
                                 {product.chapters.map((chapter, j) => (
-                                  <li className="border" key={j}>
+                                  <li key={j}>
                                     <button
                                       className="p-0 dropdown-item"
                                       onClick={() =>
                                         (window.location.href = `/learning/chapterId=${chapter?._id}&courseId=${id}`)
                                       }
                                     >
-                                      <p className="flex justify-center pt-1">
-                                        <b>{product?.title}</b>{" "}
-                                        <i>Chapter: {j + 1}</i>
+                                      <p className="flex justify-center pt-2">
+                                        {`${product?.title}` +
+                                          " - Chapter: " +
+                                          (j + 1)}
                                       </p>
                                     </button>
                                   </li>
@@ -166,7 +173,7 @@ function Learning() {
                   </div>
                   <hr />
                   <div className="m-2 h-full max-h-full">
-                    <div className="bg-gray-200 w-full p-3 rounded-lg flex gap-4">
+                    <div className="bg-orange-100 w-full p-3 rounded-lg flex gap-4">
                       <p className="flex items-center phdg">TOPICS:</p>
                       {Array.from(document.querySelectorAll("div[id]")).map(
                         (div, index) => (
@@ -180,11 +187,11 @@ function Learning() {
                         )
                       )}
                     </div>
-                    <div className="bg-gray-200 p-3 rounded-lg mt-10">
+                    <div className="bg-orange-100 p-3 rounded-lg mt-10">
                       {ReactHtmlParser(divs[1]?.innerHTML)}
                       {console.log(divs[1].innerText)}
                     </div>
-                    <div className="scale-95 bg-gray-200 rounded-lg p-4">
+                    <div className="scale-95 bg-orange-100 rounded-lg p-4">
                       {/* Render only the div that matches the index */}
                       {ReactHtmlParser(parsedContent)}
                     </div>

@@ -6,7 +6,7 @@ function Navbar1() {
     window.location.href = "/SignUp";
   }
   return (
-    <div className="sticky top-0 z-1 seashell text-black p-3 flex items-center gap-2 justify-between border-bottom">
+    <nav className="glass sticky top-0 z-1 text-black p-3 flex items-center gap-2 justify-between border-bottom">
       <Link
         href="/"
         className="flex items-center text-decoration-none text-black font-bold"
@@ -22,7 +22,7 @@ function Navbar1() {
       </Link>
 
       <div className="flex gap-20 items-center">
-        <div class="dropdown nav_text">
+        <div class="dropdown ">
           <button
             class=" dropdown-toggle"
             type="button"
@@ -31,13 +31,13 @@ function Navbar1() {
           >
             PRODUCTS
           </button>
-          <ul class="bg-black dropdown-menu p-0 mt-4 nav_text">
+          <ul class="bg-black dropdown-menu p-0 mt-4 ">
             <li className="mt-10 mb-10 ">
               <Link
                 href="/"
                 className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
                   Product 1
                 </p>
               </Link>
@@ -46,7 +46,7 @@ function Navbar1() {
                 href="/"
                 className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
                   Product 2
                 </p>
               </Link>
@@ -55,7 +55,7 @@ function Navbar1() {
                 href="/"
                 className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
                   Product 3
                 </p>
               </Link>
@@ -63,7 +63,7 @@ function Navbar1() {
           </ul>
         </div>
 
-        <div class="dropdown nav_text">
+        <div class="dropdown">
           <button
             class="dropdown-toggle"
             type="button"
@@ -72,13 +72,13 @@ function Navbar1() {
           >
             HELP & SUPPORT
           </button>
-          <ul class="bg-black dropdown-menu p-0 mt-4 nav_text">
+          <ul class="bg-black dropdown-menu p-0 mt-4 ">
             <li className="mt-10 mb-10">
               <Link
                 href="/Help&Support"
                 className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
                   Call customer care
                 </p>
               </Link>
@@ -87,7 +87,7 @@ function Navbar1() {
                 href="/Help&Support"
                 className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
                   File a Report
                 </p>
               </Link>
@@ -96,7 +96,7 @@ function Navbar1() {
                 href="/Help&Support"
                 className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
                   E-mail us
                 </p>
               </Link>
@@ -105,7 +105,7 @@ function Navbar1() {
                 href="/Help&Support"
                 className="dropdown-item text-decoration-none bg-black"
               >
-                <p className="nav_text hdg flex items-center justify-center text-gray-400 hover:text-white">
+                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
                   Ask us anything
                 </p>
               </Link>
@@ -131,7 +131,7 @@ function Navbar1() {
           </button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

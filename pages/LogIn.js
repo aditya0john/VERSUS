@@ -21,7 +21,7 @@ function LogIn() {
       <Navbar1 />
       <div className="flex justify-center items-center hdg text-black uppercase mt-5">
         <img src="/images/logo.png" alt="image" className="w-20 h-20" />
-        <p className="phdg pl-2">VERSUS</p>
+        <p className="phdg pl-2">LOG IN</p>
       </div>
       <div className="grid grid-cols-2 body">
         <div className="border border-black flex flex-col mt-4 rounded-lg flex justify-center items-center">
@@ -47,7 +47,7 @@ function LogIn() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button
-              className="border border-black rounded-lg p-3 mt-3 hover:bg-green-500"
+              className="border border-black rounded-lg p-3 mt-5 hover:bg-green-500"
               type="submit"
             >
               LOG IN

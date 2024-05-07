@@ -11,7 +11,7 @@ export default function Home() {
   const { data: session } = useSession();
   console.log({ session });
 
-  let [Institutions, setInstitutions] = useState(100000);
+  let [Institutions, setInstitutions] = useState(1200);
   let [Teacher, setTeacher] = useState(66000);
   let [Learners, setLearners] = useState(1205330);
   let [Meetings, setMeetings] = useState(10652);
@@ -49,7 +49,7 @@ export default function Home() {
                 </p>
                 <hr className="border border-black" />
                 <Link
-                  href="/"
+                  href="/SignUp"
                   className=" makeLine text-decoration-none border border-black rounded-lg p-3 px-4 shdg change_button"
                 >
                   BECOME A STUDENT
@@ -227,12 +227,6 @@ export default function Home() {
                     of auto-evaluated and manually evaluated question types
                   </li>
                   <li>
-                    • Auto-evaluated question types include computer programming
-                    in multiple languages, variants of multiple choice, fill in
-                    the blanks, numerical type, match columns, spoken english,
-                    reading comprehension, listening comprehension, etc.
-                  </li>
-                  <li>
                     • Manually evaluated question types include subjective
                     essay, viva voce, document upload, etc.
                   </li>
@@ -394,7 +388,7 @@ export default function Home() {
                 color="orange"
               />
               <Cards
-                text="click here to go to code editor"
+                text="click here to do coding in the code editor"
                 button="CODE EDITOR"
                 src="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
                 href="/Coding"

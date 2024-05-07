@@ -31,7 +31,7 @@ function SignUp() {
       <Navbar1 />
       <div className="flex justify-center items-center hdg text-black mt-5">
         <img src="/images/logo.png" alt="image" className="w-20 h-20" />
-        <p className="phdg pl-2">VERSUS</p>
+        <p className="phdg pl-2">SIGN IN</p>
       </div>
       <div className="body flex flex-col mt-4 rounded-lg flex justify-center items-center">
         <form className="flex flex-col justify-center w-full items-center p-4 body">

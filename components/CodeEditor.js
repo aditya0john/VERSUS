@@ -5,12 +5,23 @@ import "ace-builds/src-noconflict/ext-language_tools";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/theme-monokai";
+import { useRouter } from "next/router";
 
 export default function CodeEditor({ onCompile }) {
+  let route = useRouter();
   let [lang, setLanguage] = useState("c_cpp");
+  let color;
   let [code, setCode] = useState(
     "#include <iostream>\nusing namespace std;\n\nint main() {\n  // Your C++ code here\n  return 0;\n}"
   );
+
+  if (route.asPath.includes("/Coding")) {
+    color = "purple";
+  } else if (route.asPath.includes("/ProgLabs")) {
+    color = "orange";
+  } else {
+    color = "gray";
+  }
 
   const handleCompile = () => {
     onCompile(code, lang);
@@ -18,7 +29,7 @@ export default function CodeEditor({ onCompile }) {
 
   return (
     <>
-      <div className="bg-gray-200 rounded-lg p-3 grid gap-3">
+      <div className={`bg-${color}-100 rounded-lg p-3 grid gap-3`}>
         <div>
           <div className="flex justify-between mb-3">
             <h3 className="uppercase">Code Editor</h3>
@@ -51,7 +62,7 @@ export default function CodeEditor({ onCompile }) {
         </div>
         <button
           onClick={handleCompile}
-          className="flex gap-2 items-center border border-black box change p-3 rounded-lg mt-3 shdg uppercase"
+          className={`bg-${color}-200 flex gap-2 items-center box change p-3 rounded-lg mt-3 shdg uppercase`}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

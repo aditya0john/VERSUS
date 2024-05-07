@@ -22,8 +22,7 @@ function Cards({ text, button, src, href, color, SVG }) {
                 x="12"
                 y="14"
                 font-size="5"
-                viewBox="0 0 24 24"
-                font-weight="100"
+                strokeWidth={0.4}
                 text-anchor="middle"
               >
                 {SVG}

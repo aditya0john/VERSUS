@@ -48,7 +48,7 @@ export default function Test() {
                 {product.tests.map((test, j) => (
                   <>
                     <Link
-                      className="text-decoration-none rect box change_button"
+                      className="text-decoration-none bg-orange-100 p-3 rounded box change_button"
                       key={j}
                       href={`/ProgLabs/testId=${test?._id}&courseId=${id}`}
                     >
@@ -57,7 +57,6 @@ export default function Test() {
                         <div className="hdg font-bold pl-4 uppercase">
                           {test?.testName}
                         </div>
-                        <hr />
                         <p className="text-uppercase pl-4"></p>
                       </div>
                     </Link>

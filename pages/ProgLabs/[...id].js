@@ -1,6 +1,7 @@
 import CodeEditor from "@/components/CodeEditor";
 import Layout4 from "@/components/Layout4";
 import Loading from "@/components/Loading";
+import Timer from "@/components/Timer";
 import axios from "axios";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -87,10 +88,21 @@ export default function ProgLabs() {
   };
 
   function check(option, answer) {
+    const feedbackDiv = document.getElementById("feedback");
     if (option === answer && option != null && answer != null) {
-      alert("CORRECT");
+      feedbackDiv.innerText = "✔️";
+      feedbackDiv.style.backgroundColor = "lightgreen";
+      feedbackDiv.classList.add("show-feedback");
+      setTimeout(() => {
+        feedbackDiv.classList.remove("show-feedback");
+      }, 2000);
     } else if (option != answer && option != null && answer != null) {
-      alert("WRONG");
+      feedbackDiv.innerText = "❌";
+      feedbackDiv.style.backgroundColor = "yellow";
+      feedbackDiv.classList.add("show-feedback");
+      setTimeout(() => {
+        feedbackDiv.classList.remove("show-feedback");
+      }, 2000);
     }
   }
 
@@ -98,11 +110,14 @@ export default function ProgLabs() {
     <main className="user-select-none">
       <Layout4>
         <div className="h-full seashell rounded-lg p-1 gride">
-          <aside className="border border-black border-3 rounded-lg m-1">
+          <aside className="bg-purple-100 border border-black border-3 rounded-lg m-1 w-30">
             <div>
-              <p className="p-3 pb-0 mb-0 shdg font-bold">Questions</p>
+              <p className="flex justify-between p-3 pb-0 mb-0 shdg font-bold">
+                Questions
+                <Timer />
+              </p>
               <hr />
-              <div className="seashell rounded-lg m-2 flex gridd-cards">
+              <div className="rounded-lg m-2 grid grid-cols-4">
                 {Course.filter((x) => x._id == courseId).map((product) =>
                   product.tests
                     .filter((x) => x._id == testId)
@@ -129,7 +144,7 @@ export default function ProgLabs() {
             <div>
               <p className="p-3 pb-0 mb-0 shdg font-bold">Problems</p>
               <hr />
-              <div className="seashell rounded-lg m-2 flex gridd-cards">
+              <div className="rounded-lg m-2 flex grid grid-cols-4">
                 {Course.filter((x) => x._id == courseId).map((product) =>
                   product.tests
                     .filter((x) => x._id == testId)
@@ -151,7 +166,7 @@ export default function ProgLabs() {
           </aside>
 
           <div className="border border-black border-3 rounded-lg m-1">
-            <div className="p-3">
+            <div>
               {Course.filter((x) => x._id == courseId).map((product) =>
                 product.tests
                   .filter((x) => x._id == testId)
@@ -159,53 +174,67 @@ export default function ProgLabs() {
                     test.questions
                       .filter((x) => x._id == ques)
                       .map((question, j) => (
-                        <div key={j} className="bg-gray-200 p-3 rounded-lg">
+                        <div
+                          key={j}
+                          id="data"
+                          className="bg-orange-100 p-3 rounded-lg"
+                        >
                           <pre>
                             <p className="shdg font-bold uppercase">
                               Q. {question.question}
                               {console.log(question)}
                             </p>
                           </pre>
-                          <div className="bg-gray-200 mt-3">
+                          <div>
                             {question.options.map((option) => {
                               return (
-                                <div class="custom-radio">
-                                  <input
-                                    type="radio"
-                                    id="radio-1"
-                                    name="tabs"
-                                    value={"a"}
-                                  />
-                                  <label class="radio-label" for="radio-1">
-                                    <div class="radio-circle"></div>
-                                    <span class="radio-text">{option.a}</span>
-                                  </label>
-                                  <input
-                                    type="radio"
-                                    id="radio-2"
-                                    name="tabs"
-                                    value={"b"}
-                                  />
-                                  <label class="radio-label" for="radio-2">
-                                    <div class="radio-circle"></div>
-                                    <span class="radio-text">{option.b}</span>
-                                  </label>
-                                  <input
-                                    type="radio"
-                                    id="radio-3"
-                                    name="tabs"
-                                    value={"c"}
-                                  />
-                                  <label class="radio-label" for="radio-3">
-                                    <div class="radio-circle"></div>
-                                    <span class="radio-text">{option.c}</span>
-                                  </label>
-                                  <div className=" flex justify-center items-center gap-3 p-4">
+                                <>
+                                  <div class="custom-radio">
+                                    <input
+                                      type="radio"
+                                      id="radio-1"
+                                      name="tabs"
+                                      value={"a"}
+                                    />
+                                    <label class="radio-label" for="radio-1">
+                                      <div class="radio-circle"></div>
+                                      <span class="radio-text">{option.a}</span>
+                                    </label>
+                                    <input
+                                      type="radio"
+                                      id="radio-2"
+                                      name="tabs"
+                                      value={"b"}
+                                    />
+                                    <label class="radio-label" for="radio-2">
+                                      <div class="radio-circle"></div>
+                                      <span class="radio-text">{option.b}</span>
+                                    </label>
+                                    <input
+                                      type="radio"
+                                      id="radio-3"
+                                      name="tabs"
+                                      value={"c"}
+                                    />
+                                    <label class="radio-label" for="radio-3">
+                                      <div class="radio-circle"></div>
+                                      <span class="radio-text">{option.c}</span>
+                                    </label>
+                                  </div>
+                                  <div className="flex justify-center items-center gap-3 p-4">
+                                    <div id="feedback" class="feedback"></div>
                                     <button
-                                      onClick={check()}
-                                      className="border border-black bg-gray-200 change p-3 bradius flex gap-2"
+                                      onClick={() =>
+                                        check(
+                                          document.querySelector(
+                                            'input[name="tabs"]:checked'
+                                          )?.value,
+                                          question?.answer
+                                        )
+                                      }
+                                      className="bg-orange-200 change p-3 bradius flex items-center gap-2"
                                     >
-                                      <i className="shdg"> SUBMIT</i>
+                                      <i className="phdg">SUBMIT</i>
                                       <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         fill="none"
@@ -222,7 +251,7 @@ export default function ProgLabs() {
                                       </svg>
                                     </button>
                                   </div>
-                                </div>
+                                </>
                               );
                             })}
                           </div>
@@ -238,23 +267,23 @@ export default function ProgLabs() {
                       .filter((x) => x._id == ques)
                       .map((problem, j) => (
                         <div key={j}>
-                          <div id="root">
+                          <div id="root" className="p-3">
                             <i className="phdg uppercase">
                               Q. {problem.problem}.{console.log(problem)}
                             </i>
                             <hr />
-                            <div className="bg-white rounded-lg">
+                            <div className="bg-white rounded-lg ">
                               <div>
                                 <CodeEditor onCompile={handleCompile} />
                               </div>
 
-                              <div className="bg-gray-200 p-3 mt-3 rounded-lg">
+                              <div className="bg-orange-100 p-3 mt-3 rounded-lg">
                                 <div>
                                   <h3>Output</h3>
                                   <div>
                                     <textarea
-                                      className="border border-black rounded-lg w-full p-2 hover:bg-black hover:text-white hover:placeholder-white"
-                                      placeholder="//the output is shown here"
+                                      className="bg-white change border border-black rounded-lg w-full p-2 placeholder:uppercase hover:bg-black hover:text-white hover:placeholder-white"
+                                      placeholder="the output is shown here"
                                       value={output}
                                     />
                                   </div>
@@ -263,8 +292,8 @@ export default function ProgLabs() {
                                 <div>
                                   <h3 className="mt-4">Standard Input</h3>
                                   <textarea
-                                    className="border border-black rounded p-2 w-full hover:bg-black hover:placeholder-white hover:text-white"
-                                    placeholder="*enter the pre-defined input*"
+                                    className="bg-white border border-black rounded p-2 w-full placeholder:uppercase hover:bg-black hover:placeholder-white hover:text-white"
+                                    placeholder="**enter the pre-defined input here**"
                                     id="input"
                                     name="input"
                                   />
