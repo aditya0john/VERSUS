@@ -124,7 +124,7 @@ function Navbar1() {
         </div>
         <div className="flex gap-2">
           <button
-            className="border border-black rounded-md px-3 p-2 hover:bg-green-500"
+            className="border border-black rounded-md px-3 p-2 hover:bg-green-400"
             onClick={() => (window.location.href = "/LogIn")}
           >
             Log In

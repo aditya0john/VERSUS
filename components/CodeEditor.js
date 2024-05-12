@@ -33,16 +33,23 @@ export default function CodeEditor({ onCompile }) {
         <div>
           <div className="flex justify-between mb-3">
             <h3 className="uppercase">Code Editor</h3>
-            <span>
-              <label className="font-bold shdg">Languge :</label>
-              <select
-                className="border border-black p-2 rounded ml-1 uppercase bg-black text-white"
-                onChange={(e) => setLanguage(e.target.value)}
+            <span className="flex gap-2">
+              <button
+                className={`bg-${color}-200 change rounded-lg p-2 px-4 uppercase`}
               >
-                <option value={"c_cpp"}>C & C++</option>
-                <option value={"java"}>java</option>
-                <option value={"python"}>Python</option>
-              </select>
+                reset
+              </button>
+              <span>
+                <label className="font-bold shdg">Languge :</label>
+                <select
+                  className="border border-black p-2 rounded ml-1 uppercase bg-black text-white"
+                  onChange={(e) => setLanguage(e.target.value)}
+                >
+                  <option value={"c_cpp"}>C & C++</option>
+                  <option value={"java"}>java</option>
+                  <option value={"python"}>Python</option>
+                </select>
+              </span>
             </span>
           </div>
           <AceEditor

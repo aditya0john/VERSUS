@@ -282,7 +282,8 @@ export default function ProgLabs() {
                                   <h3>Output</h3>
                                   <div>
                                     <textarea
-                                      className="bg-white change border border-black rounded-lg w-full p-2 placeholder:uppercase hover:bg-black hover:text-white hover:placeholder-white"
+                                      disabled="disabled"
+                                      className="bg-white change border border-black rounded-lg w-full p-2 placeholder:uppercase change"
                                       placeholder="the output is shown here"
                                       value={output}
                                     />
@@ -292,7 +293,7 @@ export default function ProgLabs() {
                                 <div>
                                   <h3 className="mt-4">Standard Input</h3>
                                   <textarea
-                                    className="bg-white border border-black rounded p-2 w-full placeholder:uppercase hover:bg-black hover:placeholder-white hover:text-white"
+                                    className="bg-white border border-black rounded p-2 w-full placeholder:uppercase change"
                                     placeholder="**enter the pre-defined input here**"
                                     id="input"
                                     name="input"

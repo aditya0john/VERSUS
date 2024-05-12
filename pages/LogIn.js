@@ -47,7 +47,7 @@ function LogIn() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button
-              className="border border-black rounded-lg p-3 mt-5 hover:bg-green-500"
+              className="border border-black rounded-lg p-3 mt-5 hover:bg-green-400"
               type="submit"
             >
               LOG IN
