@@ -4,6 +4,7 @@ import React, { useState } from "react";
 function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [verifyPass, setVerifyPass] = useState("");
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = (ev) => {
@@ -31,7 +32,7 @@ function SignUp() {
       <Navbar1 />
       <div className="flex justify-center items-center hdg text-black mt-5">
         <img src="/images/logo.png" alt="image" className="w-20 h-20" />
-        <p className="phdg pl-2">SIGN IN</p>
+        <p className="phdg pl-2">SIGN UP</p>
       </div>
       <div className="body flex flex-col mt-4 rounded-lg flex justify-center items-center">
         <form className="flex flex-col justify-center w-full items-center p-4 body">
@@ -82,9 +83,10 @@ function SignUp() {
             <hr />
           </label>
           <input
+            value={verifyPass}
             placeholder="enter your password again"
             className="bg-white text-black rounded-md border border-black p-2 w-full change hover:placeholder-white"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e) => setVerifyPass(e.target.value)}
           />
           <div className="flex mt-20">
             <button

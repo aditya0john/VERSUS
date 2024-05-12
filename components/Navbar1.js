@@ -119,7 +119,7 @@ function Navbar1() {
             className="border border-black rounded-md px-3 p-2 hover:bg-yellow-300"
             onClick={signUp}
           >
-            Sign In
+            Sign Up
           </button>
         </div>
         <div className="flex gap-2">

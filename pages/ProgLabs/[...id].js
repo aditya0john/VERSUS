@@ -88,19 +88,24 @@ export default function ProgLabs() {
   };
 
   function check(option, answer) {
+    const submit = document.getElementById("submit");
     const feedbackDiv = document.getElementById("feedback");
     if (option === answer && option != null && answer != null) {
+      submit.style.opacity = 0;
       feedbackDiv.innerText = "✔️";
       feedbackDiv.style.backgroundColor = "lightgreen";
       feedbackDiv.classList.add("show-feedback");
       setTimeout(() => {
+        submit.style.opacity = 100;
         feedbackDiv.classList.remove("show-feedback");
       }, 2000);
     } else if (option != answer && option != null && answer != null) {
       feedbackDiv.innerText = "❌";
+      submit.style.opacity = 0;
       feedbackDiv.style.backgroundColor = "yellow";
       feedbackDiv.classList.add("show-feedback");
       setTimeout(() => {
+        submit.style.opacity = 100;
         feedbackDiv.classList.remove("show-feedback");
       }, 2000);
     }
@@ -222,7 +227,6 @@ export default function ProgLabs() {
                                     </label>
                                   </div>
                                   <div className="flex justify-center items-center gap-3 p-4">
-                                    <div id="feedback" class="feedback"></div>
                                     <button
                                       onClick={() =>
                                         check(
@@ -232,6 +236,7 @@ export default function ProgLabs() {
                                           question?.answer
                                         )
                                       }
+                                      id="submit"
                                       className="bg-orange-200 change p-3 bradius flex items-center gap-2"
                                     >
                                       <i className="phdg">SUBMIT</i>
@@ -250,6 +255,12 @@ export default function ProgLabs() {
                                         />
                                       </svg>
                                     </button>
+                                    <div className="absolute z-1 flex items-center justify-center">
+                                      <div
+                                        id="feedback"
+                                        className="feedback"
+                                      ></div>
+                                    </div>
                                   </div>
                                 </>
                               );

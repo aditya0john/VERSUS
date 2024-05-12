@@ -14,8 +14,9 @@ kit-scrollbar {
   }
 }
 
+
 .timer {
-  animation: time 1.6s infinite ease-in-out;
+  animation: time 1s infinite ease-in-out;
 }
 @keyframes time {
   0% {
