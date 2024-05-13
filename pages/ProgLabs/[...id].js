@@ -16,6 +16,7 @@ export default function ProgLabs() {
   const [ques, setQuestion] = useState(null);
   const [output, setOutput] = useState(null);
   let [answer, setAnswer] = useState(null);
+  let [press, setPress] = useState(false);
   let [Course, setCourse] = useState([]);
   let router = useRouter();
 
@@ -107,7 +108,7 @@ export default function ProgLabs() {
       setTimeout(() => {
         submit.style.opacity = 100;
         feedbackDiv.classList.remove("show-feedback");
-      }, 2000);
+      }, 1000);
     }
   }
 
@@ -119,7 +120,7 @@ export default function ProgLabs() {
             <div>
               <p className="flex justify-between p-3 pb-0 mb-0 shdg font-bold">
                 Questions
-                <Timer />
+                <Timer press={press} />
               </p>
               <hr />
               <div className="rounded-lg m-2 grid grid-cols-4">
@@ -131,13 +132,15 @@ export default function ProgLabs() {
                         <div key={j}>
                           <span key={j} className="">
                             <button
-                              onClick={() => setQuestion(question._id)}
+                              onClick={() => {
+                                setQuestion(question?._id);
+                                setPress(true);
+                              }}
                               className={
                                 ques == question._id ? active : inactive
                               }
                             >
                               {j + 1}
-                              {console.log("NUMBER", ques)}
                             </button>
                           </span>
                         </div>
@@ -157,7 +160,10 @@ export default function ProgLabs() {
                       test.problems.map((problem, j) => (
                         <span key={j} className="flex">
                           <button
-                            onClick={() => setQuestion(problem._id)}
+                            onClick={() => {
+                              setQuestion(problem?._id);
+                              setPress(true);
+                            }}
                             className={ques == problem._id ? active : inactive}
                           >
                             {j + 1}
@@ -187,7 +193,6 @@ export default function ProgLabs() {
                           <pre>
                             <p className="shdg font-bold uppercase">
                               Q. {question.question}
-                              {console.log(question)}
                             </p>
                           </pre>
                           <div>

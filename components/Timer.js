@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-function Timer() {
+function Timer({ press }) {
   let recordedTime;
+  let [buttonPress, setButtonPress] = useState(press);
   const [time, setTime] = useState(0);
   const route = useRouter();
 
   useEffect(() => {
     let timer;
-
     if (
-      route.asPath.includes("/ProgLabs") ||
+      (press && route.asPath.includes("/ProgLabs")) ||
       route.asPath.includes("/learning")
     ) {
       timer = setInterval(() => {
@@ -21,16 +21,16 @@ function Timer() {
     return () => {
       clearInterval(timer);
     };
-  }, [route.asPath]);
+  }, [press, route.asPath]);
 
   useEffect(() => {
     if (
-      !route.asPath.includes("/ProgLabs") ||
-      !route.asPath.includes("/learning")
+      (!press && route.asPath.includes("/ProgLabs")) ||
+      route.asPath.includes("/learning")
     ) {
       setTime(0);
     }
-  }, [route.asPath]);
+  }, [press, route.asPath]);
 
   function formatTime() {
     const hours = Math.floor(time / 3600);
