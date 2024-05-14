@@ -8,6 +8,7 @@ export default NextAuth({
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
+      redirectUri: `${process.env.NEXTAUTH_URL}/api/auth/callback/google`,
     }),
   ],
   adapter: MongoDBAdapter(clientPromise),

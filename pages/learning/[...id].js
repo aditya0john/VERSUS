@@ -195,6 +195,7 @@ function Learning() {
                     <div className="scale-95 bg-orange-100 rounded-lg p-4">
                       {/* Render only the div that matches the index */}
                       {ReactHtmlParser(chapter?.content)}
+                      {/* {ReactHtmlParser(parsedContent)} */}
                     </div>
                   </div>
                 </div>
