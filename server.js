@@ -18,56 +18,56 @@ app.post("/compile", (req, res) => {
   let compilerPath;
   let compilerArgs;
 
-  const inputDemandRegex =
-    /(cin\s*>>\s*)(\w+)|\b(Scanner)\s+(\w+)\s*=\s*new\s+Scanner\(System\.in\)\s*;/g;
-  const inputDemands = [];
-  let match;
-  while ((match = inputDemandRegex.exec(code)) !== null) {
-    // match[2] contains the variable name for cin >> statements
-    // match[4] contains the variable name for Scanner statements
-    if (match[2]) {
-      inputDemands.push({ type: "cin", variable: match[2] });
-    } else if (match[4]) {
-      inputDemands.push({ type: "Scanner", variable: match[4] });
-    }
-  }
+  // const inputDemandRegex =
+  //   /(cin\s*>>\s*)(\w+)|\b(Scanner)\s+(\w+)\s*=\s*new\s+Scanner\(System\.in\)\s*;/g;
+  // const inputDemands = [];
+  // let match;
+  // while ((match = inputDemandRegex.exec(code)) !== null) {
+  //   // match[2] contains the variable name for cin >> statements
+  //   // match[4] contains the variable name for Scanner statements
+  //   if (match[2]) {
+  //     inputDemands.push({ type: "cin", variable: match[2] });
+  //   } else if (match[4]) {
+  //     inputDemands.push({ type: "Scanner", variable: match[4] });
+  //   }
+  // }
 
-  console.log("Input Demands:", inputDemands);
+  // console.log("Input Demands:", inputDemands);
 
-  // Send response with input demands
-  res.send({ inputDemands });
+  // // Send response with input demands
+  // res.send({ inputDemands });
 
-  // Take inputs from user
-  const userInput = {};
-  const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-  });
+  // // Take inputs from user
+  // const userInput = {};
+  // const rl = readline.createInterface({
+  //   input: process.stdin,
+  //   output: process.stdout,
+  // });
 
-  try {
-    // Your server code here
-    const promptUserInput = (inputDemandIndex) => {
-      if (inputDemandIndex >= inputDemands.length) {
-        rl.close();
-        console.log("User Input:", userInput);
-        res.send({ userInput });
-        return;
-      }
+  // try {
+  //   // Your server code here
+  //   const promptUserInput = (inputDemandIndex) => {
+  //     if (inputDemandIndex >= inputDemands.length) {
+  //       rl.close();
+  //       console.log("User Input:", userInput);
+  //       res.send({ userInput });
+  //       return;
+  //     }
 
-      const inputDemand = inputDemands[inputDemandIndex];
-      rl.question(
-        `Enter a value for ${inputDemand.variable}: `,
-        (userInputValue) => {
-          userInput[inputDemand.variable] = userInputValue;
-          promptUserInput(inputDemandIndex + 1);
-        }
-      );
-    };
+  //     const inputDemand = inputDemands[inputDemandIndex];
+  //     rl.question(
+  //       `Enter a value for ${inputDemand.variable}: `,
+  //       (userInputValue) => {
+  //         userInput[inputDemand.variable] = userInputValue;
+  //         promptUserInput(inputDemandIndex + 1);
+  //       }
+  //     );
+  //   };
 
-    promptUserInput(0);
-  } catch (error) {
-    console.error("An error occurred:", error);
-  }
+  //   promptUserInput(0);
+  // } catch (error) {
+  //   console.error("An error occurred:", error);
+  // }
 
   // Spawn a new g++ process for each compilation request
   if (lang === "c_cpp") {
