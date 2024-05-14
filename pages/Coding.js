@@ -9,10 +9,13 @@ function Coding() {
 
   const handleCompile = async (code, lang) => {
     try {
-      const response = await axios.post("https://e-learning-website-major-project.vercel.app/compile", {
-        code,
-        lang,
-      });
+      const response = await axios.post(
+        "https://e-learning-website-major-project.vercel.app/compile",
+        {
+          code,
+          lang,
+        }
+      );
 
       const { compileOutput } = response.data;
 
