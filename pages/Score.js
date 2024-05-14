@@ -9,8 +9,10 @@ export default function Score() {
 
   useEffect(() => {
     // Extract divs with ids and store them in state
-
-    setDivs(document.querySelectorAll("div[id]"));
+    if (typeof window !== "undefined") {
+      // Code that uses document or window here
+      setDivs(document.querySelectorAll("div[id]"));
+    }
 
     // Count the number of divs with id attribute
     const count = divs.length;
