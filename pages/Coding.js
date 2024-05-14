@@ -5,30 +5,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 function Coding() {
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
   const [output, setOutput] = useState(null);
-
-  useEffect(() => {
-    fetch("https://api.jsonbin.io/v3/b/659d5db3266cfc3fde74ba15")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      });
-  }, []);
-
-  console.log("oyeeeee", data);
-
-  if (isLoading) {
-    return (
-      <div className="w-screen h-screen flex items-center justify-center">
-        <Loading />
-      </div>
-    );
-  } else if (!data) {
-    return <p>No profile data</p>;
-  }
 
   const handleCompile = async (code, lang) => {
     try {
@@ -37,13 +14,13 @@ function Coding() {
         lang,
       });
 
-      const { compileOutput, executionOutput } = response.data;
+      const { compileOutput } = response.data;
 
       console.log("Compilation Output:", compileOutput);
-      console.log("Execution Output:", executionOutput);
+      // console.log("Execution Output:", executionOutput);
 
       // Update the state with compile and execution output
-      setOutput(executionOutput);
+      setOutput(compileOutput);
     } catch (error) {
       console.error("Compilation Error:", error.message);
       setOutput("-> " + error.message + " <-");

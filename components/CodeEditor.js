@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AceEditor from "react-ace";
 import "ace-builds/src-noconflict/mode-c_cpp";
 import "ace-builds/src-noconflict/ext-language_tools";
@@ -84,7 +84,7 @@ export default function CodeEditor({ onCompile }) {
                   className="border border-black p-2 rounded ml-1 uppercase bg-black text-white"
                   onChange={(e) => setLanguage(e.target.value)}
                 >
-                  <option value={"c_cpp"}>C & C++</option>
+                  <option value={"cpp17"}>C & C++</option>
                   <option value={"java"}>java</option>
                   <option value={"python"}>Python</option>
                 </select>

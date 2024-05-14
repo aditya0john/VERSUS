@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const { spawn } = require("child_process");
 const cors = require("cors");
 const readline = require("readline");
+const { default: axios } = require("axios");
 
 const app = express();
 const port = 3001;
@@ -10,14 +11,30 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post("/compile", (req, res) => {
+app.post("/compile", async (req, res) => {
   const code = req.body.code;
   const lang = req.body.lang;
-  console.log(`Received Code:`, req.body, code);
+  console.log(`Received Code:`, code, lang);
 
   let compilerPath;
   let compilerArgs;
 
+  try {
+    const response = await axios.post("https://api.jdoodle.com/v1/execute", {
+      clientId: "48e4ddaba9c67cd755ccbd1a528a6be2",
+      clientSecret:
+        "c1206b230df1ac9286d0be2a61de511522464793805adaf7d6b3d4e7ebb98b1c",
+      script: code,
+      language: lang,
+      versionIndex: "0",
+    });
+
+    res.send({ compileOutput: response?.data?.output });
+    console.log("LODA", response?.data?.output);
+  } catch (error) {
+    console.error("Compilation error:", error);
+    res.status(500).send({ compileOutput: "Compilation error" });
+  }
   // const inputDemandRegex =
   //   /(cin\s*>>\s*)(\w+)|\b(Scanner)\s+(\w+)\s*=\s*new\s+Scanner\(System\.in\)\s*;/g;
   // const inputDemands = [];
@@ -70,80 +87,80 @@ app.post("/compile", (req, res) => {
   // }
 
   // Spawn a new g++ process for each compilation request
-  if (lang === "c_cpp") {
-    compilerPath = "C:/Program Files/CodeBlocks/MinGW/bin/g++.exe";
-    compilerArgs = ["-o", "compiledCode", "-x", "c++", "-"];
-  } else if (lang === "java") {
-    compilerPath = "";
-    compilerArgs = [];
-  } else if (lang === "python") {
-    compilerPath = "";
-    compilerArgs = [];
-  } else {
-    res.send("invalid language");
-    return;
-  }
+  // if (lang === "c_cpp") {
+  //   compilerPath = "C:/Program Files/CodeBlocks/MinGW/bin/g++.exe";
+  //   compilerArgs = ["-o", "compiledCode", "-x", "c++", "-"];
+  // } else if (lang === "java") {
+  //   compilerPath = "";
+  //   compilerArgs = [];
+  // } else if (lang === "python") {
+  //   compilerPath = "";
+  //   compilerArgs = [];
+  // } else {
+  //   res.send("invalid language");
+  //   return;
+  // }
 
-  const compileProcess = spawn(compilerPath, compilerArgs);
+  // const compileProcess = spawn(compilerPath, compilerArgs);
 
-  console.log("Compilation Command:", "g++", [
-    "-o",
-    "compiledCode",
-    "-x",
-    lang,
-    "-",
-  ]);
+  // console.log("Compilation Command:", "g++", [
+  //   "-o",
+  //   "compiledCode",
+  //   "-x",
+  //   lang,
+  //   "-",
+  // ]);
 
-  let stdoutData = "";
-  let stderrData = "";
+  // let stdoutData = "";
+  // let stderrData = "";
 
-  console.log("Compilation process starting at:", new Date().toISOString());
+  // console.log("Compilation process starting at:", new Date().toISOString());
 
-  // Handle stdout data
-  compileProcess.stdout.on("data", (data) => {
-    stdoutData += data.toString();
-    console.log("stdout:", data.toString());
-  });
+  // // Handle stdout data
+  // compileProcess.stdout.on("data", (data) => {
+  //   stdoutData += data.toString();
+  //   console.log("stdout:", data.toString());
+  // });
 
-  // Handle stderr data
-  compileProcess.stderr.on("data", (data) => {
-    stderrData += data.toString();
-    console.error("stderr:", data.toString());
-  });
+  // // Handle stderr data
+  // compileProcess.stderr.on("data", (data) => {
+  //   stderrData += data.toString();
+  //   console.error("stderr:", data.toString());
+  // });
 
-  // Handle process exit
-  compileProcess.on("close", (code) => {
-    console.log("Compilation process completed at:", new Date().toISOString());
-    if (code === 0) {
-      // Execute the compiledCode
-      const executionProcess = spawn("./compiledCode", []);
+  // // Handle process exit
+  // compileProcess.on("close", (code) => {
+  //   console.log("Compilation process completed at:", new Date().toISOString());
+  //   if (code === 0) {
+  //     // Execute the compiledCode
+  //     const executionProcess = spawn("./compiledCode", []);
 
-      let executionOutput = "";
+  //     let executionOutput = "";
 
-      // Handle execution stdout data
-      executionProcess.stdout.on("data", (data) => {
-        executionOutput += data.toString();
-        console.log("Execution stdout:", data.toString());
-      });
+  //     // Handle execution stdout data
+  //     executionProcess.stdout.on("data", (data) => {
+  //       executionOutput += data.toString();
+  //       console.log("Execution stdout:", data.toString());
+  //     });
 
-      // Handle execution stderr data
-      executionProcess.stderr.on("data", (data) => {
-        console.error("Execution stderr:", data.toString());
-      });
+  //     // Handle execution stderr data
+  //     executionProcess.stderr.on("data", (data) => {
+  //       console.error("Execution stderr:", data.toString());
+  //     });
 
-      // Handle execution process exit
-      executionProcess.on("close", (executionCode) => {
-        console.log("Execution process completed with code:", executionCode);
-        res.send({ compileOutput: stdoutData, executionOutput });
-      });
-    } else {
-      res.status(500).send({ compileOutput: stderrData });
-    }
-  });
+  //     // Handle execution process exit
+  //     executionProcess.on("close", (executionCode) => {
+  //       console.log("Execution process completed with code:", executionCode);
+  //       res.send({ compileOutput: stdoutData, executionOutput });
+  //     });
+  //   } else {
+  //     res.status(500).send({ compileOutput: stderrData });
+  //   }
+  // });
 
-  // Write the code to the stdin of the compilation process
-  compileProcess.stdin.write(code);
-  compileProcess.stdin.end();
+  // // Write the code to the stdin of the compilation process
+  // compileProcess.stdin.write(code);
+  // compileProcess.stdin.end();
 });
 
 app.listen(port, () => {
