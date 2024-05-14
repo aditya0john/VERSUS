@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 
 export default function CodeEditor({ onCompile }) {
   let route = useRouter();
-  let [lang, setLanguage] = useState("c_cpp");
+  let [lang, setLanguage] = useState("cpp17");
   let color;
   const [showModal, setShowModal] = useState(false);
   let [code, setCode] = useState(
