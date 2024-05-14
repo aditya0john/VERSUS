@@ -52,23 +52,24 @@ function Learning() {
   }
 
   const { chapterId, courseId } = parseQueryParams(router.query.id);
-  useEffect(() => {
-    if (!id) return;
-    const divs = document.querySelectorAll("div[id]");
-    setDivs(divs);
 
-    // Count the number of divs with id attribute
-    const count = divs.length;
-    console.log(`Number of divs with id attribute: ${count}`, divs);
+  // useEffect(() => {
+  //   if (!id) return;
+  //   const divs = document.querySelectorAll("div[id]");
+  //   setDivs(divs);
 
-    const selectedChapter = course
-      .flatMap((product) => product.chapters)
-      .find((chapter) => chapter._id == chapterId);
+  //   // Count the number of divs with id attribute
+  //   const count = divs.length;
+  //   console.log(`Number of divs with id attribute: ${count}`, divs);
 
-    if (selectedChapter) {
-      setParsedContent(selectedChapter.content);
-    }
-  }, [id, course, chapterId]);
+  //   const selectedChapter = course
+  //     .flatMap((product) => product.chapters)
+  //     .find((chapter) => chapter._id == chapterId);
+
+  //   if (selectedChapter) {
+  //     setParsedContent(selectedChapter.content);
+  //   }
+  // }, [id, course, chapterId]);
 
   if (isLoading) {
     return (
@@ -188,12 +189,12 @@ function Learning() {
                       )}
                     </div>
                     <div className="bg-orange-100 p-3 rounded-lg mt-10">
-                      {ReactHtmlParser(divs[1]?.innerHTML)}
-                      {console.log(divs[1].innerText)}
+                      {/* {ReactHtmlParser(divs[1]?.innerHTML)} */}
+                      {/* {console.log(divs[1].innerText)} */}
                     </div>
                     <div className="scale-95 bg-orange-100 rounded-lg p-4">
                       {/* Render only the div that matches the index */}
-                      {ReactHtmlParser(parsedContent)}
+                      {ReactHtmlParser(chapter?.content)}
                     </div>
                   </div>
                 </div>
