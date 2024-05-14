@@ -24,17 +24,15 @@ export default function Score() {
       <div className="gride mt-4">
         <div className="bg-gray-200 p-3 rounded-lg flex flex-col gap-4">
           <p className="flex items-center justify-center phdg">TOPIC</p>
-          {Array.from(document.querySelectorAll("div[id]")).map(
-            (div, index) => (
-              <button
-                className="items-center bradius p-4 bg-gray-300 change"
-                key={index}
-                onClick={() => setSelectedDivIndex(index)}
-              >
-                {index}
-              </button>
-            )
-          )}
+          {divs.map((div, index) => (
+            <button
+              className="items-center bradius p-4 bg-gray-300 change"
+              key={index}
+              onClick={() => setSelectedDivIndex(index)}
+            >
+              {index}
+            </button>
+          ))}
         </div>
         <div className="bg-black text-white p-3 scale-95 rounded">
           {ReactHtmlParser(divs[selectedDivIndex]?.innerHTML)}
