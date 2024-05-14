@@ -52,10 +52,10 @@ function Learning() {
   }
 
   const { chapterId, courseId } = parseQueryParams(router.query.id);
-
   useEffect(() => {
     if (!id) return;
-    setDivs(document.querySelectorAll("div[id]"));
+    const divs = document.querySelectorAll("div[id]");
+    setDivs(divs);
 
     // Count the number of divs with id attribute
     const count = divs.length;

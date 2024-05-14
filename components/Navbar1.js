@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -11,7 +12,7 @@ function Navbar1() {
         href="/"
         className="flex items-center text-decoration-none text-black font-bold"
       >
-        <img
+        <Image
           src="/images/logo.png"
           alt="image"
           width={40}

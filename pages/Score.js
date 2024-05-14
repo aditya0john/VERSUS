@@ -14,7 +14,7 @@ export default function Score() {
     // Count the number of divs with id attribute
     const count = divs.length;
     console.log(`Number of divs with id attribute: ${count}`, divs);
-  }, []);
+  }, [divs]);
 
   return (
     <Layout2>

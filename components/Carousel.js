@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 function Carousel() {
   let images = {
@@ -21,7 +22,9 @@ function Carousel() {
 
   const imageElements = Object.keys(images).map((key) => (
     <div key={key}>
-      <img
+      <Image
+        width={500}
+        height={500}
         src={images[key]}
         className="p-3 image-resize"
         alt={`Award ${key}`}
@@ -32,7 +35,7 @@ function Carousel() {
   return (
     <div className="body">
       <div>
-        {/* <img src="/images/logo.png" alt="image" className="image-change" /> */}
+        {/* <Image src="/images/logo.png" alt="image" className="image-change" /> */}
         <span>
           <p className="hdg flex justify-center items-center text-black">
             GALLERY

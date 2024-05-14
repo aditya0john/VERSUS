@@ -1,6 +1,7 @@
 import Loading from "@/components/Loading";
 import Navbar1 from "@/components/Navbar1";
 import { signIn, useSession } from "next-auth/react";
+import Image from "next/image";
 import React from "react";
 
 function LogIn() {
@@ -20,7 +21,7 @@ function LogIn() {
     <>
       <Navbar1 />
       <div className="flex justify-center items-center hdg text-black uppercase mt-5">
-        <img src="/images/logo.png" alt="image" className="w-20 h-20" />
+        <Image src="/images/logo.png" alt="image" width={100} height={100} />
         <p className="phdg pl-2">LOG IN</p>
       </div>
       <div className="grid grid-cols-2 body">

@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 
 function Timer({ press }) {
   let recordedTime;
-  let [buttonPress, setButtonPress] = useState(press);
   const [time, setTime] = useState(0);
   const route = useRouter();
 

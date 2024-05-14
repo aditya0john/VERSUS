@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 
 async function logout() {
   await signOut();
@@ -23,7 +24,7 @@ function Navbar2() {
           href="/"
           className="flex items-center text-decoration-none text-black font-bold mr-4"
         >
-          <img
+          <Image
             src="/images/logo.png"
             alt="image"
             width={40}

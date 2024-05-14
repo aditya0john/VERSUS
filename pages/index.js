@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Table from "@/components/Table";
 import Carousel from "@/components/Carousel";
+import Image from "next/image";
 
 export default function Home() {
   const { data: session } = useSession();
@@ -35,7 +36,7 @@ export default function Home() {
         <Layout>
           <div className="bg-white gridd p-4 gap-5 bottom_round">
             <div className="flex items-center">
-              <img className="p-1" src="/images/LOGO.gif" width={300} />
+              <Image className="p-1" src="/images/LOGO.gif" height={300} width={300} />
             </div>
 
             <div className="flex gap-20 justify-center text-center items-center">
@@ -184,7 +185,7 @@ export default function Home() {
           <div className="mt-3 bg-white bradius">
             <div className="scale-95 grid grid-cols-2 items-center">
               <div className="flex justify-center">
-                <img
+                <Image
                   src="/images/practoring.gif"
                   alt="image"
                   width={400}
@@ -296,7 +297,7 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center">
-                <img
+                <Image
                   src="/images/Remote Study.gif"
                   alt="image"
                   width={400}
@@ -307,7 +308,7 @@ export default function Home() {
 
             <div className="scale-95 grid grid-cols-2 items-center">
               <div className="flex justify-center">
-                <img
+                <Image
                   src="/images/University.gif"
                   alt="image"
                   width={400}

@@ -1,4 +1,5 @@
 import Navbar1 from "@/components/Navbar1";
+import Image from "next/image";
 import React, { useState } from "react";
 
 function SignUp() {
@@ -31,7 +32,7 @@ function SignUp() {
     <>
       <Navbar1 />
       <div className="flex justify-center items-center hdg text-black mt-5">
-        <img src="/images/logo.png" alt="image" className="w-20 h-20" />
+        <Image src="/images/logo.png" alt="image" width={100} height={100} />
         <p className="phdg pl-2">SIGN UP</p>
       </div>
       <div className="body flex flex-col mt-4 rounded-lg flex justify-center items-center">

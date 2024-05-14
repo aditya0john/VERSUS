@@ -70,9 +70,9 @@ export default function Course() {
               return search.toLocaleLowerCase() === ""
                 ? items
                 : items.title.toLocaleLowerCase().includes(search);
-            }).map((Course) => {
+            }).map((Course, i) => {
               return (
-                <span className="card">
+                <span className="card" key={i}>
                   <Cards
                     SVG={Course?.title}
                     href={"/chapters/" + Course?._id}
