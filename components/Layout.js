@@ -16,7 +16,7 @@ export default function Layout({ children }) {
         <hr />
         <footer className="bg-white flex justify-evenly p-3">
           <Link href="/" className="text-decoration-none text-black">
-            @Copyright "Versus.com"
+            @Copyright &quot;Versus.com&quot;
           </Link>
           <Link
             href="/Help&Support"

@@ -91,13 +91,13 @@ function Navbar2() {
               d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z"
             />
           </svg>
-          REPORT'S
+          REPORT&apos;S
         </Link>
       </div>
 
       <div className="flex gap-2 items-center">
         <div class="dropdown flex items-center">
-          <img
+          <Image
             src={session?.user?.image}
             className="rounded w-10 h-10 border"
           />
@@ -110,7 +110,7 @@ function Navbar2() {
 
           <ul class="dropdown-menu pt-0">
             <div className="flex flex-col justify-center bg-gray-200 p-3 change">
-              <img className="rounded" src={session?.user?.image} />
+              <Image className="rounded" src={session?.user?.image} />
               <p className="flex justify-center shdg mb-0">
                 {session?.user?.name}
               </p>

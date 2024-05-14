@@ -36,7 +36,7 @@ export default function Home() {
         <Layout>
           <div className="bg-white gridd p-4 gap-5 bottom_round">
             <div className="flex items-center">
-              <Image className="p-1" src="/images/LOGO.gif" height={300} width={300} />
+              <Image alt="image" className="p-1" src="/images/LOGO.gif" height={300} width={300} />
             </div>
 
             <div className="flex gap-20 justify-center text-center items-center">
@@ -76,7 +76,7 @@ export default function Home() {
               </svg>
 
               <span>{Institutions}</span>
-              <p className="font-bold">Institution's</p>
+              <p className="font-bold">Institution&apos;s</p>
             </span>
 
             <span className="bg-purple-100 shdg round flex flex-col items-center p-3 text-center change_button">
@@ -96,7 +96,7 @@ export default function Home() {
               </svg>
 
               <span>{Teacher}</span>
-              <p className="font-bold"> Teacher's</p>
+              <p className="font-bold"> Teacher&apos;s</p>
             </span>
 
             <span className="bg-blue-100 shdg round flex flex-col items-center p-3 text-center change_button">
@@ -116,7 +116,7 @@ export default function Home() {
               </svg>
 
               <span>{Learners}</span>
-              <p className="font-bold">Learner's</p>
+              <p className="font-bold">Learner&apos;s</p>
             </span>
 
             <span className="bg-gray-200 shdg round flex flex-col items-center p-3 text-center change_button">
@@ -136,7 +136,7 @@ export default function Home() {
               </svg>
 
               <span>{Meetings}</span>
-              <p className="font-bold">Meeting's</p>
+              <p className="font-bold">Meeting&apos;s</p>
             </span>
 
             <span className="bg-red-100 shdg round flex flex-col items-center p-3 text-center change_button">
@@ -156,7 +156,7 @@ export default function Home() {
               </svg>
 
               <span>{Tests}</span>
-              <p className="font-bold">Test's</p>
+              <p className="font-bold">Test&apos;s</p>
             </span>
 
             <span className="bg-green-100 shdg round flex flex-col items-center p-3 text-center change_button">
@@ -176,7 +176,7 @@ export default function Home() {
               </svg>
 
               <span>{Assignments}</span>
-              <p className="font-bold">Assignment's</p>
+              <p className="font-bold">Assignment&apos;s</p>
             </span>
           </div>
 

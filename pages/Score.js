@@ -55,8 +55,8 @@ export default function Score() {
               <ul>
                 <li className="shdg p-3 pt-0">
                   <i className="shdg font-bold">Prepreocessor Directive:</i> The{" "}
-                  <i>'#' </i>
-                  in the line <i>'#include'</i> shows that it is a preprocessor
+                  <i>&apos;#&apos; </i>
+                  in the line <i>&apos;#include&apos;</i> shows that it is a preprocessor
                   directive which means this header file has to be included and
                   processed before the program is compiled.
                 </li>
@@ -156,8 +156,8 @@ export default function Score() {
                                   </ul>
                                   <br />
                                   for example: using ASCII code, the number of
-                                  65 and the character 'A' are quivalent 'A'.
-                                  Data 'A', or any other single character
+                                  65 and the character &apos;A&apos; are quivalent &apos;A&apos;.
+                                  Data &apos;A&apos;, or any other single character
                                   between apostrophes, is known as character
                                   constant.
                                   <br />
