@@ -98,6 +98,9 @@ function Navbar2() {
       <div className="flex gap-2 items-center">
         <div class="dropdown flex items-center">
           <Image
+            alt="image"
+            width={100}
+            height={100}
             src={session?.user?.image}
             className="rounded w-10 h-10 border"
           />
@@ -110,7 +113,13 @@ function Navbar2() {
 
           <ul class="dropdown-menu pt-0">
             <div className="flex flex-col justify-center bg-gray-200 p-3 change">
-              <Image className="rounded" src={session?.user?.image} />
+              <Image
+                alt="image"
+                width={200}
+                height={200}
+                className="rounded"
+                src={session?.user?.image}
+              />
               <p className="flex justify-center shdg mb-0">
                 {session?.user?.name}
               </p>

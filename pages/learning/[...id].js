@@ -68,7 +68,7 @@ function Learning() {
     if (selectedChapter) {
       setParsedContent(selectedChapter.content);
     }
-  }, [id, course]);
+  }, [id, course, chapterId]);
 
   if (isLoading) {
     return (

@@ -7,4 +7,9 @@ module.exports = nextConfig;
 
 const withVideos = require("next-videos");
 
-module.exports = withVideos;
+module.exports = withVideos({
+  images: {
+    domains: ["lh3.googleusercontent.com"],
+  },
+  reactStrictMode: true,
+});

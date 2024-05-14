@@ -1,4 +1,5 @@
 import Layout2 from "@/components/Layout2";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import ReactHtmlParser from "react-html-parser";
 
@@ -56,9 +57,9 @@ export default function Score() {
                 <li className="shdg p-3 pt-0">
                   <i className="shdg font-bold">Prepreocessor Directive:</i> The{" "}
                   <i>&apos;#&apos; </i>
-                  in the line <i>&apos;#include&apos;</i> shows that it is a preprocessor
-                  directive which means this header file has to be included and
-                  processed before the program is compiled.
+                  in the line <i>&apos;#include&apos;</i> shows that it is a
+                  preprocessor directive which means this header file has to be
+                  included and processed before the program is compiled.
                 </li>
               </ul>
               <ul>
@@ -156,10 +157,10 @@ export default function Score() {
                                   </ul>
                                   <br />
                                   for example: using ASCII code, the number of
-                                  65 and the character &apos;A&apos; are quivalent &apos;A&apos;.
-                                  Data &apos;A&apos;, or any other single character
-                                  between apostrophes, is known as character
-                                  constant.
+                                  65 and the character &apos;A&apos; are
+                                  quivalent &apos;A&apos;. Data &apos;A&apos;,
+                                  or any other single character between
+                                  apostrophes, is known as character constant.
                                   <br />
                                   <br />
                                   for examlpe: Unsigned, in a class the number
@@ -319,7 +320,12 @@ export default function Score() {
                     </p>
                   </div>
                   <div>
-                    <img src="/images/variables.png" alt="image" />
+                    <Image
+                      height={200}
+                      width={200}
+                      src="/images/variables.png"
+                      alt="image"
+                    />
                   </div>
                 </div>
                 <p className="p-4 pt-0 shdg"></p>

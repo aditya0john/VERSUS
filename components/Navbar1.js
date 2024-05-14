@@ -13,10 +13,10 @@ function Navbar1() {
         className="flex items-center text-decoration-none text-black font-bold"
       >
         <Image
+          width={50}
+          height={50}
           src="/images/logo.png"
           alt="image"
-          width={40}
-          height={10}
           className="mr-1"
         />
         <h>VERSUS</h>
