@@ -21,16 +21,15 @@ app.post("/compile", async (req, res) => {
 
   try {
     const response = await axios.post("https://api.jdoodle.com/v1/execute", {
-      clientId: "48e4ddaba9c67cd755ccbd1a528a6be2",
-      clientSecret:
-        "c1206b230df1ac9286d0be2a61de511522464793805adaf7d6b3d4e7ebb98b1c",
+      clientId: process.env.JDOODLE_ID,
+      clientSecret: process.env.JDOODLE_SECRET,
       script: code,
       language: lang,
       versionIndex: "0",
     });
 
     res.send({ compileOutput: response?.data?.output });
-    console.log("LODA", response?.data?.output);
+    console.log(response?.data?.output);
   } catch (error) {
     console.error("Compilation error:", error);
     res.status(500).send({ compileOutput: "Compilation error" });
