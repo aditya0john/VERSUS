@@ -36,7 +36,7 @@ function Timer({ press }) {
     const minutes = Math.floor((time % 3600) / 60);
     const seconds = time % 60;
     recordedTime = hours + " " + minutes + " " + seconds;
-    console.log(recordedTime);
+    // console.log(recordedTime);
     return `${hours.toString().padStart(2, "0")}:${minutes
       .toString()
       .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;

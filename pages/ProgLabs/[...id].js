@@ -75,13 +75,12 @@ export default function ProgLabs() {
         lang,
       });
 
-      const { compileOutput, executionOutput } = response.data;
+      const { compileOutput } = response?.data;
 
       console.log("Compilation Output:", compileOutput);
-      console.log("Execution Output:", executionOutput);
 
       // Update the state with compile and execution output
-      setOutput(executionOutput);
+      setOutput(compileOutput);
     } catch (error) {
       console.error("Compilation Error:", error.message);
       setOutput("-> " + error.message + " <-");

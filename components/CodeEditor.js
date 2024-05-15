@@ -63,6 +63,7 @@ export default function CodeEditor({ onCompile }) {
 
   const handleCompile = () => {
     onCompile(code, lang);
+    console.log(code, lang);
   };
 
   return (

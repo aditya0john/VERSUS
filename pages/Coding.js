@@ -1,27 +1,26 @@
 import CodeEditor from "@/components/CodeEditor";
 import Layout4 from "@/components/Layout4";
-import Loading from "@/components/Loading";
+// import Loading from "@/components/Loading";
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function Coding() {
   const [output, setOutput] = useState(null);
-  
+
   const handleCompile = async (code, lang) => {
+    console.log("CODING", code, lang);
     try {
-      const response = await axios.post("/compile", {
+      const response = await axios.post("http://localhost:3001/compile", {
         code,
         lang,
       });
-      
-      // console.log("RESPONSE", response, code, lang);
-      const { compileOutput } = response?.data;
 
-      console.log("Compilation Output:", compileOutput);
-      // console.log("Execution Output:", executionOutput);
+      const { output } = response?.data;
 
-      // Update the state with compile and execution output
-      setOutput(compileOutput);
+      console.log("Compilation Output:", output);
+
+      // Update the state with the compilation output
+      setOutput(output);
     } catch (error) {
       console.error("Compilation Error:", error.message);
       setOutput("-> " + error.message + " <-");
