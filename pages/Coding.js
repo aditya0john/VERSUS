@@ -16,6 +16,7 @@ function Coding() {
           lang,
         }
       );
+      console.log("RESPONSE", response);
 
       const { compileOutput } = response.data;
 
