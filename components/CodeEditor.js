@@ -94,7 +94,7 @@ export default function CodeEditor({ onCompile }) {
           <div className="relative">
             <AceEditor
               className="border border-black rounded-lg"
-              mode={"cpp17" ? "c_cpp" : lang}
+              mode={lang.includes("cpp17") ? "c_cpp" : lang}
               value={code}
               enableLiveAutocompletion={true}
               theme="monokai"

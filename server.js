@@ -9,7 +9,7 @@ const app = express();
 const port = 3001;
 
 app.use(bodyParser.json());
-// app.use(cors());
+app.use(cors());
 
 app.post("/compile", async (req, res) => {
   const code = req.body.code;
