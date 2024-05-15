@@ -16,9 +16,9 @@ function Coding() {
           lang,
         }
       );
-      console.log("RESPONSE", response);
+      console.log("RESPONSE", response, code, lang);
 
-      const { compileOutput } = response.data;
+      const { compileOutput } = response?.data;
 
       console.log("Compilation Output:", compileOutput);
       // console.log("Execution Output:", executionOutput);
