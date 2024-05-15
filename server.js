@@ -11,7 +11,7 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post("/compile",  (req, res) => {
+app.post("/compile", async (req, res) => {
   const code = req.body.code;
   const lang = req.body.lang;
   console.log(`Received Code:`, code, lang);
@@ -20,7 +20,7 @@ app.post("/compile",  (req, res) => {
   // let compilerArgs;
 
   try {
-    const response =  axios.post("https://api.jdoodle.com/v1/execute", {
+    const response = await axios.post("https://api.jdoodle.com/v1/execute", {
       clientId: process.env.JDOODLE_ID,
       clientSecret: process.env.JDOODLE_SECRET,
       script: code,
