@@ -14,7 +14,7 @@ app.use(cors());
 app.post("/compile", async (req, res) => {
   const code = req.body.code;
   const lang = req.body.lang;
-  console.log(`Received Code:`, code, lang);
+  console.log("Received Code:", code, lang);
 
   // let compilerPath;
   // let compilerArgs;
