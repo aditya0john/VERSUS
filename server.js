@@ -12,14 +12,14 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post("/compile", async (req, res) => {
-  const code = req.body.code;
-  const lang = req.body.lang;
-  console.log("Received Code:", code, lang);
-
   // let compilerPath;
   // let compilerArgs;
 
   try {
+    console.log("received a request to compile");
+    const code = req.body.code;
+    const lang = req.body.lang;
+    console.log("Received Code:", code, lang);
     const response = await axios.post("https://api.jdoodle.com/v1/execute", {
       clientId: process.env.JDOODLE_ID,
       clientSecret: process.env.JDOODLE_SECRET,
