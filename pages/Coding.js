@@ -11,7 +11,7 @@ function Coding() {
     try {
       // console.log("RESPONSE", response, code, lang);
       const response = await axios.post(
-        "https://e-learning-website-major-project.vercel.app/compile",
+        "https:/e-learning-website-major-project.vercel.app/compile",
         {
           code,
           lang,
