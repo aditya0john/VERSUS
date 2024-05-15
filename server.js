@@ -1,7 +1,7 @@
 const express = require("express");
 // const bodyParser = require("body-parser");
 // const { spawn } = require("child_process");
-// const cors = require("cors");
+const cors = require("cors");
 // const readline = require("readline");
 const { default: axios } = require("axios");
 
