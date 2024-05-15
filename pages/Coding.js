@@ -6,15 +6,15 @@ import React, { useEffect, useState } from "react";
 
 function Coding() {
   const [output, setOutput] = useState(null);
-  console.log("RESPONSE", response, code, lang);
-
+  
   const handleCompile = async (code, lang) => {
     try {
       const response = await axios.post("/compile", {
         code,
         lang,
       });
-
+      
+      // console.log("RESPONSE", response, code, lang);
       const { compileOutput } = response?.data;
 
       console.log("Compilation Output:", compileOutput);
