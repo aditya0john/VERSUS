@@ -11,7 +11,7 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post("/compile", async (req, res) => {
+app.get("/compile", async (req, res) => {
   // let compilerPath;
   // let compilerArgs;
 
