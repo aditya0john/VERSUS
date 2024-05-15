@@ -10,7 +10,7 @@ function Coding() {
   const handleCompile = async (code, lang) => {
     try {
       const response = await axios.post(
-        "https://e-learning-website-major-project.vercel.app/compile",
+        "https://e-learning-website-major-project.vercel.app/Coding",
         {
           code,
           lang,
