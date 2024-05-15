@@ -8,8 +8,8 @@ function Coding() {
   const [output, setOutput] = useState(null);
 
   const handleCompile = async (code, lang) => {
+    console.log("RESPONSE", response, code, lang);
     try {
-      // console.log("RESPONSE", response, code, lang);
       const response = await axios.post("/compile", {
         code,
         lang,
