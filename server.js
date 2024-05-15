@@ -1,23 +1,23 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const { spawn } = require("child_process");
-const cors = require("cors");
-const readline = require("readline");
+// const bodyParser = require("body-parser");
+// const { spawn } = require("child_process");
+// const cors = require("cors");
+// const readline = require("readline");
 const { default: axios } = require("axios");
 
 const app = express();
 const port = 3001;
 
 app.use(bodyParser.json());
-app.use(cors());
+// app.use(cors());
 
 app.post("/compile", async (req, res) => {
   const code = req.body.code;
   const lang = req.body.lang;
   console.log(`Received Code:`, code, lang);
 
-  let compilerPath;
-  let compilerArgs;
+  // let compilerPath;
+  // let compilerArgs;
 
   try {
     const response = await axios.post("https://api.jdoodle.com/v1/execute", {
