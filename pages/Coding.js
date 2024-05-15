@@ -7,9 +7,9 @@ import React, { useEffect, useState } from "react";
 function Coding() {
   const [output, setOutput] = useState(null);
 
-  const handleCompile = async (code, lang) => {
+  const handleCompile =  (code, lang) => {
     try {
-      const response = await axios.post(
+      const response =  axios.post(
         "https://e-learning-website-major-project.vercel.app/compile",
         {
           code,
