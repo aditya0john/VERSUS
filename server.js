@@ -11,7 +11,7 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post("/Coding", async (req, res) => {
+app.post("/compile", async (req, res) => {
   const code = req.body.code;
   const lang = req.body.lang;
   console.log(`Received Code:`, code, lang);
