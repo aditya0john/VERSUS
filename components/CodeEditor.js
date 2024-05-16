@@ -6,9 +6,11 @@ import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/theme-monokai";
 import { useRouter } from "next/router";
+import { version } from "mongoose";
 
 export default function CodeEditor({ onCompile, err, status }) {
   let route = useRouter();
+  let [version, setVersion] = useState(0);
   let [lang, setLanguage] = useState("cpp17");
   let color;
   const [showModal, setShowModal] = useState(false);
@@ -62,8 +64,15 @@ export default function CodeEditor({ onCompile, err, status }) {
   }
 
   const handleCompile = () => {
-    onCompile(code, lang);
-    console.log(code, lang);
+    if (lang.includes("cpp17")) {
+      setVersion(0);
+    } else if (lang.includes("java")) {
+      setVersion(5);
+    } else if (lang.includes("pyhton3")) {
+      setVersion(4);
+    }
+    onCompile(code, lang, version);
+    console.log(code, lang, version);
   };
 
   return (
@@ -87,7 +96,7 @@ export default function CodeEditor({ onCompile, err, status }) {
                 >
                   <option value={"cpp17"}>C & C++</option>
                   <option value={"java"}>java</option>
-                  <option value={"python"}>Python</option>
+                  <option value={"python3"}>Python</option>
                 </select>
               </span>
             </span>
