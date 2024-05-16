@@ -18,6 +18,8 @@ export default function ProgLabs() {
   let [answer, setAnswer] = useState(null);
   let [press, setPress] = useState(false);
   let [Course, setCourse] = useState([]);
+  const [statusCode, setStatus] = useState(null);
+  const [err, setErr] = useState(null);
   let router = useRouter();
 
   let testId, courseId;
@@ -82,8 +84,10 @@ export default function ProgLabs() {
       // Update the state with compile and execution output
       setOutput(compileOutput);
     } catch (error) {
+      setStatus(error?.response?.status);
       console.error("Compilation Error:", error.message);
       setOutput("-> " + error.message + " <-");
+      setErr(error.message);
     }
   };
 
@@ -289,7 +293,11 @@ export default function ProgLabs() {
                             <hr />
                             <div className="bg-white rounded-lg ">
                               <div>
-                                <CodeEditor onCompile={handleCompile} />
+                                <CodeEditor
+                                  onCompile={handleCompile}
+                                  err={err}
+                                  status={statusCode}
+                                />
                               </div>
 
                               <div className="bg-orange-100 p-3 mt-3 rounded-lg">

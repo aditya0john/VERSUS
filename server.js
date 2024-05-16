@@ -9,22 +9,21 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "https://e-learning-website-major-project.vercel.app", // Replace with your frontend domain
+    origin: "http://localhost:3000", // Replace with your frontend domain
     methods: ["POST"], // Allow only POST requests
     allowedHeaders: ["Content-Type", "Authorization"], // Allow only specific headers
   })
 );
 
 app.post("/compile", async (req, res) => {
+  console.log("Received a request to compile");
+  const code = req?.body?.code;
+  const lang = req?.body?.lang;
+  let clientId = process?.env?.CLIENT_ID;
+  let clientSecret = process?.env?.CLIENT_SECRET;
+  console.log(process.env, clientId, clientSecret);
+  console.log("Received Code:", code, "and Lang", lang);
   try {
-    console.log("Received a request to compile");
-    const code = req?.body?.code;
-    const lang = req?.body?.lang;
-    let clientId = process?.env?.CLIENT_ID;
-    let clientSecret = process?.env?.CLIENT_SECRET;
-    console.log(process.env, clientId, clientSecret);
-    console.log("Received Code:", code, "and Lang", lang);
-
     const response = await axios.post("https://api.jdoodle.com/v1/execute", {
       clientId: "48e4ddaba9c67cd755ccbd1a528a6be2",
       clientSecret:
