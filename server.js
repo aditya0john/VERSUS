@@ -28,7 +28,7 @@ app.post("/compile", async (req, res) => {
     const response = await axios.post("https://api.jdoodle.com/v1/execute", {
       clientId: "48e4ddaba9c67cd755ccbd1a528a6be2",
       clientSecret:
-        "2cd4118b374b243f9f0235f290b05527f20459727bd515ba27d36382e851e341",
+        "b835df6092d74879bb33a5086ff347e4de489c3750287c239e0d555b9091fd5e",
       script: req?.body?.code,
       language: req?.body?.lang,
       versionIndex: "0",
