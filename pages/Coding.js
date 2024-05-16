@@ -6,6 +6,7 @@ import React, { useState } from "react";
 function Coding() {
   const [output, setOutput] = useState(null);
   const [statusCode, setStatus] = useState(null);
+  const [limit, setLimit] = useState(null);
   const [err, setErr] = useState(null);
 
   const handleCompile = async (code, lang) => {
@@ -22,9 +23,15 @@ function Coding() {
       setOutput(compileOutput);
     } catch (error) {
       setStatus(error?.response?.status);
+      setLimit(error.response.data.limit);
       console.error("Compilation Error:", error.message);
       setOutput("-> " + error.message + " <-");
       setErr(error.message);
+      if (statusCode == 429) {
+        console.log(error.response.data.limit);
+        setErr(limit);
+        setOutput(limit);
+      }
     }
   };
 

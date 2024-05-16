@@ -24,9 +24,11 @@ export default async function handler(req, res) {
   } catch (error) {
     let status;
     let message;
+    let limit;
     if (error?.response) {
       status = error.response.status;
       message = error.response.data.status;
+      limit = error.response.data.error;
     } else if (error.request) {
       status = 500;
       message = "NO RESPONSE FROM SERVER";
@@ -34,9 +36,9 @@ export default async function handler(req, res) {
       status = 500;
       message = error.message;
     }
-    console.error(error, status);
+    console.error(error, status, limit);
     res
       .status(status)
-      .send({ compileOutput: error.message, statusCode: status });
+      .send({ compileOutput: error.message, statusCode: status, limit: limit });
   }
 }

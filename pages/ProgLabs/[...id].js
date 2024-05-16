@@ -16,6 +16,7 @@ export default function ProgLabs() {
   const [ques, setQuestion] = useState(null);
   const [output, setOutput] = useState(null);
   let [answer, setAnswer] = useState(null);
+  const [limit, setLimit] = useState(null);
   let [press, setPress] = useState(false);
   let [Course, setCourse] = useState([]);
   const [statusCode, setStatus] = useState(null);
@@ -83,9 +84,15 @@ export default function ProgLabs() {
       setOutput(compileOutput);
     } catch (error) {
       setStatus(error?.response?.status);
+      setLimit(error.response.data.limit);
       console.error("Compilation Error:", error.message);
       setOutput("-> " + error.message + " <-");
       setErr(error.message);
+      if (statusCode == 429) {
+        console.log(error.response.data.limit);
+        setErr(limit);
+        setOutput(limit);
+      }
     }
   };
 
