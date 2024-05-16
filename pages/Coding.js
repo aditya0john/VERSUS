@@ -18,7 +18,7 @@ function Coding() {
       });
 
       const { compileOutput } = response?.data;
-      console.log("Compilation Output:", compileOutput, response?.data);
+      console.log("Compilation Output:", compileOutput);
       setOutput(compileOutput);
     } catch (error) {
       setStatus(error?.response?.status);
@@ -38,7 +38,7 @@ function Coding() {
             <div className="relative">
               <textarea
                 id="txt"
-                className="border border-black rounded-lg w-full h-auto resize-none overflow-hidden p-2 bg-black text-white"
+                className="border border-black rounded-lg w-full h-40 resize-none overflow-hidden p-2 bg-black text-white"
                 placeholder="//the output is shown here"
                 value={output}
               />

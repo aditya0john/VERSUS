@@ -69,19 +69,17 @@ export default function ProgLabs() {
   } else if (!Course) {
     return <p>No profile data</p>;
   }
-
   const handleCompile = async (code, lang) => {
+    console.log("CODING", code, lang);
+
     try {
-      const response = await axios.post("api/compile", {
+      const response = await axios.post("/api/compile", {
         code,
         lang,
       });
 
       const { compileOutput } = response?.data;
-
       console.log("Compilation Output:", compileOutput);
-
-      // Update the state with compile and execution output
       setOutput(compileOutput);
     } catch (error) {
       setStatus(error?.response?.status);
@@ -306,7 +304,7 @@ export default function ProgLabs() {
                                   <div>
                                     <textarea
                                       disabled="disabled"
-                                      className="bg-white change border border-black rounded-lg w-full p-2 placeholder:uppercase change"
+                                      className="border border-black rounded-lg w-full h-40 resize-none overflow-hidden p-2 bg-black text-white"
                                       placeholder="the output is shown here"
                                       value={output}
                                     />
