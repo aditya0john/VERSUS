@@ -9,7 +9,7 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "https://e-learning-website-major-project.vercel.app/",
+    origin: "https://e-learning-website-major-project.vercel.app",
     methods: ["POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })

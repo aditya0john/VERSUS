@@ -10,7 +10,7 @@ function Coding() {
   const handleCompile = async (code, lang) => {
     console.log("CODING", code, lang);
     try {
-      const response = await axios.post("http://localhost:3001/compile", {
+      const response = await axios.post("/compile", {
         code,
         lang,
       });
