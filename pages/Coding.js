@@ -6,7 +6,7 @@ import React, { useState } from "react";
 
 function Coding() {
   const [output, setOutput] = useState(null);
-
+  const [err, setErr] = useState("");
   const handleCompile = async (code, lang) => {
     console.log("CODING", code, lang);
     try {
@@ -24,6 +24,7 @@ function Coding() {
     } catch (error) {
       console.error("Compilation Error:", error.message);
       setOutput("-> " + error.message + " <-");
+      setErr(error.message);
     }
   };
 
@@ -31,7 +32,7 @@ function Coding() {
     <main>
       <Layout4>
         <div className="bg-white p-3">
-          <CodeEditor onCompile={handleCompile} />
+          <CodeEditor onCompile={handleCompile} err={err} />
           <div>
             <h3>Output</h3>
             <div>
