@@ -6,22 +6,21 @@ import React, { useState } from "react";
 
 function Coding() {
   const [output, setOutput] = useState(null);
+  const [statusCode, setStatus] = useState(null);
   const [err, setErr] = useState("");
   const handleCompile = async (code, lang) => {
     console.log("CODING", code, lang);
     try {
-      const response = await axios.post("/compile", {
+      const response = await axios.post("http://localhost:3001/compile", {
         code,
         lang,
       });
 
-      const { output } = response?.data;
-
-      console.log("Compilation Output:", output);
-
-      // Update the state with the compilation output
-      setOutput(output);
+      const { compileOutput } = response?.data;
+      console.log("Compilation Output:", compileOutput, response?.data);
+      setOutput(compileOutput);
     } catch (error) {
+      setStatus(error.response.status);
       console.error("Compilation Error:", error.message);
       setOutput("-> " + error.message + " <-");
       setErr(error.message);
@@ -32,7 +31,7 @@ function Coding() {
     <main>
       <Layout4>
         <div className="bg-white p-3">
-          <CodeEditor onCompile={handleCompile} err={err} />
+          <CodeEditor onCompile={handleCompile} err={err} status={statusCode} />
           <div>
             <h3>Output</h3>
             <div>
