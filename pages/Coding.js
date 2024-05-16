@@ -23,7 +23,7 @@ function Coding() {
       setOutput(compileOutput);
     } catch (error) {
       setStatus(error?.response?.status);
-      setLimit(error.response.data.limit);
+      setLimit(error?.response?.data.limit);
       console.error("Compilation Error:", error.message);
       setOutput("-> " + error.message + " <-");
       setErr(error.message);
