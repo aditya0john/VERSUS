@@ -12,7 +12,7 @@ function Coding() {
     console.log("CODING", code, lang);
 
     try {
-      const response = await axios.post("http://localhost:3001/compile", {
+      const response = await axios.post("api/compile", {
         code,
         lang,
       });
