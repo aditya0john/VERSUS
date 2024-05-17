@@ -34,8 +34,8 @@ export default function Home() {
     return (
       <main className="user-select-none">
         <Layout>
-          <div className="bg-white gridd p-4 gap-5 bottom_round">
-            <div className="flex items-center">
+          <div className="bg-white sm:bg-white sm:gridd p-4 gap-5 bottom_round">
+            <div className="hidden sm:flex sm:items-center">
               <Image
                 alt="image"
                 className="p-1"
@@ -45,7 +45,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="flex gap-20 justify-center text-center items-center">
+            <div className="flex justify-center text-center items-center">
               <div className="uppercase text-black hdg flex-row">
                 <i>Your Virtual University, in minutes!</i>
                 <p className="lowercase shdg">
@@ -64,7 +64,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-6 gap-4 p-10 mb-10">
+          <div className="grid grid-cols-3 gap-4 p-4 mb-10 md:grid-cols-6">
             <span className="bg-orange-100 shdg round flex flex-col items-center p-3 text-center change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="orange"
-                class="w-20 h-20"
+                class="w-20 h-20 sm:w-20 sm:h-20"
               >
                 <path
                   stroke-linecap="round"
@@ -188,37 +188,36 @@ export default function Home() {
 
           <Carousel />
 
-          <div className="mt-3 bg-white bradius">
-            <div className="scale-95 grid grid-cols-2 items-center">
+          <div className="mt-3 bg-white bradius p-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
               <div className="flex justify-center">
                 <Image
                   src="/images/practoring.gif"
                   alt="image"
                   width={400}
                   height={400}
+                  className="w-full max-w-xs md:max-w-full"
                 />
               </div>
 
-              <div className="grid scale-95">
-                <div className="grid grid-rows-2">
+              <div className="space-y-4">
+                <div className="space-y-2">
                   <h3 className="hdg text-black">
                     AI Assisted Assessment Platform With :- Online Remote
                     Proctoring
                   </h3>
-
-                  <h3 className="phdg text-gray-400 ">
+                  <h3 className="phdg text-gray-400">
                     Comprehensive remote Assessment platform with support for a
                     variety of tests & an ultra-powerful remote proctoring
                     solution for uncontrollable test-taker environments.
                   </h3>
                 </div>
-                <hr className="text-black" />
-                <ol className="text-black">
+                <hr className="border-gray-400" />
+                <ol className="text-black text-sm md:text-base space-y-2">
                   <li>
                     • Secure: 2-factor authentication based access,
                     organizational role based
                   </li>
-
                   <li>
                     • Comprehensive composite recording and playback of all
                     aspects of a test, including multiple cameras, screen,
@@ -237,55 +236,49 @@ export default function Home() {
                     • Manually evaluated question types include subjective
                     essay, viva voce, document upload, etc.
                   </li>
-
                   <li>• Evaluation audit trails</li>
-
                   <li>
                     • Unlimited test support with complete data isolation by
                     domain
                   </li>
-
                   <li>• Plagiarism reports</li>
-
                   <li>• Rich analytics</li>
-
                   <li>
                     • Consolidated test reports for various audit and
                     accreditation requirements
                   </li>
-
                   <li>Optional access to our extensive question banks</li>
                 </ol>
               </div>
             </div>
 
-            <div className="scale-95 grid grid-cols-2 items-center">
-              <div className="grid grid-rows-2">
-                <h3 className="hdg text-black">Live Meetings</h3>
-
-                <h3 className="phdg text-gray-400">
-                  Secure Online conferencing from any device on even low
-                  bandwidth network at an unbelieveable price
-                </h3>
-
-                <hr className="text-black" />
-                <ol className="text-black">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 mt-8">
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <h3 className="hdg text-black md:text-xl">Live Meetings</h3>
+                  <h3 className="phdg text-gray-400 md:text-base">
+                    Secure Online conferencing from any device on even low
+                    bandwidth network at an unbelievable price.
+                  </h3>
+                </div>
+                <hr className="border-gray-400" />
+                <ol className="text-black md:text-base space-y-2">
                   <li>
                     • Secure: 2-factor authentication based access,
                     organizational role based access control, encryption over
                     wire, encryption at rest
                   </li>
                   <li>
-                    • No apps or special devices needed. A modern browsers on
-                    any PC or mobile phone is all that is needed
+                    • No apps or special devices needed. A modern browser on any
+                    PC or mobile phone is all that is needed
                   </li>
                   <li>
                     • Unlimited secure cloud stored recordings, with video
                     indexing, rich composite recording playback
                   </li>
                   <li>
-                    • Powerful time-table manager for scheduled meetings. One
-                    click ad-hoc hosting with easy participant selection
+                    • Powerful time-table manager for scheduled meetings.
+                    One-click ad-hoc hosting with easy participant selection
                   </li>
                   <li>
                     • Adaptive bitrate control, specially tuned for low
@@ -296,7 +289,7 @@ export default function Home() {
                     technology, support for chalkboard, pen & paper based
                     teaching, shared whiteboards, real-time annotations,
                     synchronized video playback for all participants,
-                    synchronized powerpoint sharing, live polls, engagement
+                    synchronized PowerPoint sharing, live polls, engagement
                     tracking, etc.
                   </li>
                 </ol>
@@ -308,33 +301,36 @@ export default function Home() {
                   alt="image"
                   width={400}
                   height={400}
+                  className="w-full max-w-xs md:max-w-full"
                 />
               </div>
             </div>
 
-            <div className="scale-95 grid grid-cols-2 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 mt-8">
               <div className="flex justify-center">
                 <Image
                   src="/images/university.gif"
                   alt="image"
                   width={400}
                   height={400}
+                  className="w-full max-w-xs md:max-w-full"
                 />
               </div>
 
-              <div>
-                <div className="grid grid-rows-2">
-                  <p className="hdg text-black"> Virtual University</p>
-
-                  <p className="phdg text-gray-400">
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <p className="hdg text-black  md:text-xl">
+                    Virtual University
+                  </p>
+                  <p className="phdg text-gray-400 md:text-base">
                     Online Classes + LMS + Assessments + Remote Proctoring +
                     Interactive Courses
                   </p>
                 </div>
-                <hr className="text-black" />
-                <ol className="text-black">
+                <hr className="border-gray-400" />
+                <ol className="text-black text-sm md:text-base space-y-2">
                   <li>
-                    • Powerful leaming management system (LMS) with complete
+                    • Powerful learning management system (LMS) with complete
                     data isolation between different schools
                   </li>
                   <li>
@@ -352,7 +348,7 @@ export default function Home() {
                   <li>
                     • Auto-evaluated question types include computer programming
                     in multiple languages, variants of multiple choice, fill in
-                    the blanks, numerical type, match columns, spoken english,
+                    the blanks, numerical type, match columns, spoken English,
                     reading comprehension, listening comprehension, etc.
                   </li>
                   <li>
@@ -368,6 +364,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           <div className="bg-white p-5 mt-3 up_round">
             <div className="text-black phdg">
               Customers
@@ -383,10 +380,10 @@ export default function Home() {
     );
   } else {
     return (
-      <main className="w-full h-full">
+      <main>
         <Layout2>
-          <div className="seashell m-0 rounded h-screen">
-            <div className="scale-95 grid grid-cols-4 gap-10 ml-5 mr-5 pt-10">
+          <div className="seashell flex justify-center">
+            <div className="scale-95 grid grid-cols-2 md:grid-cols-4 gap-10 ml-5 mr-5 pt-10">
               <Cards
                 text="click here to view all your courses/subjects"
                 button="COURSES"

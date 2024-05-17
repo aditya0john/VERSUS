@@ -26,23 +26,22 @@ function Carousel() {
         width={500}
         height={500}
         src={images[key]}
-        className="p-3 image-resize"
+        className="p-3 image-resize w-full h-100 sm:p-3 sm:image-resize"
         alt={`Award ${key}`}
       />
     </div>
   ));
 
   return (
-    <div className="body">
+    <div className="sm:body">
       <div>
-        {/* <Image src="/images/logo.png" alt="image" className="image-change" /> */}
         <span>
           <p className="hdg flex justify-center items-center text-black">
             GALLERY
           </p>
         </span>
       </div>
-      <Slider {...settings} className="overflow-hidden">
+      <Slider {...settings} className="overflow-hidden sm:overflow-hidden">
         {imageElements}
       </Slider>
     </div>

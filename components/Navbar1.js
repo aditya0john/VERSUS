@@ -22,7 +22,7 @@ function Navbar1() {
         <h>VERSUS</h>
       </Link>
 
-      <div className="flex gap-20 items-center">
+      <div className="flex gap-20 items-center hidden sm:flex gap-20 items-center">
         <div class="dropdown ">
           <button
             class=" dropdown-toggle"
