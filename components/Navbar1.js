@@ -19,7 +19,7 @@ function Navbar1() {
           alt="image"
           className="mr-1"
         />
-        <h>VERSUS</h>
+        <h>VERSUS-CODE</h>
       </Link>
 
       <div className="flex gap-20 items-center hidden sm:flex gap-20 items-center">
