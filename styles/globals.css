@@ -6,6 +6,13 @@ kit-scrollbar {
   width: 18px;
 }
 
+@media only screen and (min-width: 640px) {
+  .ace_editor {
+    font-size: 22px !important;
+    height: 700px !important;
+  }
+}
+
 @media only screen and (min-width: 900px) {
   .body {
     width: 80%;
@@ -427,9 +434,11 @@ img {
   display: flex;
 }
 
-.gride {
-  display: grid;
-  grid-template-columns: 0.3fr 1fr;
+@media (min-width: 640px) {
+  .gride {
+    display: grid;
+    grid-template-columns: 0.3fr 1fr;
+  }
 }
 
 .gridthree_col {

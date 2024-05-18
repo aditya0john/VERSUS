@@ -108,12 +108,15 @@ export default function CodeEditor({ onCompile, err, status }) {
               value={code}
               enableLiveAutocompletion={true}
               theme="monokai"
-              fontSize="22px"
+              fontSize="16px"
               onChange={(e) => setCode(e)}
               editorProps={{ $blockScrolling: true }}
               style={{
                 width: "100%",
-                height: "700px",
+                height: "500px",
+              }}
+              setOptions={{
+                fontSize: "1rem", // Default font size for small screens
               }}
             />
             {showModal && (

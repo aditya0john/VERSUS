@@ -35,7 +35,7 @@ export default function Test() {
           <div className="flex justify-between">
             {Course.filter((x) => x._id == id).map((product, i) => (
               <div key={i}>
-                <p className="text-uppercase hdg user-select-none">
+                <p className="text-uppercase hdg font-bold user-select-none">
                   {product.title} Tests
                 </p>
               </div>
