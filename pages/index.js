@@ -383,7 +383,7 @@ export default function Home() {
       <main>
         <Layout2>
           <div className="seashell flex justify-center">
-            <div className="scale-95 grid grid-cols-2 md:grid-cols-4 gap-10 ml-5 mr-5 pt-10">
+            <div className=" grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-10 ml-5 mr-5 mt-10">
               <Cards
                 text="click here to view all your courses/subjects"
                 button="COURSES"
