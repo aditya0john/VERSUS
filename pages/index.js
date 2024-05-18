@@ -46,7 +46,7 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center text-center items-center">
-              <div className="uppercase text-black hdg flex-row">
+              <div className="uppercase text-black hdg thdg flex-row">
                 <i>Your Virtual University, in minutes!</i>
                 <p className="lowercase shdg">
                   <i className="text-gray-400">
@@ -54,7 +54,7 @@ export default function Home() {
                     Auto Grading, Plagrism check ---- All in one platform.
                   </i>
                 </p>
-                <hr className="border border-black" />
+                <hr className="border border-black mb-3" />
                 <Link
                   href="/SignUp"
                   className=" makeLine text-decoration-none border border-black rounded-lg p-3 px-4 shdg change_button"
@@ -64,7 +64,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4 p-4 mb-10 mt-10 md:grid-cols-6">
+          <div className="grid grid-cols-3 gap-4 p-4 mb-10 mt-20 md:grid-cols-6">
             <span className="bg-orange-100 shdg round flex flex-col items-center p-3 text-center change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

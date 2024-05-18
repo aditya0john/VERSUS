@@ -290,6 +290,13 @@ p {
   }
 }
 
+@media (max-width: 640px) {
+  .thdg {
+    font-size: 50px;
+    font-weight: 700;
+  }
+}
+
 .phdg {
   font-size: 30px;
   font-weight: 600;
