@@ -77,7 +77,7 @@ export default function CodeEditor({ onCompile, err, status }) {
 
   return (
     <>
-      <div className={`bg-${color}-100 rounded-lg p-3 grid gap-3`}>
+      <div className={`bg-${color}-100 rounded-lg p-3`}>
         <div>
           <div className="flex justify-between mb-3">
             <h3 className="uppercase">Code Editor</h3>

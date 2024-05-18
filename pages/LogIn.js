@@ -24,8 +24,8 @@ function LogIn() {
         <Image src="/images/logo.png" alt="image" width={100} height={100} />
         <p className="phdg pl-2">LOG IN</p>
       </div>
-      <div className="grid body md:grid-cols-2 ">
-        <div className="border border-black flex flex-col m-4 rounded-lg flex justify-center items-center">
+      <div className="md:grid md:body md:grid-cols-2">
+        <div className="hidden md:border md:border-black md:flex md:flex-col md:m-4 md:rounded-lg md:justify-center md:items-center">
           <form className="flex flex-col justify-center w-full items-center p-4 body">
             <label className="shdg uppercase font-bold">
               e-mail

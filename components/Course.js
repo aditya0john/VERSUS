@@ -9,17 +9,12 @@ export default function Course() {
   const [search, setSearch] = useState("");
   const [isLoading, setLoading] = useState(true);
   let [Course, setCourse] = useState([]);
-  const [randomColor, setRandomColor] = useState("");
 
   useEffect(() => {
     axios.get("/api/courses").then((response) => {
       setCourse(response.data);
       setLoading(false);
     });
-
-    const colors = ["red", "yellow", "green", "blue", "gray", "purple", "pink"];
-    const randomIndex = Math.floor(Math.random() * colors.length);
-    setRandomColor(colors[randomIndex]);
   }, []);
 
   if (isLoading) {
@@ -65,7 +60,7 @@ export default function Course() {
           </div>
 
           <hr className="mb-20" />
-          <div className="grid grid-cols-3 gap-4 m-10">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:m-10">
             {Course.filter((items) => {
               return search.toLocaleLowerCase() === ""
                 ? items

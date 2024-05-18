@@ -7,7 +7,7 @@ function Itemstrip() {
   if (route.asPath == "/Courses") {
     return (
       <div className="m-1 seashell rounded flex justify-center items-center">
-        <h1 className="p-4 hdg text-black text-uppercase rounded-lg user-select-none">
+        <h1 className="p-4 hdg text-black text-uppercase rounded-lg user-select-nonef">
           courses
         </h1>
       </div>

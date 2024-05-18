@@ -26,7 +26,7 @@ function Carousel() {
         width={500}
         height={500}
         src={images[key]}
-        className="p-3 image-resize w-full h-100 sm:p-3 sm:image-resize"
+        className="p-3 image-resize-sm image-resize-lg"
         alt={`Award ${key}`}
       />
     </div>

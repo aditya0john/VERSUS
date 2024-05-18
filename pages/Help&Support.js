@@ -39,8 +39,8 @@ export default function Courses() {
         <div className="bg-white">
           <Itemstrip />
         </div>
-        <div className="body grid gap-4 bg-white rounded-lg flex flex-col items-center p-3">
-          <div className="bg-gray-200 border border-black  rounded-lg w-full ">
+        <div className="body gap-4 bg-white rounded-lg flex flex-col items-center p-3">
+          <div className="bg-gray-200 border border-black rounded-lg w-full">
             <p className="text-black shdg font-bold text-uppercase flex justify-center p-2">
               complaint form
             </p>
@@ -223,7 +223,7 @@ export default function Courses() {
       <div className="bg-white">
         <Itemstrip />
       </div>
-      <div className="body grid gap-1 bg-white rounded-lg flex flex-col items-center p-3">
+      <div className="body gap-1 bg-white rounded-lg flex flex-col items-center p-3">
         <div className="bg-gray-100 border border-black rounded-lg w-full ">
           <ul className="text-black shdg font-bold text-uppercase flex justify-center p-2">
             complaint form

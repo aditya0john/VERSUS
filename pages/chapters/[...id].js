@@ -39,7 +39,7 @@ export default function LearnCPP() {
             <div className="flex justify-between">
               {Course.filter((x) => x._id == id).map((product, i) => (
                 <div key={i}>
-                  <p className="text-uppercase hdg user-select-none">
+                  <p className="text-uppercase hdg font-bold user-select-none">
                     {product.title} for {product.description}
                   </p>
                 </div>
@@ -47,7 +47,7 @@ export default function LearnCPP() {
 
               <div className="grid grid-cols-2 gap-2">
                 <Link href="/Score" className="text-decoration-none text-black">
-                  <div className="bg-white p-3 rounded-lg border border-black change box ">
+                  <div className="bg-white p-3 rounded-lg border border-black change box image-change">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -69,7 +69,7 @@ export default function LearnCPP() {
                   href={"/test/" + id}
                   className="text-decoration-none text-black"
                 >
-                  <div className="bg-white p-3 rounded-lg border border-black box change box">
+                  <div className="bg-white p-3 rounded-lg border border-black box change box image-change">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -102,14 +102,16 @@ export default function LearnCPP() {
                           href={`/learning/chapterId=${chapter?._id}&courseId=${id}`}
                         >
                           <div>
-                            chapter: {j + 1}
-                            <div className="hdg font-bold pl-4 uppercase">
+                            <div className="font-bold">chapter: {j + 1}</div>
+                            <div className="hdg md:font-bold uppercase">
                               {chapter?.chapterName}
                             </div>
-                            <hr />
-                            <p className="text-uppercase pl-4">
-                              {chapter?.chapterDescription}
-                            </p>
+                            <div className="hidden md:block">
+                              <hr />
+                              <p className="text-uppercase pl-4">
+                                {chapter?.chapterDescription}
+                              </p>
+                            </div>
                           </div>
                         </Link>
                       </>

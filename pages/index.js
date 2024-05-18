@@ -34,7 +34,7 @@ export default function Home() {
     return (
       <main className="user-select-none">
         <Layout>
-          <div className="bg-white sm:bg-white sm:gridd p-4 gap-5 bottom_round">
+          <div className="bg-white mt-3 sm:bg-white sm:gridd p-4 gap-5 bottom_round">
             <div className="hidden sm:flex sm:items-center">
               <Image
                 alt="image"
@@ -64,7 +64,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4 p-4 mb-10 md:grid-cols-6">
+          <div className="grid grid-cols-3 gap-4 p-4 mb-10 mt-10 md:grid-cols-6">
             <span className="bg-orange-100 shdg round flex flex-col items-center p-3 text-center change_button">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -188,7 +188,7 @@ export default function Home() {
 
           <Carousel />
 
-          <div className="mt-3 bg-white bradius p-4">
+          <div className="mt-3 bg-white bradiups p-4">
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
               <div className="flex justify-center">
                 <Image

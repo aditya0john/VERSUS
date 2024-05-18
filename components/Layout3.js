@@ -12,8 +12,8 @@ export default function Layout3({ children }) {
           <Navbar2 />
           <div className="bg-black p-1 text-black rounded-top">
             <Itemstrip />
-            <div className="gridd h-100">
-              <aside className="seashell rounded-lg p-3 ml-1 mt-1 h-80">
+            <div className="grid gridd h-100">
+              <aside className="seashell rounded-lg p-3 ml-2 md:ml-1 mt-1 mr-2 mb-1 h-80">
                 <div className="seashell p-3 rounded-lg flex items-center justify-center">
                   <form>
                     <label className="text-uppercase">date :</label>
@@ -60,7 +60,7 @@ export default function Layout3({ children }) {
                 </div>
               </aside>
 
-              <div className="h-screen p-3 seashell ml-2 mt-1 mr-1 mb-1 rounded-md scrollbar">
+              <div className="h-screen p-3 seashell ml-2 md:ml-1 mt-1 mr-2 mb-1 rounded-md scrollbar">
                 {children}
               </div>
             </div>

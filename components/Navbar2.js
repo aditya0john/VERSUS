@@ -147,10 +147,10 @@ function Navbar2() {
             <hr className="mt-0" />
             <li>
               <Link
-                href="/"
+                href="/Help&Support"
                 className="dropdown-item text-decoration-none text-black"
               >
-                Settings
+                Support
               </Link>
             </li>
           </ul>
@@ -158,7 +158,7 @@ function Navbar2() {
 
         <Link
           href="/Help&Support"
-          className="flex gap-1 text-decoration-none text-black"
+          className="hidden md:flex md:gap-1 md:text-decoration-none md:text-black"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

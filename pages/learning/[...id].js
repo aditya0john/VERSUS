@@ -86,7 +86,7 @@ function Learning() {
   return (
     <main>
       <Layout2>
-        <div className="sticky top-0 z-1 mt-5">
+        <div className="sticky top-0 z-1">
           <Timer />
         </div>
         {course.map((product, i) => (
@@ -94,15 +94,14 @@ function Learning() {
             {product.chapters
               .filter((product) => product._id == chapterId)
               .map((chapter, j) => (
-                <div key={j} className="seashell rounded-lg ">
-                  <div className="grido mr-10 items-center">
+                <div key={j} className="seashell rounded-lg">
+                  <div className="grido items-center">
                     <div className="shdg p-3 pb-0 text-uppercase font-bold">
                       <p className="hdg user-select-none">
                         {chapter?.chapterName}
                       </p>
                     </div>
-                    <div className="flex gap-4">
-                      {/* Render other content */}
+                    <div className="flex gap-4 justify-center">
                       <div className="dropdown bg-orange-100 rounded-lg p-2">
                         <button
                           className="p-2 dropdown-toggle "
@@ -193,7 +192,6 @@ function Learning() {
                       {/* {console.log(divs[1].innerText)} */}
                     </div>
                     <div className="scale-95 bg-orange-100 rounded-lg p-4">
-                      {/* Render only the div that matches the index */}
                       {ReactHtmlParser(chapter?.content)}
                       {/* {ReactHtmlParser(parsedContent)} */}
                     </div>
