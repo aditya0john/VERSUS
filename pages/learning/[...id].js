@@ -191,7 +191,7 @@ function Learning() {
                       {/* {ReactHtmlParser(divs[1]?.innerHTML)} */}
                       {/* {console.log(divs[1].innerText)} */}
                     </div>
-                    <div className="scale-95 bg-orange-100 rounded-lg p-4">
+                    <div className="scale-95 bg-orange-100 overflow-hidden rounded-lg p-4">
                       {ReactHtmlParser(chapter?.content)}
                       {/* {ReactHtmlParser(parsedContent)} */}
                     </div>
