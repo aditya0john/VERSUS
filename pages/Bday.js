@@ -3,7 +3,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import axios from "axios";
-import Layout from "@/components/Layout";
+import Layout2 from "@/components/Layout2";
 import Loading from "@/components/Loading";
 
 export default function Bday() {
@@ -106,7 +106,7 @@ export default function Bday() {
 
   return (
     <>
-      <Layout>
+      <Layout2>
         <div className="bg-black p-1 text-black rounded-top">
           <div className="grid gridd h-100">
             <div className="flex flex-col gap-2">
@@ -232,7 +232,7 @@ export default function Bday() {
             </div>
           </div>
         </div>
-      </Layout>
+      </Layout2>
     </>
   );
 }
