@@ -18,7 +18,7 @@ export default function Bday() {
 
   let [click, setClick] = useState(false);
   let [data, setData] = useState(null);
-  let [date, setDate] = useState(null);
+  let [date, setDate] = useState(new Date());
 
   let month = (date?.getMonth() + 1).toLocaleString("en-US", {
     minimumIntegerDigits: 2,
