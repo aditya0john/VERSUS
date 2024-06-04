@@ -6,10 +6,21 @@ export default async function handle(req, res) {
   await mongooseConnect();
 
   if (method === "GET") {
-    if (req.query?.id) {
-      res.json(await Bday.findOne({ _id: req.query.id }));
-    } else {
-      res.json(await Bday.find());
+    try {
+      if (req.query?.id) {
+        const result = await Bday.findOne({ _id: req.query.id });
+        if (!result) {
+          res.status(404).json({ message: "Birthday not found" });
+        } else {
+          res.json(result);
+        }
+      } else {
+        const results = await Bday.find();
+        res.json(results);
+      }
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Internal server error" });
     }
   }
 
