@@ -31,7 +31,7 @@ function Cards({ text, button, src, href, color, SVG }) {
           </div>
         </Link>
         <div className="card-body p-0 con_lower">
-          <div className="card-text text-center p-1 h-20 uppercase user-select-none">
+          <div className={`text-center p-1 h-20 uppercase user-select-none`}>
             {text}
           </div>
           <div

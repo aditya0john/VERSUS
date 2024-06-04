@@ -38,6 +38,7 @@ kit-scrollbar {
     background-color: rgb(99, 255, 99);
   }
 }
+
 .glass {
   background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white color */
   backdrop-filter: blur(10px) !important; /* Blur effect */
@@ -227,7 +228,6 @@ p {
   transition: 0.3s ease-in-out 0ms;
   background-color: rgb(0, 0, 0) !important;
   color: white !important;
-  transform: translateY(-20px);
 }
 
 .nav_text:hover {
@@ -393,6 +393,7 @@ img {
 
 .con:hover .con_lower {
   opacity: 1;
+
 }
 
 .con:hover div {
