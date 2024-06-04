@@ -18,15 +18,15 @@ export default function Bday() {
 
   let [click, setClick] = useState(false);
   let [data, setData] = useState(null);
-  let [date, setDate] = useState(new Date());
+  let [date, setDate] = useState(null);
 
-  let month = (date.getMonth() + 1).toLocaleString("en-US", {
+  let month = (date?.getMonth() + 1).toLocaleString("en-US", {
     minimumIntegerDigits: 2,
     useGrouping: false,
   });
 
   let day = date
-    .getDate()
+    ?.getDate()
     .toLocaleString("en-US", { minimumIntegerDigits: 2, useGrouping: false });
   console.log("month=>", month, "day=>", day);
   console.log("DATA", data);
