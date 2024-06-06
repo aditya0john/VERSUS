@@ -12,89 +12,32 @@ export default function Bday() {
 
   let [Name, setName] = useState("");
   let [fav, setFav] = useState("");
-  let [description, setDescription] = useState("");
-  let [extract, setExtract] = useState("");
   let [Favourites, setFavourites] = useState(false);
 
-  let [click, setClick] = useState(false);
   let [data, setData] = useState(null);
   let [date, setDate] = useState(new Date());
-
-  let month = (date?.getMonth() + 1).toLocaleString("en-US", {
-    minimumIntegerDigits: 2,
-    useGrouping: false,
-  });
-
-  let day = date
-    ?.getDate()
-    .toLocaleString("en-US", { minimumIntegerDigits: 2, useGrouping: false });
-  console.log("month=>", month, "day=>", day);
-  console.log("DATA", data);
-  console.log(date);
-  console.log(fav);
-
-  function Loadingg() {
-    if (isLoading) {
-      return (
-        <div className="w-auto h-screen flex items-center justify-center">
-          <Loading />
-        </div>
-      );
-    } else if (!data) {
-      return <p>No profile data</p>;
-    }
-  }
-
-  const handleClick = (ev, birth) => {
-    setClick((prevClick) => !prevClick);
-    const isAlreadyFav =
-      Array.isArray(fav) &&
-      fav.some((f) => f.Name.toLowerCase() === birth.text.toLowerCase());
-    if (isAlreadyFav) {
-      const existingFav =
-        Array.isArray(fav) &&
-        fav.find((f) => f.Name.toLowerCase() === birth.text.toLowerCase());
-      if (existingFav) {
-        const favId = existingFav._id;
-        axios
-          .delete("/api/favbday?id=" + favId)
-          .then((response) => {
-            console.log("DELETED FAV BDAY", response.data);
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      }
-    } else {
-      // Birthday is not in favorites, so add it
-      console.log("ABBEEEEE", Name, date);
-      let data = {
-        Name: birth.text,
-        Favourites: true,
-        date: date.toISOString(),
-      };
-      ev.preventDefault();
-      axios
-        .post("/api/favbday", { ...data })
-        .then((response) => {
-          console.log("PUSHED DATA", response.data);
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    }
-  };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        const month = (date.getMonth() + 1).toLocaleString("en-US", {
+          minimumIntegerDigits: 2,
+          useGrouping: false,
+        });
+        const day = date.getDate().toLocaleString("en-US", {
+          minimumIntegerDigits: 2,
+          useGrouping: false,
+        });
+
         const response = await axios.get(
           `https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/all/${month}/${day}`
         );
         setData(response.data);
+
+        const favResponse = await axios.get("/api/favbday");
+        setFav(favResponse.data);
+
         setLoading(false);
-        const res = await axios.get("api/favbday");
-        setFav(res.data);
       } catch (error) {
         console.error(error);
         setLoading(false);
@@ -102,8 +45,47 @@ export default function Bday() {
     };
 
     fetchData();
-  }, [month, day, fav]);
+  }, [date]);
 
+  const handleClick = async (ev, birth) => {
+    ev.preventDefault();
+    const isAlreadyFav = fav.some(
+      (f) => f.Name.toLowerCase() === birth.text.toLowerCase()
+    );
+    if (isAlreadyFav) {
+      const existingFav = fav.find(
+        (f) => f.Name.toLowerCase() === birth.text.toLowerCase()
+      );
+      if (existingFav) {
+        try {
+          await axios.delete(`/api/favbday?id=${existingFav._id}`);
+          setFav(fav.filter((f) => f._id !== existingFav._id));
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    } else {
+      try {
+        const newFav = {
+          Name: birth.text,
+          Favourites: true,
+          date: date.toISOString(),
+        };
+        const response = await axios.post("/api/favbday", newFav);
+        setFav([...fav, response.data]);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  };
+
+  if (isLoading) {
+    return (
+      <div className="w-auto h-screen flex items-center justify-center">
+        <Loading />
+      </div>
+    );
+  }
   return (
     <>
       <Layout2>
@@ -147,11 +129,17 @@ export default function Bday() {
                 <hr />
                 <div className="p-3 bg-white ml-2 md:ml-1 mt-1 mr-2 mb-1 rounded-md flex flex-col gap-3 w-full">
                   {Array.isArray(fav) &&
-                    fav.map((f, j) => (
-                      <div className="bg-yellow-100 p-2 rounded-lg" key={j}>
-                        <i>{f.Name}</i>
-                      </div>
-                    ))}
+                    fav
+                      .filter(
+                        (f) =>
+                          f.date.split("T")[0] ==
+                          date.toISOString().split("T")[0]
+                      )
+                      .map((f, j) => (
+                        <div className="bg-yellow-100 p-2 rounded-lg" key={j}>
+                          <i>{f.Name}</i>
+                        </div>
+                      ))}
                 </div>
               </aside>
             </div>
