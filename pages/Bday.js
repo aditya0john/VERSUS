@@ -14,7 +14,7 @@ export default function Bday() {
   let [fav, setFav] = useState("");
   let [Favourites, setFavourites] = useState(false);
 
-  let [data, setData] = useState(null);
+  let [data, setData] = useState(new Date());
   let [date, setDate] = useState(new Date());
 
   useEffect(() => {
