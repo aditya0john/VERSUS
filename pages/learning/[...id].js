@@ -5,14 +5,17 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import ReactHtmlParser from "react-html-parser";
 import Timer from "@/components/Timer";
+import Image from "next/image";
 
 function Learning() {
   const [isLoading, setLoading] = useState(true);
   const [course, setCourse] = useState([]);
+  let [press, setPress] = useState(false);
   const router = useRouter();
   const { id } = router.query;
   const [selectedDivIndex, setSelectedDivIndex] = useState(1);
   const [parsedContent, setParsedContent] = useState("");
+  const [showModal, setShowModal] = useState(true);
   const [divs, setDivs] = useState([]);
 
   console.log(selectedDivIndex);
@@ -51,6 +54,55 @@ function Learning() {
     }
   }
 
+  function ConfirmationModal({ onConfirm, color }) {
+    return (
+      <div
+        className={`p-3 bg-${color}-100 rounded-lg flex items-center justify-center`}
+      >
+        <div className="modal-content grid grid-cols-2">
+          {course.map((product, i) => (
+            <div key={i}>
+              {product.chapters
+                .filter((product) => product._id == chapterId)
+                .map((chapter, j) => (
+                  <div key={j} className="grid grid-cols-2">
+                    <div className="flex gap-3">
+                      <Image
+                        src="/images/C++.png"
+                        alt="image"
+                        width={100}
+                        height={100}
+                      />
+                      <div className="grid grid-rows-2">
+                        <div className="shdg font-bold">
+                          {chapter?.chapterName}
+                        </div>
+                        <hr />
+                        <div>{chapter?.summary}</div>
+                      </div>
+                    </div>
+                    <div className="flex items-center justify-end gap-10">
+                      <button
+                        className={`bg-${color}-200 phdg p-4 change rounded-lg`}
+                        onClick={onConfirm}
+                      >
+                        LEARN
+                      </button>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  function handleCancel() {
+    setShowModal(false);
+    setPress(true);
+  }
+
   const { chapterId, courseId } = parseQueryParams(router.query.id);
 
   // useEffect(() => {
@@ -87,14 +139,22 @@ function Learning() {
     <main>
       <Layout2>
         <div className="sticky top-0 z-1">
-          <Timer />
+          <Timer press={press} />
         </div>
         {course.map((product, i) => (
           <div key={i}>
+            {showModal && (
+              <div className="absolute inset-0 flex items-center justify-center">
+                <ConfirmationModal onConfirm={handleCancel} color="gray" />
+              </div>
+            )}
             {product.chapters
               .filter((product) => product._id == chapterId)
               .map((chapter, j) => (
-                <div key={j} className="seashell rounded-lg">
+                <div
+                  key={j}
+                  className={`seashell rounded-lg ${showModal ? "blur " : ""}`}
+                >
                   <div className="grido items-center">
                     <div className="shdg p-3 pb-0 text-uppercase font-bold">
                       <p className="hdg user-select-none">

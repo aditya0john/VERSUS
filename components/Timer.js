@@ -10,7 +10,7 @@ function Timer({ press }) {
     let timer;
     if (
       (press && route.asPath.includes("/ProgLabs")) ||
-      route.asPath.includes("/learning")
+      (press && route.asPath.includes("/learning"))
     ) {
       timer = setInterval(() => {
         setTime((prevTime) => prevTime + 1);
@@ -25,7 +25,7 @@ function Timer({ press }) {
   useEffect(() => {
     if (
       (!press && route.asPath.includes("/ProgLabs")) ||
-      route.asPath.includes("/learning")
+      (!press && route.asPath.includes("/learning"))
     ) {
       setTime(0);
     }
