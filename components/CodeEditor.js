@@ -6,10 +6,15 @@ import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/theme-monokai";
 import { useRouter } from "next/router";
-import { version } from "mongoose";
 
 export default function CodeEditor({ onCompile, err, status }) {
   let route = useRouter();
+  let resetLang = {
+    cpp17:
+      "#include <iostream>\nusing namespace std;\n\nint main() {\n  // Your C++ code here\n  return 0;\n}",
+    java: 'public class Test {\npublic static void main(String []args) {\n  System.out.println("My First Java Program.");\n  }\n};',
+    python3: 'print("hello world")',
+  };
   let [version, setVersion] = useState(0);
   let [lang, setLanguage] = useState("cpp17");
   let color;
@@ -24,7 +29,7 @@ export default function CodeEditor({ onCompile, err, status }) {
         className={`p-3 bg-${color}-100 rounded-lg flex items-center justify-center`}
       >
         <div className="modal-content">
-          <p className=" flex items-center justify-center">{message}</p>
+          <p className=" flex items-center justify-center">{(message, lang)}</p>
           <div className="flex items-center justify-center gap-10">
             <button
               className={`bg-${color}-200 p-2 change rounded-lg`}
@@ -45,9 +50,9 @@ export default function CodeEditor({ onCompile, err, status }) {
   }
 
   function resetCode() {
-    setCode(
-      "#include <iostream>\nusing namespace std;\n\nint main() {\n  // Your C++ code here\n  return 0;\n}"
-    );
+    if (lang.includes("cpp17")) setCode(resetLang.cpp17);
+    else if (lang.includes("java")) setCode(resetLang.java);
+    else if (lang.includes("python3")) setCode(resetLang.python3);
     setShowModal(false);
   }
 
