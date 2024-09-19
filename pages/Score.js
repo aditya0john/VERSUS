@@ -1,7 +1,7 @@
 import Layout2 from "@/components/Layout2";
+import HTMLReactParser from "html-react-parser";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import ReactHtmlParser from "html-react-parser";
 
 export default function Score() {
   const [selectedDivIndex, setSelectedDivIndex] = useState(1);
@@ -35,7 +35,7 @@ export default function Score() {
           ))}
         </div>
         <div className="bg-black text-white p-3 scale-95 rounded">
-          {ReactHtmlParser(divs[selectedDivIndex]?.innerHTML)}
+          {HTMLReactParser(divs[selectedDivIndex]?.innerHTML)}
         </div>
       </div>
       <div className="seashell m-1 rounded-lg">
