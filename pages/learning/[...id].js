@@ -3,7 +3,7 @@ import axios from "axios";
 import Loading from "@/components/Loading";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import ReactHtmlParser from "react-html-parser";
+import ReactHtmlParser from "html-react-parser";
 import Timer from "@/components/Timer";
 import Image from "next/image";
 

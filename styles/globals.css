@@ -240,21 +240,6 @@ p {
   transition: 0.3s ease-in-out 0ms;
 }
 
-.bottom_round {
-  height: 30em;
-  display: flex;
-  border-radius: 0% 0% 100px 100px;
-  box-sizing: border-box;
-  transition: 0.3s ease-in-out 0ms;
-}
-
-.bottom_round:hover {
-  height: 40em;
-  border-radius: 0% 0% 100px 100px;
-  box-sizing: border-box;
-  transition: 0.3s ease-in-out 0ms;
-}
-
 .bradius {
   border-radius: 100px;
 }
@@ -393,7 +378,6 @@ img {
 
 .con:hover .con_lower {
   opacity: 1;
-
 }
 
 .con:hover div {

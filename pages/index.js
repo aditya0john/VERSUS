@@ -34,7 +34,7 @@ export default function Home() {
     return (
       <main className="user-select-none">
         <Layout>
-          <div className="bg-white mt-3 sm:bg-white sm:gridd p-4 gap-5 bottom_round">
+          <div className="bg-white mt-3 sm:bg-white sm:gridd p-4 gap-5 flex">
             <div className="hidden sm:flex sm:items-center">
               <Image
                 alt="image"
@@ -46,10 +46,35 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center text-center items-center">
-              <div className="uppercase text-black hdg thdg flex-row">
-                <i>Your Virtual University, in minutes!</i>
+              <div className="uppercase text-black hdg thdg">
+                <h1 className="text-4xl lg:text-7xl tracking-tight flex flex-col items-center">
+                  Your{""}
+                  <br />{" "}
+                  <div className="flex">
+                    <Image
+                      alt="image"
+                      className="p-1 -rotate-[75deg] absolute top-20 z-10 h-40 w-40 lg:h-[200px] lg:w-[200px]"
+                      src="/images/arrow.png"
+                      height={300}
+                      width={300}
+                    ></Image>
+                    <span className="font-extrabold bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
+                      Virtual University
+                      <Image
+                        alt="image"
+                        className="p-1 rotate-[30deg] md:rotate-[40deg] lg:rotate-[80deg] absolute -bottom-20 right-0 md:-right-0 md:-bottom-[140px] lg:-bottom-40 lg:-right-10 h-40 w-40 lg:h-[200px] lg:w-[200px]"
+                        src="/images/arrow.png"
+                        height={300}
+                        width={300}
+                      ></Image>
+                    </span>
+                  </div>
+                  <span>
+                    , in minutes<span className="font-extrabold">!!</span>
+                  </span>
+                </h1>
                 <p className="lowercase shdg">
-                  <i className="text-gray-400">
+                  <i className="text-2xl text-black/[0.5] z-10">
                     Online Classes, Assesments, proctored Exams, Assignments,
                     Auto Grading, Plagrism check ---- All in one platform.
                   </i>
@@ -57,7 +82,7 @@ export default function Home() {
                 <hr className="border border-black mb-3" />
                 <Link
                   href="/SignUp"
-                  className=" makeLine text-decoration-none border border-black rounded-lg p-3 px-4 shdg change_button"
+                  className=" makeLine text-decoration-none border border-black rounded-3xl p-3 px-4 shdg change_button"
                 >
                   BECOME A STUDENT
                 </Link>
@@ -196,55 +221,55 @@ export default function Home() {
                   alt="image"
                   width={400}
                   height={400}
-                  className="w-full max-w-xs md:max-w-full"
+                  className="max-w-xs lg:max-w-7xl"
                 />
               </div>
 
               <div className="space-y-4">
-                <div className="space-y-2">
-                  <h3 className="hdg text-black">
+                <div className="space-y-2 flex flex-col">
+                  <h3 className="text-black text-2xl lg:text-5xl font-bold capitalize tracking-tight">
                     AI Assisted Assessment Platform With :- Online Remote
                     Proctoring
                   </h3>
-                  <h3 className="phdg text-gray-400">
+                  <h3 className="text-2xl lg:text-3xl text-justify text-gray-400 tracking-tight">
                     Comprehensive remote Assessment platform with support for a
                     variety of tests & an ultra-powerful remote proctoring
                     solution for uncontrollable test-taker environments.
                   </h3>
                 </div>
                 <hr className="border-gray-400" />
-                <ol className="text-black text-sm md:text-base space-y-2">
+                <ol className="text-black text-sm md:text-base space-y-2 list-outside list-disc">
                   <li>
-                    • Secure: 2-factor authentication based access,
-                    organizational role based
+                    Secure: 2-factor authentication based access, organizational
+                    role based
                   </li>
                   <li>
-                    • Comprehensive composite recording and playback of all
+                    Comprehensive composite recording and playback of all
                     aspects of a test, including multiple cameras, screen,
                     times, navigation activity, locations, answers, multiple
                     audio streams
                   </li>
                   <li>
-                    • Automatic blocking of bad actors with complete control for
+                    Automatic blocking of bad actors with complete control for
                     proctor to extend or terminate the test
                   </li>
                   <li>
-                    • Over 200 knobs to design and schedule tests from a variety
+                    Over 200 knobs to design and schedule tests from a variety
                     of auto-evaluated and manually evaluated question types
                   </li>
                   <li>
-                    • Manually evaluated question types include subjective
-                    essay, viva voce, document upload, etc.
+                    Manually evaluated question types include subjective essay,
+                    viva voce, document upload, etc.
                   </li>
-                  <li>• Evaluation audit trails</li>
+                  <li> Evaluation audit trails</li>
                   <li>
-                    • Unlimited test support with complete data isolation by
+                    Unlimited test support with complete data isolation by
                     domain
                   </li>
-                  <li>• Plagiarism reports</li>
-                  <li>• Rich analytics</li>
+                  <li> Plagiarism reports</li>
+                  <li> Rich analytics</li>
                   <li>
-                    • Consolidated test reports for various audit and
+                    Consolidated test reports for various audit and
                     accreditation requirements
                   </li>
                   <li>Optional access to our extensive question banks</li>
@@ -255,37 +280,39 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 mt-8">
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <h3 className="hdg text-black md:text-xl">Live Meetings</h3>
-                  <h3 className="phdg text-gray-400 md:text-base">
+                  <h3 className="text-black text-2xl lg:text-5xl font-bold capitalize tracking-tight">
+                    Live Meetings
+                  </h3>
+                  <h3 className="text-2xl lg:text-3xl text-justify text-gray-400 tracking-tight">
                     Secure Online conferencing from any device on even low
                     bandwidth network at an unbelievable price.
                   </h3>
                 </div>
                 <hr className="border-gray-400" />
-                <ol className="text-black md:text-base space-y-2">
+                <ol className="text-black md:text-base space-y-2 list-outside list-disc">
                   <li>
-                    • Secure: 2-factor authentication based access,
-                    organizational role based access control, encryption over
-                    wire, encryption at rest
+                    Secure: 2-factor authentication based access, organizational
+                    role based access control, encryption over wire, encryption
+                    at rest
                   </li>
                   <li>
-                    • No apps or special devices needed. A modern browser on any
+                    No apps or special devices needed. A modern browser on any
                     PC or mobile phone is all that is needed
                   </li>
                   <li>
-                    • Unlimited secure cloud stored recordings, with video
+                    Unlimited secure cloud stored recordings, with video
                     indexing, rich composite recording playback
                   </li>
                   <li>
-                    • Powerful time-table manager for scheduled meetings.
+                    Powerful time-table manager for scheduled meetings.
                     One-click ad-hoc hosting with easy participant selection
                   </li>
                   <li>
-                    • Adaptive bitrate control, specially tuned for low
-                    bandwidth situations
+                    Adaptive bitrate control, specially tuned for low bandwidth
+                    situations
                   </li>
                   <li>
-                    • Rich feature-set for teachers such as Second Device™
+                    Rich feature-set for teachers such as Second Device™
                     technology, support for chalkboard, pen & paper based
                     teaching, shared whiteboards, real-time annotations,
                     synchronized video playback for all participants,
@@ -319,61 +346,62 @@ export default function Home() {
 
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <p className="hdg text-black  md:text-xl">
+                  <p className="text-black text-2xl lg:text-5xl font-bold capitalize tracking-tight">
                     Virtual University
                   </p>
-                  <p className="phdg text-gray-400 md:text-base">
+                  <p className="text-2xl lg:text-3xl text-justify text-gray-400 tracking-tight">
                     Online Classes + LMS + Assessments + Remote Proctoring +
                     Interactive Courses
                   </p>
                 </div>
                 <hr className="border-gray-400" />
-                <ol className="text-black text-sm md:text-base space-y-2">
+                <ul className="text-black text-sm md:text-base space-y-2 list-outside list-disc">
                   <li>
-                    • Powerful learning management system (LMS) with complete
-                    data isolation between different schools
+                    Powerful learning management system (LMS) with complete data
+                    isolation between different schools
                   </li>
                   <li>
-                    • Organizations & user management with role based access
+                    Organizations & user management with role based access
                     control with secure multi-factor authentication
                   </li>
                   <li>
-                    • Curriculum management, controllable at individual as well
-                    as organization hierarchy level
+                    Curriculum management, controllable at individual as well as
+                    organization hierarchy level
                   </li>
                   <li>
-                    • Rich online course authoring & design with support for
-                    rich media, animations, etc.
+                    Rich online course authoring & design with support for rich
+                    media, animations, etc.
                   </li>
                   <li>
-                    • Auto-evaluated question types include computer programming
+                    Auto-evaluated question types include computer programming
                     in multiple languages, variants of multiple choice, fill in
                     the blanks, numerical type, match columns, spoken English,
                     reading comprehension, listening comprehension, etc.
                   </li>
                   <li>
-                    • Manually evaluated question types include subjective
-                    essay, viva voce, document upload, etc.
+                    Manually evaluated question types include subjective essay,
+                    viva voce, document upload, etc.
                   </li>
-                  <li>• Timed assignments and self-paced exercises</li>
+                  <li>Timed assignments and self-paced exercises</li>
                   <li>
-                    • Testing and assessment platform with remote proctoring
+                    Testing and assessment platform with remote proctoring
                   </li>
-                  <li>• Secure digital vault for question banks</li>
-                </ol>
+                  <li>Secure digital vault for question banks</li>
+                </ul>
               </div>
             </div>
           </div>
 
           <div className="bg-white p-5 mt-3 up_round">
-            <div className="text-black phdg">
+            <div className="text-black phdg text-2xl lg:text-5xl">
               Customers
-              <h3 className="shdg text-gray-400 mb-4">
+              <h3 className="text-gray-400 mb-4 text-2xl lg:text-5xl">
                 Listed below are a small subset of our customers
               </h3>
             </div>
-
-            <Table />
+            <div className="py-10">
+              <Table />
+            </div>
           </div>
         </Layout>
       </main>

@@ -12,7 +12,7 @@ function Table() {
               <Image
                 width={200}
                 height={200}
-                class=" con image-change-sm h-auto image-resize-sm"
+                class="con image-change-sm h-auto image-resize-sm"
                 src="/images/IIIT GUWAHATI.jpeg"
                 alt="image1"
               ></Image>
