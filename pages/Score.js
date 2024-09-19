@@ -1,7 +1,7 @@
 import Layout2 from "@/components/Layout2";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import ReactHtmlParser from "react-html-parser";
+import ReactHtmlParser from "html-react-parser";
 
 export default function Score() {
   const [selectedDivIndex, setSelectedDivIndex] = useState(1);
