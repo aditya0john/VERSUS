@@ -5,7 +5,7 @@ export default function Layout2({ children }) {
     <>
       <div className="seashell">
         <Navbar2 />
-        <div className="seashell p-1 body">{children}</div>
+        <div className="seashell mx-auto">{children}</div>
       </div>
     </>
   );

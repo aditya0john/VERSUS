@@ -26,17 +26,17 @@ function Carousel() {
         width={500}
         height={500}
         src={images[key]}
-        className="p-3 image-resize-sm image-resize-lg"
+        className="p-3 image-resize-sm image-resize-lg rounded-3xl"
         alt={`Award ${key}`}
       />
     </div>
   ));
 
   return (
-    <div className="sm:body">
+    <div className="">
       <div>
         <span>
-          <p className="hdg flex justify-center items-center text-black">
+          <p className="font-bold text-2xl lg:text-5xl flex justify-center items-center text-black/[0.8]">
             GALLERY
           </p>
         </span>

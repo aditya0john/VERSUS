@@ -54,48 +54,56 @@ function Learning() {
     }
   }
 
-  function ConfirmationModal({ onConfirm, color }) {
-    return (
-      <div
-        className={`p-3 bg-${color}-100 rounded-lg flex items-center justify-center`}
-      >
-        <div className="modal-content grid grid-cols-2">
-          {course.map((product, i) => (
-            <div key={i}>
-              {product.chapters
-                .filter((product) => product._id == chapterId)
-                .map((chapter, j) => (
-                  <div key={j} className="grid grid-cols-2">
-                    <div className="flex gap-3">
-                      <Image
-                        src="/images/C++.png"
-                        alt="image"
-                        width={100}
-                        height={100}
-                      />
-                      <div className="grid grid-rows-2">
-                        <div className="shdg font-bold">
-                          {chapter?.chapterName}
+  function ConfirmationModal({ onConfirm, text }) {
+    if (!text) {
+      return (
+        <div
+          className={`p-3 bg-gray-100 rounded-lg flex items-center justify-center`}
+        >
+          <div className="max-w-4xl">
+            {course.map((product, i) => (
+              <div key={i}>
+                {product.chapters
+                  .filter((product) => product._id == chapterId)
+                  .map((chapter, j) => (
+                    <div key={j} className="grid grid-cols-2">
+                      <div className="flex gap-3 items-center">
+                        <Image
+                          src="/images/C++.png"
+                          alt="image"
+                          width={100}
+                          height={100}
+                        />
+                        <div className="flex flex-col max-w-2xl">
+                          <div className="text-2xl font-bold uppercase">
+                            {chapter?.chapterName}
+                          </div>
+                          <hr />
+                          <div>{chapter?.summary}</div>
                         </div>
-                        <hr />
-                        <div>{chapter?.summary}</div>
+                      </div>
+                      <div className="flex items-center justify-end">
+                        <button
+                          className={`bg-gray-400/[0.4] phdg p-4 hover:text-white hover:bg-black transition duration-200 rounded-lg`}
+                          onClick={onConfirm}
+                        >
+                          LEARN
+                        </button>
                       </div>
                     </div>
-                    <div className="flex items-center justify-end gap-10">
-                      <button
-                        className={`bg-${color}-200 phdg p-4 change rounded-lg`}
-                        onClick={onConfirm}
-                      >
-                        LEARN
-                      </button>
-                    </div>
-                  </div>
-                ))}
-            </div>
-          ))}
+                  ))}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          <div></div>
+        </div>
+      );
+    }
   }
 
   function handleCancel() {
@@ -138,14 +146,14 @@ function Learning() {
   return (
     <main>
       <Layout2>
-        <div className="sticky top-0 z-1">
+        <div className="sticky mt-2 top-2 z-1">
           <Timer press={press} />
         </div>
         {course.map((product, i) => (
           <div key={i}>
             {showModal && (
-              <div className="absolute inset-0 flex items-center justify-center">
-                <ConfirmationModal onConfirm={handleCancel} color="gray" />
+              <div className="inset-0 flex items-center justify-center absolute top-40 z-10">
+                <ConfirmationModal onConfirm={handleCancel} />
               </div>
             )}
             {product.chapters
@@ -153,12 +161,32 @@ function Learning() {
               .map((chapter, j) => (
                 <div
                   key={j}
-                  className={`seashell rounded-lg ${showModal ? "blur " : ""}`}
+                  className={`seashell rounded-lg ${
+                    showModal ? "blur-lg overflow-hidden h-[80vh]" : ""
+                  }`}
                 >
                   <div className="grido items-center">
                     <div className="shdg p-3 pb-0 text-uppercase font-bold">
-                      <p className="hdg user-select-none">
-                        {chapter?.chapterName}
+                      <p className="text-uppercase hdg font-bold user-select-none">
+                        <div className="p-3">
+                          <span className="flex justify-center font-extrabold bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
+                            <Image
+                              alt="image"
+                              className="hidden lg:flex z-10 p-1 h-20 w-20 rotate-[130deg] lg:rotate-[180deg] absolute -bottom-10 left-50   lg:-top-20 lg:-left-40 top-10 lg:h-[200px] lg:w-[200px]"
+                              src="/images/arrow.png"
+                              height={300}
+                              width={300}
+                            />
+                            {chapter?.chapterName}
+                            <Image
+                              alt="image"
+                              className="hidden lg:flex z-10 p-1 rotate-[30deg] lg:-rotate-[10deg] absolute -bottom-10 right-20 lg:-bottom-20 lg:-right-40 h-20 w-20 lg:h-[200px] lg:w-[200px]"
+                              src="/images/arrow.png"
+                              height={300}
+                              width={300}
+                            />
+                          </span>
+                        </div>
                       </p>
                     </div>
                     <div className="flex gap-4 justify-center">
@@ -174,6 +202,10 @@ function Learning() {
                         <ul className="dropdown-menu">
                           <li className="dropdown-item text-gray-400 hover:text-white">
                             {chapter?.summary}
+                            <ConfirmationModal
+                              onConfirm={handleCancel}
+                              text={chapter?.summary}
+                            />
                           </li>
                         </ul>
                       </div>

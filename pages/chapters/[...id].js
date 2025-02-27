@@ -6,6 +6,7 @@ import Loading from "@/components/Loading";
 import axios from "axios";
 
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function LearnCPP() {
   const [isLoading, setLoading] = useState(true);
@@ -34,20 +35,38 @@ export default function LearnCPP() {
   return (
     <>
       <Layout2>
-        <div className="grid">
-          <div className="seashell rounded-lg p-3">
-            <div className="flex justify-between">
+        <div>
+          <div className="seashell rounded-lg p-3 overflow-hidden">
+            <div className="flex justify-around">
               {Course.filter((x) => x._id == id).map((product, i) => (
                 <div key={i}>
-                  <p className="text-uppercase hdg font-bold user-select-none">
-                    {product.title} for {product.description}
+                  <p className="text-uppercase font-bold select-none">
+                    <div className="p-3 text-4xl">
+                      <span className="flex justify-center font-extrabold bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[50vw]">
+                        <Image
+                          alt="image"
+                          className="hidden lg:flex z-10 p-1 h-20 w-20 rotate-[130deg] lg:rotate-[180deg] absolute -bottom-10 left-50 lg:-top-20 lg:-left-40 top-10 lg:h-[200px] lg:w-[200px]"
+                          src="/images/arrow.png"
+                          height={300}
+                          width={300}
+                        />
+                        {product.title} for {product.description}
+                        <Image
+                          alt="image"
+                          className="hidden lg:flex z-10 p-1 rotate-[30deg] lg:-rotate-[10deg] absolute -bottom-10 right-20 lg:-bottom-20 lg:-right-40 h-20 w-20 lg:h-[200px] lg:w-[200px]"
+                          src="/images/arrow.png"
+                          height={300}
+                          width={300}
+                        />
+                      </span>
+                    </div>
                   </p>
                 </div>
               ))}
 
               <div className="grid grid-cols-2 gap-2">
                 <Link href="/Score" className="text-decoration-none text-black">
-                  <div className="bg-white p-3 rounded-lg border border-black change box image-change">
+                  <div className="bg-white p-3 rounded-lg border border-black change_button box image-change">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -69,7 +88,7 @@ export default function LearnCPP() {
                   href={"/test/" + id}
                   className="text-decoration-none text-black"
                 >
-                  <div className="bg-white p-3 rounded-lg border border-black box change box image-change">
+                  <div className="bg-white p-3 rounded-lg border border-black box change_button box image-change">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -97,18 +116,18 @@ export default function LearnCPP() {
                     {product.chapters.map((chapter, j) => (
                       <>
                         <Link
-                          className="text-decoration-none bg-orange-100 p-3 rounded-lg box change_button"
+                          className="text-decoration-none baseBackgroundColor p-3 rounded-lg change"
                           key={j}
                           href={`/learning/chapterId=${chapter?._id}&courseId=${id}`}
                         >
-                          <div>
-                            <div className="font-bold">chapter: {j + 1}</div>
-                            <div className="hdg md:font-bold uppercase">
+                          <div className="baseTextColor">
+                            <p className="font-bold text-xs lg:text-base">chapter: {j + 1}</p>
+                            <p className="text-base lg:text-3xl font-bold uppercase tracking-tight">
                               {chapter?.chapterName}
-                            </div>
+                            </p>
                             <div className="hidden md:block">
                               <hr />
-                              <p className="text-uppercase pl-4">
+                              <p className="text-uppercase pl-4 font-semibold">
                                 {chapter?.chapterDescription}
                               </p>
                             </div>

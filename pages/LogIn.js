@@ -58,7 +58,7 @@ function LogIn() {
         <div className="flex flex-col items-center justify-center m-4 gap-3">
           <span className="w-full makeLine">
             <button
-              className="w-full  uppercase overflow-hidden flex justify-center gap-3 border border-black rounded-md p-3 font-bold shdg google_color"
+              className="w-full uppercase overflow-hidden flex justify-center gap-3 border border-black rounded-full p-3 font-bold shdg google_color"
               onClick={() => signIn("google")}
             >
               <svg

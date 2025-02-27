@@ -6,7 +6,7 @@ function Cards({ text, button, src, href, color, SVG }) {
 
   if (session) {
     return (
-      <div className={`box con change_button bg-${color}-100 rounded-lg`}>
+      <div className={`box con change_button bg-${color}-100 rounded-3xl `}>
         <Link href={href}>
           <div className="con_upper p-1">
             <svg
@@ -22,7 +22,7 @@ function Cards({ text, button, src, href, color, SVG }) {
                 x="12"
                 y="14"
                 font-size="5"
-                strokeWidth={0.4}
+                strokeWidth={0.2}
                 text-anchor="middle"
               >
                 {SVG}
@@ -31,11 +31,13 @@ function Cards({ text, button, src, href, color, SVG }) {
           </div>
         </Link>
         <div className="card-body p-0 con_lower">
-          <div className={`text-center p-1 h-20 uppercase user-select-none`}>
+          <p
+            className={`text-center p-3 h-20 uppercase user-select-none font-mono font-semibold tracking-tight`}
+          >
             {text}
-          </div>
+          </p>
           <div
-            className={`py-3 items-center justify-center rounded-md flex card-body bg-${color}-100 text-black`}
+            className={`py-3 items-center justify-center rounded-b-3xl flex card-body bg-${color}-100 text-black`}
           >
             <Link href={href} className="text-decoration-none text-black">
               {button}

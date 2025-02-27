@@ -33,7 +33,7 @@ function Navbar2() {
           />
           <h>VERSUS</h>
         </Link>
-        <div className="flex hidden md:flex gap-3 items-center">
+        <div className="hidden sm:flex md:flex gap-3 items-center">
           <Link href="/" className="flex gap-1 text-decoration-none text-black">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -112,8 +112,8 @@ function Navbar2() {
             aria-expanded="false"
           ></button>
 
-          <ul class="dropdown-menu pt-0">
-            <div className="flex flex-col justify-center bg-gray-200 p-3 change">
+          <ul class="dropdown-menu p-0">
+            <div className="flex flex-col justify-center bg-gray-200 p-3 hover:bg-black hover:text-white transition duration-200 select-none rounded-t-md">
               <Image
                 alt="image"
                 width={200}
@@ -121,20 +121,18 @@ function Navbar2() {
                 className="rounded"
                 src={session?.user?.image}
               />
-              <p className="flex justify-center shdg mb-0">
+              <p className="flex justify-center text-base font-bold mb-0">
                 {session?.user?.name}
               </p>
             </div>
-            <hr className="mt-0" />
             <li>
               <Link
                 href="/"
-                className=" dropdown-item text-decoration-none text-black"
+                className="dropdown-item text-decoration-none text-black"
               >
                 Profile
               </Link>
             </li>
-            <hr className="mt-0" />
 
             <li>
               <Link
@@ -144,7 +142,6 @@ function Navbar2() {
                 Enrolled Courses
               </Link>
             </li>
-            <hr className="mt-0" />
             <li>
               <Link
                 href="/Help&Support"
@@ -158,7 +155,7 @@ function Navbar2() {
 
         <Link
           href="/Help&Support"
-          className="hidden md:flex md:gap-1 md:text-decoration-none md:text-black"
+          className="hidden sm:flex gap-1 text-decoration-none uppercase sm:text-black"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +175,7 @@ function Navbar2() {
         </Link>
 
         <button
-          className="border border-black text-black hover:bg-red-400 rounded-md p-2 px-3 p-1 ml-4"
+          className="font-semibold border border-black text-black hover:bg-red-300 rounded-md p-2 px-3 ml-4"
           onClick={logout}
         >
           LogOut

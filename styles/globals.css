@@ -6,6 +6,17 @@ kit-scrollbar {
   width: 18px;
 }
 
+.baseBackgroundColor{
+  background-color:#C4FFA5;
+}
+.secondBackgroundColor{
+  background-color: #0A3362;
+}
+
+.baseTextColor{
+color: #105A41;
+}
+
 @media only screen and (min-width: 640px) {
   .ace_editor {
     font-size: 22px !important;
@@ -38,6 +49,7 @@ kit-scrollbar {
     background-color: rgb(99, 255, 99);
   }
 }
+
 
 .glass {
   background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white color */
@@ -216,7 +228,11 @@ p {
 .change:hover {
   transition: 0.3s ease-in-out 0ms;
   background-color: rgb(0, 0, 0) !important;
-  color: white !important;
+  
+}
+
+.change:hover p,hr{
+  color: #C4FFA5 !important;
 }
 
 .change_button {
@@ -383,7 +399,7 @@ img {
 .con:hover div {
   z-index: 1;
   transform: translateY(0%);
-  transition: 0.2s ease 0ms;
+  transition: 0.15s ease 0ms;
 }
 
 .con:hover {

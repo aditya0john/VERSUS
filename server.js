@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     origin: "https://e-learning-website-major-project.vercel.app/Coding", // Replace with your frontend domain
-    methods: ["POST"], // Allow only POST requests
+    methods: ["POST"], // Allow only POST requestsF
     allowedHeaders: ["Content-Type", "Authorization"], // Allow only specific headers
   })
 );

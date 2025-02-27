@@ -10,7 +10,7 @@ export default function Layout3({ children }) {
       <>
         <div>
           <Navbar2 />
-          <div className="bg-black p-1 text-black rounded-top">
+          <div className="bg-black/[0.8] p-1 text-black rounded-top">
             <Itemstrip />
             <div className="grid gridd h-100">
               <aside className="seashell rounded-lg p-3 ml-2 md:ml-1 mt-1 mr-2 mb-1 h-80">
@@ -37,7 +37,7 @@ export default function Layout3({ children }) {
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
-                          viewBox="0 0 24 24"
+                          viewBox="0 0 24 2F4"
                           stroke-width="1.5"
                           stroke="currentColor"
                           class="w-8 h-8"

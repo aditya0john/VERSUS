@@ -36,7 +36,7 @@ export default function Course() {
           <div className="p-3 flex gap-2">
             <input
               onChange={(e) => setSearch(e.target.value)}
-              className="bg-white text-black rounded-md border border-black p-2 w-full change hover:placeholder-white"
+              className="bg-white text-black rounded-2xl border border-black p-2 w-full change hover:placeholder-white"
               type="text"
               placeholder="Enter Course name"
             />
@@ -67,7 +67,7 @@ export default function Course() {
                 : items.title.toLocaleLowerCase().includes(search);
             }).map((Course, i) => {
               return (
-                <span className="card" key={i}>
+                <span key={i}>
                   <Cards
                     SVG={Course?.title}
                     href={"/chapters/" + Course?._id}

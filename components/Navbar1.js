@@ -7,22 +7,16 @@ function Navbar1() {
     window.location.href = "/SignUp";
   }
   return (
-    <nav className="glass sticky top-0 z-1 text-black p-3 flex items-center gap-2 justify-between border-bottom">
+    <nav className="glass sticky top-0 z-50 text-black p-3 flex items-center gap-2 justify-between border-bottom">
       <Link
         href="/"
-        className="flex items-center text-decoration-none text-black font-bold"
+        className="flex items-center justify-center gap-2 text-decoration-none text-black font-bold"
       >
-        <Image
-          width={50}
-          height={50}
-          src="/images/logo.png"
-          alt="image"
-          className="mr-1"
-        />
-        <h>VERSUS-CODE</h>
+        <Image width={50} height={50} src="/images/logo.png" alt="image" className="object-cover w-[30px] h-[30px] lg:h-[50px] lg:w-[50px]" />
+        <p className="text-[18px] lg:text-4xl lg:font-bold flex pt-2">VERSUS-CODE</p>
       </Link>
 
-      <div className="flex gap-20 items-center hidden sm:flex gap-20 items-center">
+      <div className="hidden sm:flex gap-20 items-center">
         <div class="dropdown ">
           <button
             class=" dropdown-toggle"
@@ -64,55 +58,11 @@ function Navbar1() {
           </ul>
         </div>
 
-        <div class="dropdown">
-          <button
-            class="dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
+        <Link href="/Help&Support" className="text-decoration-none text-black">
+          <button type="button" aria-expanded="false">
             HELP & SUPPORT
           </button>
-          <ul class="bg-black dropdown-menu p-0 mt-4 ">
-            <li className="mt-10 mb-10">
-              <Link
-                href="/Help&Support"
-                className="dropdown-item text-decoration-none bg-black"
-              >
-                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
-                  Call customer care
-                </p>
-              </Link>
-              <hr className="text-white" />
-              <Link
-                href="/Help&Support"
-                className="dropdown-item text-decoration-none bg-black"
-              >
-                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
-                  File a Report
-                </p>
-              </Link>
-              <hr className="text-white" />
-              <Link
-                href="/Help&Support"
-                className="dropdown-item text-decoration-none bg-black"
-              >
-                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
-                  E-mail us
-                </p>
-              </Link>
-              <hr className="text-white" />
-              <Link
-                href="/Help&Support"
-                className="dropdown-item text-decoration-none bg-black"
-              >
-                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
-                  Ask us anything
-                </p>
-              </Link>
-            </li>
-          </ul>
-        </div>
+        </Link>
       </div>
       <div className="flex gap-3">
         <div className="flex gap-2">

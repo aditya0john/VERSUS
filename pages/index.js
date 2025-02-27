@@ -34,8 +34,8 @@ export default function Home() {
     return (
       <main className="user-select-none">
         <Layout>
-          <div className="bg-white mt-3 sm:bg-white sm:gridd p-4 gap-5 flex">
-            <div className="hidden sm:flex sm:items-center">
+          <div className="bg-slate-50 mt-3 flex justify-around ">
+            <div className="hidden lg:flex items-center justify-center">
               <Image
                 alt="image"
                 className="p-1"
@@ -46,58 +46,52 @@ export default function Home() {
             </div>
 
             <div className="flex justify-center text-center items-center">
-              <div className="uppercase text-black hdg thdg">
-                <h1 className="text-4xl lg:text-7xl tracking-tight flex flex-col items-center">
+              <div className="uppercase hdg thdg">
+                <h1 className="text-4xl lg:text-7xl text-black font-extrabold tracking-tight flex flex-col items-center">
                   Your{""}
                   <br />{" "}
                   <div className="flex">
                     <Image
-                      alt="image"
-                      className="p-1 -rotate-[75deg] absolute top-20 z-10 h-40 w-40 lg:h-[200px] lg:w-[200px]"
+                      alt="arrow image"
+                      className="p-1 -rotate-[75deg] lg:-rotate-[75deg] absolute top-20 lg:top-20 z-10 h-28 w-28 lg:h-[200px] lg:w-[200px]"
                       src="/images/arrow.png"
                       height={300}
                       width={300}
-                    ></Image>
-                    <span className="font-extrabold bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
+                    />
+                    <span className="max-w-xs lg:max-w-5xl font-extrabold baseTextColor bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
                       Virtual University
                       <Image
-                        alt="image"
-                        className="p-1 rotate-[30deg] md:rotate-[40deg] lg:rotate-[80deg] absolute -bottom-20 right-0 md:-right-0 md:-bottom-[140px] lg:-bottom-40 lg:-right-10 h-40 w-40 lg:h-[200px] lg:w-[200px]"
+                        alt="arrow image"
+                        className="p-1 -rotate-[34deg] lg:rotate-[80deg] absolute -bottom-10 right-0 md:-right-0 lg:-bottom-40 lg:-right-10 h-28 w-28 lg:h-[200px] lg:w-[200px]"
                         src="/images/arrow.png"
                         height={300}
                         width={300}
-                      ></Image>
+                      />
                     </span>
                   </div>
                   <span>
                     , in minutes<span className="font-extrabold">!!</span>
                   </span>
                 </h1>
-                <p className="lowercase shdg">
-                  <i className="text-2xl text-black/[0.5] z-10">
-                    Online Classes, Assesments, proctored Exams, Assignments,
-                    Auto Grading, Plagrism check ---- All in one platform.
-                  </i>
-                </p>
-                <hr className="border border-black mb-3" />
+
                 <Link
                   href="/SignUp"
-                  className=" makeLine text-decoration-none border border-black rounded-3xl p-3 px-4 shdg change_button"
+                  className="makeLine text-decoration-none border-2 border-black rounded-full p-3 px-4 shdg change_button"
                 >
                   BECOME A STUDENT
                 </Link>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4 p-4 mb-10 mt-20 md:grid-cols-6">
-            <span className="bg-orange-100 shdg round flex flex-col items-center p-3 text-center change_button">
+          <div className="grid grid-cols-2 gap-4 p-4 mb-10 mt-20 md:grid-cols-6 w-full">
+            <span className="w-26 h-26 bg-orange-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-orange-300/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="orange"
-                class="w-20 h-20 sm:w-20 sm:h-20"
+                class="w-12 h-12 sm:w-20 sm:h-20"
               >
                 <path
                   stroke-linecap="round"
@@ -107,17 +101,17 @@ export default function Home() {
               </svg>
 
               <span>{Institutions}</span>
-              <p className="font-bold">Institution&apos;s</p>
+              <p className="font-semibold text-xl">Institution&apos;s</p>
             </span>
 
-            <span className="bg-purple-100 shdg round flex flex-col items-center p-3 text-center change_button">
+            <span className="w-26 h-26 bg-purple-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-purple-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="purple"
-                class="w-20 h-20"
+                class="w-12 h-12 sm:w-20 sm:h-20"
               >
                 <path
                   stroke-linecap="round"
@@ -127,17 +121,17 @@ export default function Home() {
               </svg>
 
               <span>{Teacher}</span>
-              <p className="font-bold"> Teacher&apos;s</p>
+              <p className="font-semibold text-xl"> Teacher&apos;s</p>
             </span>
 
-            <span className="bg-blue-100 shdg round flex flex-col items-center p-3 text-center change_button">
+            <span className="w-26 h-26 bg-blue-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-blue-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="blue"
-                class="w-20 h-20"
+                class="w-12 h-12 sm:w-20 sm:h-20"
               >
                 <path
                   stroke-linecap="round"
@@ -147,17 +141,17 @@ export default function Home() {
               </svg>
 
               <span>{Learners}</span>
-              <p className="font-bold">Learner&apos;s</p>
+              <p className="font-semibold text-xl">Learner&apos;s</p>
             </span>
 
-            <span className="bg-gray-200 shdg round flex flex-col items-center p-3 text-center change_button">
+            <span className="w-26 h-26 bg-gray-200 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-gray-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="gray"
-                class="w-20 h-20"
+                class="w-12 h-12 sm:w-20 sm:h-20"
               >
                 <path
                   stroke-linecap="round"
@@ -167,17 +161,17 @@ export default function Home() {
               </svg>
 
               <span>{Meetings}</span>
-              <p className="font-bold">Meeting&apos;s</p>
+              <p className="font-semibold text-xl">Meeting&apos;s</p>
             </span>
 
-            <span className="bg-red-100 shdg round flex flex-col items-center p-3 text-center change_button">
+            <span className="w-26 h-26 bg-red-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-red-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="red"
-                class="w-20 h-20"
+                class="w-12 h-12 sm:w-20 sm:h-20"
               >
                 <path
                   stroke-linecap="round"
@@ -187,17 +181,17 @@ export default function Home() {
               </svg>
 
               <span>{Tests}</span>
-              <p className="font-bold">Test&apos;s</p>
+              <p className="font-semibold text-xl">Test&apos;s</p>
             </span>
 
-            <span className="bg-green-100 shdg round flex flex-col items-center p-3 text-center change_button">
+            <span className="w-26 h-26 bg-green-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-green-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="green"
-                class="w-20 h-20"
+                class="w-12 h-12 sm:w-20 sm:h-20"
               >
                 <path
                   stroke-linecap="round"
@@ -207,15 +201,15 @@ export default function Home() {
               </svg>
 
               <span>{Assignments}</span>
-              <p className="font-bold">Assignment&apos;s</p>
+              <p className="font-semibold text-xl">Assignment&apos;s</p>
             </span>
           </div>
 
           <Carousel />
 
-          <div className="mt-3 bg-white bradiups p-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4">
-              <div className="flex justify-center">
+          <div className="mt-3 baseBackgorundColor bradiups p-4">
+          <div className="flex flex-col lg:grid grid-cols-[1fr_2fr] items-center justify-center gap-4 mt-8">
+              <div className="flex justify-center items-center">
                 <Image
                   src="/images/practoring.gif"
                   alt="image"
@@ -227,18 +221,18 @@ export default function Home() {
 
               <div className="space-y-4">
                 <div className="space-y-2 flex flex-col">
-                  <h3 className="text-black text-2xl lg:text-5xl font-bold capitalize tracking-tight">
+                  <h3 className="text-black/[0.8] text-justify text-3xl lg:text-5xl font-bold font-sans capitalize">
                     AI Assisted Assessment Platform With :- Online Remote
                     Proctoring
                   </h3>
-                  <h3 className="text-2xl lg:text-3xl text-justify text-gray-400 tracking-tight">
+                  <h3 className="text-2xl lg:text-3xl text-justify text-black/[0.6] tracking-tight">
                     Comprehensive remote Assessment platform with support for a
                     variety of tests & an ultra-powerful remote proctoring
                     solution for uncontrollable test-taker environments.
                   </h3>
                 </div>
-                <hr className="border-gray-400" />
-                <ol className="text-black text-sm md:text-base space-y-2 list-outside list-disc">
+
+                <ol className="bg-slate-200/[0.5] p-2 rounded-lg text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-inside list-disc">
                   <li>
                     Secure: 2-factor authentication based access, organizational
                     role based
@@ -277,19 +271,19 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 mt-8">
+            <div className="flex flex-col-reverse lg:grid grid-cols-[2fr_1fr] items-center justify-center gap-4 mt-8">
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <h3 className="text-black text-2xl lg:text-5xl font-bold capitalize tracking-tight">
+                  <h3 className="text-black/[0.8] text-justify text-3xl lg:text-5xl font-bold font-sans capitalize">
                     Live Meetings
                   </h3>
-                  <h3 className="text-2xl lg:text-3xl text-justify text-gray-400 tracking-tight">
+                  <h3 className="text-2xl lg:text-3xl text-justify text-black/[0.6] tracking-tight">
                     Secure Online conferencing from any device on even low
                     bandwidth network at an unbelievable price.
                   </h3>
                 </div>
-                <hr className="border-gray-400" />
-                <ol className="text-black md:text-base space-y-2 list-outside list-disc">
+
+                <ol className="bg-slate-200/[0.5] p-2 rounded-lg text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-inside list-disc">
                   <li>
                     Secure: 2-factor authentication based access, organizational
                     role based access control, encryption over wire, encryption
@@ -322,40 +316,38 @@ export default function Home() {
                 </ol>
               </div>
 
-              <div className="flex justify-center">
-                <Image
-                  src="/images/Remote Study.gif"
-                  alt="image"
-                  width={400}
-                  height={400}
-                  className="w-full max-w-xs md:max-w-full"
-                />
-              </div>
+              <Image
+                src="/images/Remote Study.gif"
+                alt="image"
+                width={400}
+                height={400}
+                className="max-w-xs lg:max-w-7xl"
+              />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 mt-8">
+            <div className="flex flex-col lg:grid grid-cols-[1fr_2fr] items-center justify-center gap-4 mt-8">
               <div className="flex justify-center">
                 <Image
                   src="/images/university.gif"
                   alt="image"
                   width={400}
                   height={400}
-                  className="w-full max-w-xs md:max-w-full"
+                   className="max-w-xs lg:max-w-7xl"
                 />
               </div>
 
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <p className="text-black text-2xl lg:text-5xl font-bold capitalize tracking-tight">
+                  <h3 className="text-black/[0.8] text-justify text-3xl lg:text-5xl font-bold font-sans capitalize">
                     Virtual University
-                  </p>
-                  <p className="text-2xl lg:text-3xl text-justify text-gray-400 tracking-tight">
+                  </h3>
+                  <h3 className="text-2xl lg:text-3xl text-justify text-black/[0.6] tracking-tight">
                     Online Classes + LMS + Assessments + Remote Proctoring +
                     Interactive Courses
-                  </p>
+                  </h3>
                 </div>
-                <hr className="border-gray-400" />
-                <ul className="text-black text-sm md:text-base space-y-2 list-outside list-disc">
+
+                <ol className="bg-slate-200/[0.5] p-2 rounded-lg text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-inside list-disc">
                   <li>
                     Powerful learning management system (LMS) with complete data
                     isolation between different schools
@@ -387,19 +379,19 @@ export default function Home() {
                     Testing and assessment platform with remote proctoring
                   </li>
                   <li>Secure digital vault for question banks</li>
-                </ul>
+                </ol>
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-5 mt-3 up_round">
-            <div className="text-black phdg text-2xl lg:text-5xl">
+          <div className="bg-slate-50 p-4 mt-3 up_round">
+            <div className="text-black/[0.8] font-bold text-3xl lg:text-5xl">
               Customers
-              <h3 className="text-gray-400 mb-4 text-2xl lg:text-5xl">
+              <h3 className="text-black/[0.6] mb-4 text-xl lg:text-3xl">
                 Listed below are a small subset of our customers
               </h3>
             </div>
-            <div className="py-10">
+            <div className="">
               <Table />
             </div>
           </div>
@@ -411,7 +403,7 @@ export default function Home() {
       <main>
         <Layout2>
           <div className="seashell flex justify-center">
-            <div className=" grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-10 ml-5 mr-5 mt-10">
+            <div className=" grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-10 mx-10 my-5 max-w-xl lg:max-w-5xl">
               <Cards
                 text="click here to view all your courses/subjects"
                 button="COURSES"
