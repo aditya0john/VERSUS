@@ -63,7 +63,7 @@ export default function Courses() {
 
               <button
                 type="submit"
-                className="text-5xl md:text-6xl font-bold bg-slate-500/[0.4] rounded flex items-center justify-center change_button"
+                className="text-5xl md:text-6xl font-bold bg-slate-500/[0.4] rounded flex items-center justify-center hover:bg-green-400 transition duration-300"
               >
                 SUBMIT{" "}
                 <svg
@@ -248,7 +248,7 @@ export default function Courses() {
 
             <button
               type="submit"
-              className="bg-slate-600/[0.4] text-5xl md:text-6xl font-bold rounded flex items-center justify-center change_button"
+              className="bg-slate-600/[0.4] text-5xl md:text-6xl font-bold rounded flex items-center justify-center hover:bg-green-400 transition duration-300"
             >
               SUBMIT {" "}
               <svg

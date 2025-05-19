@@ -17,7 +17,7 @@ function Navbar1() {
       </Link>
 
       <div className="hidden sm:flex gap-20 items-center">
-        <div class="dropdown ">
+        <div class="dropdown">
           <button
             class=" dropdown-toggle"
             type="button"
@@ -26,7 +26,7 @@ function Navbar1() {
           >
             PRODUCTS
           </button>
-          <ul class="bg-black dropdown-menu p-0 mt-4 ">
+          <ul className="bg-black dropdown-menu p-0 mt-4">
             <li className="mt-10 mb-10 ">
               <Link
                 href="/"

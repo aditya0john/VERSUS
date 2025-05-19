@@ -33,7 +33,7 @@ function Carousel() {
   ));
 
   return (
-    <div className="">
+    <div className="cursor-grab active:cursor-grabbing select-none">
       <div>
         <span>
           <p className="font-bold text-2xl lg:text-5xl flex justify-center items-center text-black/[0.8]">
