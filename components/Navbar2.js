@@ -74,7 +74,7 @@ function Navbar2() {
           </Link>
 
           <Link
-            href="/Score"
+            href="/"
             className="flex gap-1 text-decoration-none text-black"
           >
             <svg

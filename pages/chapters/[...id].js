@@ -65,7 +65,7 @@ export default function LearnCPP() {
               ))}
 
               <div className="grid grid-cols-2 gap-2">
-                <Link href="/Score" className="text-decoration-none text-black">
+                <Link href="/" className="text-decoration-none text-black">
                   <div className="bg-white p-3 rounded-lg border border-black change_button box image-change">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
