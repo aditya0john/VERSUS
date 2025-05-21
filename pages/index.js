@@ -34,17 +34,7 @@ export default function Home() {
     return (
       <main className="user-select-none">
         <Layout>
-          <div className="bg-slate-50 mt-3 flex justify-around ">
-            <div className="hidden lg:flex items-center justify-center">
-              <Image
-                alt="image"
-                className="p-1"
-                src="/images/LOGO.gif"
-                height={300}
-                width={300}
-              />
-            </div>
-
+          <div className="bg-slate-50 mt-3 flex justify-center items-center">
             <div className="flex justify-center text-center items-center">
               <div className="uppercase hdg thdg">
                 <h1 className="text-4xl lg:text-7xl text-black font-extrabold tracking-tight flex flex-col items-center">
@@ -76,7 +66,7 @@ export default function Home() {
 
                 <Link
                   href="/SignUp"
-                  className="makeLine text-decoration-none border-2 border-black rounded-full p-3 px-4 shdg change_button"
+                  className="makeLine text-decoration-none outline-dotted rounded-lg p-3 px-4 shdg change_button"
                 >
                   BECOME A STUDENT
                 </Link>
@@ -84,7 +74,7 @@ export default function Home() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 p-4 mb-10 mt-20 md:grid-cols-6 w-full">
-            <span className="w-26 h-26 bg-orange-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-orange-300/[0.4] hover:shadow-lg">
+            <span className="w-26 h-26 outline-dashed outline-orange-300 bg-orange-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-orange-300/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -104,7 +94,7 @@ export default function Home() {
               <p className="font-semibold text-xl">Institution&apos;s</p>
             </span>
 
-            <span className="w-26 h-26 bg-purple-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-purple-400/[0.4] hover:shadow-lg">
+            <span className="w-26 h-26 outline-dashed outline-purple-300 bg-purple-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-purple-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -124,7 +114,7 @@ export default function Home() {
               <p className="font-semibold text-xl"> Teacher&apos;s</p>
             </span>
 
-            <span className="w-26 h-26 bg-blue-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-blue-400/[0.4] hover:shadow-lg">
+            <span className="w-26 h-26  outline-dashed outline-blue-300 bg-blue-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-blue-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -144,7 +134,7 @@ export default function Home() {
               <p className="font-semibold text-xl">Learner&apos;s</p>
             </span>
 
-            <span className="w-26 h-26 bg-gray-200 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-gray-400/[0.4] hover:shadow-lg">
+            <span className="w-26 h-26 outline-dashed outline-gray-300 bg-gray-200 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-gray-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -164,7 +154,7 @@ export default function Home() {
               <p className="font-semibold text-xl">Meeting&apos;s</p>
             </span>
 
-            <span className="w-26 h-26 bg-red-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-red-400/[0.4] hover:shadow-lg">
+            <span className="w-26 h-26 outline-dashed outline-red-300 bg-red-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-red-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -184,7 +174,7 @@ export default function Home() {
               <p className="font-semibold text-xl">Test&apos;s</p>
             </span>
 
-            <span className="w-26 h-26 bg-green-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-green-400/[0.4] hover:shadow-lg">
+            <span className="w-26 h-26 outline-dashed outline-green-300 bg-green-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-green-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -208,7 +198,7 @@ export default function Home() {
           <Carousel />
 
           <div className="mt-3 baseBackgorundColor bradiups p-4">
-          <div className="flex flex-col lg:grid grid-cols-[1fr_2fr] items-center justify-center gap-4 mt-8">
+            <div className="flex flex-col lg:grid grid-cols-[1fr_2fr] items-center justify-center gap-4 mt-8">
               <div className="flex justify-center items-center">
                 <Image
                   src="/images/practoring.gif"
@@ -232,42 +222,44 @@ export default function Home() {
                   </h3>
                 </div>
 
-                <ol className="bg-slate-200/[0.5] p-2 rounded-lg text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-inside list-disc">
-                  <li>
-                    Secure: 2-factor authentication based access, organizational
-                    role based
-                  </li>
-                  <li>
-                    Comprehensive composite recording and playback of all
-                    aspects of a test, including multiple cameras, screen,
-                    times, navigation activity, locations, answers, multiple
-                    audio streams
-                  </li>
-                  <li>
-                    Automatic blocking of bad actors with complete control for
-                    proctor to extend or terminate the test
-                  </li>
-                  <li>
-                    Over 200 knobs to design and schedule tests from a variety
-                    of auto-evaluated and manually evaluated question types
-                  </li>
-                  <li>
-                    Manually evaluated question types include subjective essay,
-                    viva voce, document upload, etc.
-                  </li>
-                  <li> Evaluation audit trails</li>
-                  <li>
-                    Unlimited test support with complete data isolation by
-                    domain
-                  </li>
-                  <li> Plagiarism reports</li>
-                  <li> Rich analytics</li>
-                  <li>
-                    Consolidated test reports for various audit and
-                    accreditation requirements
-                  </li>
-                  <li>Optional access to our extensive question banks</li>
-                </ol>
+                <div className="bg-slate-200/[0.5] p-2 rounded-lg ">
+                  <ul className="text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-outside list-disc">
+                    <li>
+                      Secure: 2-factor authentication based access,
+                      organizational role based
+                    </li>
+                    <li>
+                      Comprehensive composite recording and playback of all
+                      aspects of a test, including multiple cameras, screen,
+                      times, navigation activity, locations, answers, multiple
+                      audio streams
+                    </li>
+                    <li>
+                      Automatic blocking of bad actors with complete control for
+                      proctor to extend or terminate the test
+                    </li>
+                    <li>
+                      Over 200 knobs to design and schedule tests from a variety
+                      of auto-evaluated and manually evaluated question types
+                    </li>
+                    <li>
+                      Manually evaluated question types include subjective
+                      essay, viva voce, document upload, etc.
+                    </li>
+                    <li> Evaluation audit trails</li>
+                    <li>
+                      Unlimited test support with complete data isolation by
+                      domain
+                    </li>
+                    <li> Plagiarism reports</li>
+                    <li> Rich analytics</li>
+                    <li>
+                      Consolidated test reports for various audit and
+                      accreditation requirements
+                    </li>
+                    <li>Optional access to our extensive question banks</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -283,37 +275,39 @@ export default function Home() {
                   </h3>
                 </div>
 
-                <ol className="bg-slate-200/[0.5] p-2 rounded-lg text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-inside list-disc">
-                  <li>
-                    Secure: 2-factor authentication based access, organizational
-                    role based access control, encryption over wire, encryption
-                    at rest
-                  </li>
-                  <li>
-                    No apps or special devices needed. A modern browser on any
-                    PC or mobile phone is all that is needed
-                  </li>
-                  <li>
-                    Unlimited secure cloud stored recordings, with video
-                    indexing, rich composite recording playback
-                  </li>
-                  <li>
-                    Powerful time-table manager for scheduled meetings.
-                    One-click ad-hoc hosting with easy participant selection
-                  </li>
-                  <li>
-                    Adaptive bitrate control, specially tuned for low bandwidth
-                    situations
-                  </li>
-                  <li>
-                    Rich feature-set for teachers such as Second Device™
-                    technology, support for chalkboard, pen & paper based
-                    teaching, shared whiteboards, real-time annotations,
-                    synchronized video playback for all participants,
-                    synchronized PowerPoint sharing, live polls, engagement
-                    tracking, etc.
-                  </li>
-                </ol>
+                <div className="bg-slate-200/[0.5] p-2 rounded-lg ">
+                  <ul className="text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-outside list-disc">
+                    <li>
+                      Secure: 2-factor authentication based access,
+                      organizational role based access control, encryption over
+                      wire, encryption at rest
+                    </li>
+                    <li>
+                      No apps or special devices needed. A modern browser on any
+                      PC or mobile phone is all that is needed
+                    </li>
+                    <li>
+                      Unlimited secure cloud stored recordings, with video
+                      indexing, rich composite recording playback
+                    </li>
+                    <li>
+                      Powerful time-table manager for scheduled meetings.
+                      One-click ad-hoc hosting with easy participant selection
+                    </li>
+                    <li>
+                      Adaptive bitrate control, specially tuned for low
+                      bandwidth situations
+                    </li>
+                    <li>
+                      Rich feature-set for teachers such as Second Device™
+                      technology, support for chalkboard, pen & paper based
+                      teaching, shared whiteboards, real-time annotations,
+                      synchronized video playback for all participants,
+                      synchronized PowerPoint sharing, live polls, engagement
+                      tracking, etc.
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               <Image
@@ -332,7 +326,7 @@ export default function Home() {
                   alt="image"
                   width={400}
                   height={400}
-                   className="max-w-xs lg:max-w-7xl"
+                  className="max-w-xs lg:max-w-7xl"
                 />
               </div>
 
@@ -347,39 +341,42 @@ export default function Home() {
                   </h3>
                 </div>
 
-                <ol className="bg-slate-200/[0.5] p-2 rounded-lg text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-inside list-disc">
-                  <li>
-                    Powerful learning management system (LMS) with complete data
-                    isolation between different schools
-                  </li>
-                  <li>
-                    Organizations & user management with role based access
-                    control with secure multi-factor authentication
-                  </li>
-                  <li>
-                    Curriculum management, controllable at individual as well as
-                    organization hierarchy level
-                  </li>
-                  <li>
-                    Rich online course authoring & design with support for rich
-                    media, animations, etc.
-                  </li>
-                  <li>
-                    Auto-evaluated question types include computer programming
-                    in multiple languages, variants of multiple choice, fill in
-                    the blanks, numerical type, match columns, spoken English,
-                    reading comprehension, listening comprehension, etc.
-                  </li>
-                  <li>
-                    Manually evaluated question types include subjective essay,
-                    viva voce, document upload, etc.
-                  </li>
-                  <li>Timed assignments and self-paced exercises</li>
-                  <li>
-                    Testing and assessment platform with remote proctoring
-                  </li>
-                  <li>Secure digital vault for question banks</li>
-                </ol>
+                <div className="bg-slate-200/[0.5] p-2 rounded-lg ">
+                  <ul className="text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-outside list-disc">
+                    <li>
+                      Powerful learning management system (LMS) with complete
+                      data isolation between different schools
+                    </li>
+                    <li>
+                      Organizations & user management with role based access
+                      control with secure multi-factor authentication
+                    </li>
+                    <li>
+                      Curriculum management, controllable at individual as well
+                      as organization hierarchy level
+                    </li>
+                    <li>
+                      Rich online course authoring & design with support for
+                      rich media, animations, etc.
+                    </li>
+                    <li>
+                      Auto-evaluated question types include computer programming
+                      in multiple languages, variants of multiple choice, fill
+                      in the blanks, numerical type, match columns, spoken
+                      English, reading comprehension, listening comprehension,
+                      etc.
+                    </li>
+                    <li>
+                      Manually evaluated question types include subjective
+                      essay, viva voce, document upload, etc.
+                    </li>
+                    <li>Timed assignments and self-paced exercises</li>
+                    <li>
+                      Testing and assessment platform with remote proctoring
+                    </li>
+                    <li>Secure digital vault for question banks</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

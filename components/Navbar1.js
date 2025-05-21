@@ -12,58 +12,18 @@ function Navbar1() {
         href="/"
         className="flex items-center justify-center gap-2 text-decoration-none text-black font-bold"
       >
-        <Image width={50} height={50} src="/images/logo.png" alt="image" className="object-cover w-[30px] h-[30px] lg:h-[50px] lg:w-[50px]" />
-        <p className="text-[18px] lg:text-4xl lg:font-bold flex pt-2">VERSUS-CODE</p>
+        <Image
+          width={50}
+          height={50}
+          src="/images/logo.png"
+          alt="image"
+          className="object-cover w-[30px] h-[30px] lg:h-[50px] lg:w-[50px]"
+        />
+        <p className="text-[18px] lg:text-4xl lg:font-bold flex pt-2">
+          VERSUS-CODE
+        </p>
       </Link>
 
-      <div className="hidden sm:flex gap-20 items-center">
-        <div class="dropdown">
-          <button
-            class=" dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            PRODUCTS
-          </button>
-          <ul className="bg-black dropdown-menu p-0 mt-4">
-            <li className="mt-10 mb-10 ">
-              <Link
-                href="/"
-                className="dropdown-item text-decoration-none bg-black"
-              >
-                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
-                  Product 1
-                </p>
-              </Link>
-              <hr className="text-white" />
-              <Link
-                href="/"
-                className="dropdown-item text-decoration-none bg-black"
-              >
-                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
-                  Product 2
-                </p>
-              </Link>
-              <hr className="text-white" />
-              <Link
-                href="/"
-                className="dropdown-item text-decoration-none bg-black"
-              >
-                <p className=" hdg flex items-center justify-center text-gray-400 hover:text-white">
-                  Product 3
-                </p>
-              </Link>
-            </li>
-          </ul>
-        </div>
-
-        <Link href="/Help&Support" className="text-decoration-none text-black">
-          <button type="button" aria-expanded="false">
-            HELP & SUPPORT
-          </button>
-        </Link>
-      </div>
       <div className="flex gap-3">
         <div className="flex gap-2">
           <button

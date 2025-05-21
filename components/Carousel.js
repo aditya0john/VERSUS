@@ -6,9 +6,10 @@ import Image from "next/image";
 
 function Carousel() {
   let images = {
-    1: "/images/award1.jpg",
-    2: "/images/award2.jpg",
-    3: "/images/award3.jpg",
+    1: "/images/Live meetings.jpg",
+    2: "/images/Ai assisted.webp",
+    3: "/images/Interactive.png",
+    4: "/images/Remote proctoring.png",
   };
 
   const settings = {

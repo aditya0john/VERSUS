@@ -638,6 +638,8 @@ input::placeholder {
 .wrapper .instagram:hover .tooltip::before {
   background: red;
 }
+
+
 .google_color {
   position: relative;
 }

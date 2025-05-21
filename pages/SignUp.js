@@ -31,11 +31,11 @@ function SignUp() {
   return (
     <>
       <Navbar1 />
-      <div className="flex justify-center items-center hdg text-black mt-5">
-        <Image src="/images/logo.png" alt="image" width={100} height={100} />
+      <div className="flex justify-center items-center hdg text-black mt-2">
+        <Image src="/images/logo.png" alt="image" width={70} height={70} />
         <p className="phdg pl-2">SIGN UP</p>
       </div>
-      <div className="body flex flex-col mt-4 rounded-lg flex justify-center items-center">
+      <div className="body flex flex-col rounded-lg justify-center items-center scale-95">
         <form className="flex flex-col justify-center w-full items-center p-4 body">
           <label className="shdg uppercase font-bold">
             e-mail
@@ -44,14 +44,14 @@ function SignUp() {
           <input
             type="email"
             placeholder="enter your email"
-            className="bg-white text-black rounded-md border border-black p-2 w-full change hover:placeholder-white"
+            className="bg-white text-black rounded-md border border-black p-2 w-[50%] change hover:placeholder-white"
             onChange={(e) => setEmail(e.target.value)}
           />
           <label className="shdg uppercase mt-4 font-bold">
             Password
             <hr />
           </label>
-          <div className="flex w-full gap-4">
+          <div className="flex w-[50%] gap-4">
             <input
               type={showPassword ? "text" : "password"}
               placeholder="create a password"
@@ -86,7 +86,7 @@ function SignUp() {
           <input
             value={verifyPass}
             placeholder="enter your password again"
-            className="bg-white text-black rounded-md border border-black p-2 w-full change hover:placeholder-white"
+            className="bg-white text-black rounded-md border border-black p-2 w-[50%] change hover:placeholder-white"
             onChange={(e) => setVerifyPass(e.target.value)}
           />
           <div className="flex mt-20">
