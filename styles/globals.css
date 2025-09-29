@@ -6,22 +6,15 @@ kit-scrollbar {
   width: 18px;
 }
 
-.baseBackgroundColor{
-  background-color:#C4FFA5;
+.baseBackgroundColor {
+  background-color: #c4ffa5;
 }
-.secondBackgroundColor{
-  background-color: #0A3362;
-}
-
-.baseTextColor{
-color: #105A41;
+.secondBackgroundColor {
+  background-color: #0a3362;
 }
 
-@media only screen and (min-width: 640px) {
-  .ace_editor {
-    font-size: 22px !important;
-    height: 700px !important;
-  }
+.baseTextColor {
+  color: #105a41;
 }
 
 @media only screen and (min-width: 900px) {
@@ -49,7 +42,6 @@ color: #105A41;
     background-color: rgb(99, 255, 99);
   }
 }
-
 
 .glass {
   background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white color */
@@ -228,11 +220,11 @@ p {
 .change:hover {
   transition: 0.3s ease-in-out 0ms;
   background-color: rgb(0, 0, 0) !important;
-  
 }
 
-.change:hover p,hr{
-  color: #C4FFA5 !important;
+.change:hover p,
+hr {
+  color: #c4ffa5 !important;
 }
 
 .change_button {
@@ -375,7 +367,7 @@ p {
 
 .box:hover {
   box-sizing: border-box;
-  box-shadow: 0 30px 100px 1px black;
+  box-shadow: 0 0px 100px 0px black;
 }
 
 .content {
@@ -507,7 +499,7 @@ input::placeholder {
 }
 
 .loader {
-  width: 20px;
+  width: 10px;
   scale: 5;
   aspect-ratio: 1;
   border-radius: 50%;
@@ -531,7 +523,7 @@ input::placeholder {
 }
 @keyframes l2 {
   100% {
-    box-shadow: 0 0 0 40px #0000;
+    box-shadow: 0 0 0 20px #0000;
   }
 }
 
@@ -638,7 +630,6 @@ input::placeholder {
 .wrapper .instagram:hover .tooltip::before {
   background: red;
 }
-
 
 .google_color {
   position: relative;

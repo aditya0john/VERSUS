@@ -44,7 +44,7 @@ function SignUp() {
           <input
             type="email"
             placeholder="enter your email"
-            className="bg-white text-black rounded-md border border-black p-2 w-[50%] change hover:placeholder-white"
+            className="bg-white text-black rounded-md border border-black p-2 w-[50%] change_button hover:placeholder-white"
             onChange={(e) => setEmail(e.target.value)}
           />
           <label className="shdg uppercase mt-4 font-bold">
@@ -55,12 +55,12 @@ function SignUp() {
             <input
               type={showPassword ? "text" : "password"}
               placeholder="create a password"
-              className="bg-white text-black rounded-md border border-black p-2 w-full change hover:placeholder-white"
+              className="bg-white text-black rounded-md border border-black p-2 w-full change_button hover:placeholder-white"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <button
-              className="border border-black p-2 rounded-lg change"
+              className="border border-black p-2 rounded-lg change_button"
               onClick={togglePasswordVisibility}
             >
               <svg
@@ -84,9 +84,10 @@ function SignUp() {
             <hr />
           </label>
           <input
+          type={showPassword ? "text" : "password"}
             value={verifyPass}
             placeholder="enter your password again"
-            className="bg-white text-black rounded-md border border-black p-2 w-[50%] change hover:placeholder-white"
+            className="bg-white text-black rounded-md border border-black p-2 w-[50%] change_button hover:placeholder-white"
             onChange={(e) => setVerifyPass(e.target.value)}
           />
           <div className="flex mt-20">

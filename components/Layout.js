@@ -13,20 +13,23 @@ export default function Layout({ children }) {
           {children}
         </div>
 
-        
-        <footer className="bg-slate-100 min-h-[14vh] flex items-center justify-evenly p-3 text-xs lg:text-2xl">
-          <Link href="/" className="text-decoration-none text-black/[0.6]">
-            @Copyright &quot;Versus-Code.com&quot;
-          </Link>
-          <Link
-            href="/Help&Support"
-            className="text-decoration-none text-black/[0.6]"
-          >
-            Help & Support
-          </Link>
-          <Link href="/" className="text-decoration-none text-black/[0.6]">
-            About
-          </Link>
+        <footer className="bg-slate-100 min-h-[2rem] flex items-center justify-center p-3 text-xs">
+          <div className="text-xs text-black/[0.8]">
+            @copyright &quot;
+            <Link
+              href="https://versus-code.vercel.app/"
+              className="text-decoration-none text-black"
+            >
+              <span className="italic font-bold">versus-code.vercel.app</span>
+            </Link>
+            &quot; | developer -{" "}
+            <Link
+              href="https://myportfolio-beta-seven-46.vercel.app/"
+              className="text-decoration-none text-black"
+            >
+              <span className="font-bold uppercase">Aditya John</span>
+            </Link>
+          </div>
         </footer>
       </div>
     </>

@@ -34,16 +34,16 @@ export default function Home() {
     return (
       <main className="user-select-none">
         <Layout>
-          <div className="bg-slate-50 mt-3 flex justify-center items-center">
+          <div>
             <div className="flex justify-center text-center items-center">
               <div className="uppercase hdg thdg">
-                <h1 className="text-4xl lg:text-7xl text-black font-extrabold tracking-tight flex flex-col items-center">
+                <h1 className="text-3xl lg:text-5xl text-black font-extrabold tracking-tight flex flex-col items-center">
                   Your{""}
                   <br />{" "}
                   <div className="flex">
                     <Image
                       alt="arrow image"
-                      className="p-1 -rotate-[75deg] lg:-rotate-[75deg] absolute top-20 lg:top-20 z-10 h-28 w-28 lg:h-[200px] lg:w-[200px]"
+                      className="p-1 -rotate-[75deg] lg:-rotate-[90deg] absolute top-20 lg:top-2 z-10 h-28 w-28 lg:h-[200px] lg:w-[200px]"
                       src="/images/arrow.png"
                       height={300}
                       width={300}
@@ -66,22 +66,23 @@ export default function Home() {
 
                 <Link
                   href="/SignUp"
-                  className="makeLine text-decoration-none outline-dotted rounded-lg p-3 px-4 shdg change_button"
+                  className="makeLine text-decoration-none outline-dotted rounded-lg p-3 px-4 text-xs sm:text-lg change_button"
                 >
                   BECOME A STUDENT
                 </Link>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-4 p-4 mb-10 mt-20 md:grid-cols-6 w-full">
-            <span className="w-26 h-26 outline-dashed outline-orange-300 bg-orange-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-orange-300/[0.4] hover:shadow-lg">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-4 p-4 h-[140px] my-10 w-full scale-75">
+            <span className="outline-dashed -outline-offset-2 outline-orange-300 bg-orange-100 text-xl round flex flex-col items-center p-3 text-center text-black hover:bg-orange-300/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="orange"
-                class="w-12 h-12 sm:w-20 sm:h-20"
+                a
+                class="w-10 h-10 sm:w-16 sm:h-16"
               >
                 <path
                   stroke-linecap="round"
@@ -91,17 +92,17 @@ export default function Home() {
               </svg>
 
               <span>{Institutions}</span>
-              <p className="font-semibold text-xl">Institution&apos;s</p>
+              <p className="font-semibold text-lg ">Institution&apos;s</p>
             </span>
 
-            <span className="w-26 h-26 outline-dashed outline-purple-300 bg-purple-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-purple-400/[0.4] hover:shadow-lg">
+            <span className="w-18 h-18 outline-dashed -outline-offset-2 outline-purple-300 bg-purple-100 text-xl round flex flex-col items-center p-3 text-center text-black hover:bg-purple-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="purple"
-                class="w-12 h-12 sm:w-20 sm:h-20"
+                class="w-10 h-10 sm:w-16 sm:h-16"
               >
                 <path
                   stroke-linecap="round"
@@ -111,17 +112,17 @@ export default function Home() {
               </svg>
 
               <span>{Teacher}</span>
-              <p className="font-semibold text-xl"> Teacher&apos;s</p>
+              <p className="font-semibold text-lg"> Teacher&apos;s</p>
             </span>
 
-            <span className="w-26 h-26  outline-dashed outline-blue-300 bg-blue-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-blue-400/[0.4] hover:shadow-lg">
+            <span className="w-26 h-26  outline-dashed -outline-offset-2 outline-blue-300 bg-blue-100 text-xl round flex flex-col items-center p-3 text-center text-black hover:bg-blue-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="blue"
-                class="w-12 h-12 sm:w-20 sm:h-20"
+                class="w-10 h-10 sm:w-16 sm:h-16"
               >
                 <path
                   stroke-linecap="round"
@@ -131,17 +132,17 @@ export default function Home() {
               </svg>
 
               <span>{Learners}</span>
-              <p className="font-semibold text-xl">Learner&apos;s</p>
+              <p className="font-semibold text-lg">Learner&apos;s</p>
             </span>
 
-            <span className="w-26 h-26 outline-dashed outline-gray-300 bg-gray-200 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-gray-400/[0.4] hover:shadow-lg">
+            <span className="w-18 h-18 outline-dashed -outline-offset-2 outline-gray-300 bg-gray-200 text-xl round flex flex-col items-center p-3 text-center text-black hover:bg-gray-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="gray"
-                class="w-12 h-12 sm:w-20 sm:h-20"
+                class="w-10 h-10 sm:w-16 sm:h-16"
               >
                 <path
                   stroke-linecap="round"
@@ -151,17 +152,17 @@ export default function Home() {
               </svg>
 
               <span>{Meetings}</span>
-              <p className="font-semibold text-xl">Meeting&apos;s</p>
+              <p className="font-semibold text-lg">Meeting&apos;s</p>
             </span>
 
-            <span className="w-26 h-26 outline-dashed outline-red-300 bg-red-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-red-400/[0.4] hover:shadow-lg">
+            <span className="w-18 h-18 outline-dashed -outline-offset-2 outline-red-300 bg-red-100 text-xl round flex flex-col items-center p-3 text-center text-black hover:bg-red-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="red"
-                class="w-12 h-12 sm:w-20 sm:h-20"
+                class="w-10 h-10 sm:w-16 sm:h-16"
               >
                 <path
                   stroke-linecap="round"
@@ -171,17 +172,17 @@ export default function Home() {
               </svg>
 
               <span>{Tests}</span>
-              <p className="font-semibold text-xl">Test&apos;s</p>
+              <p className="font-semibold text-lg">Test&apos;s</p>
             </span>
 
-            <span className="w-26 h-26 outline-dashed outline-green-300 bg-green-100 shdg round flex flex-col items-center p-3 text-center text-black hover:bg-green-400/[0.4] hover:shadow-lg">
+            <span className="w-18 h-18 outline-dashed -outline-offset-2 outline-green-300 bg-green-100 text-xl round flex flex-col items-center p-3 text-center text-black hover:bg-green-400/[0.4] hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1"
                 stroke="green"
-                class="w-12 h-12 sm:w-20 sm:h-20"
+                class="w-10 h-10 sm:w-16 sm:h-16"
               >
                 <path
                   stroke-linecap="round"
@@ -191,7 +192,7 @@ export default function Home() {
               </svg>
 
               <span>{Assignments}</span>
-              <p className="font-semibold text-xl">Assignment&apos;s</p>
+              <p className="font-semibold text-lg">Assignment&apos;s</p>
             </span>
           </div>
 
@@ -205,7 +206,7 @@ export default function Home() {
                   alt="image"
                   width={400}
                   height={400}
-                  className="max-w-xs lg:max-w-7xl"
+                  className="max-w-xs lg:max-w-7xl h-[300px] object-contain"
                 />
               </div>
 
@@ -215,15 +216,15 @@ export default function Home() {
                     AI Assisted Assessment Platform With :- Online Remote
                     Proctoring
                   </h3>
-                  <h3 className="text-2xl lg:text-3xl text-justify text-black/[0.6] tracking-tight">
+                  <h3 className="text-2xl lg:text-3xl text-justify text-neutral-400 tracking-tighter">
                     Comprehensive remote Assessment platform with support for a
                     variety of tests & an ultra-powerful remote proctoring
                     solution for uncontrollable test-taker environments.
                   </h3>
                 </div>
 
-                <div className="bg-slate-200/[0.5] p-2 rounded-lg ">
-                  <ul className="text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-outside list-disc">
+                <div className="bg-slate-200/[0.3] p-2 rounded-lg ">
+                  <ul className="text-black/[0.8] text-justify font-semibold text-sm md:text-md space-y-2 list-outside list-disc">
                     <li>
                       Secure: 2-factor authentication based access,
                       organizational role based
@@ -269,14 +270,14 @@ export default function Home() {
                   <h3 className="text-black/[0.8] text-justify text-3xl lg:text-5xl font-bold font-sans capitalize">
                     Live Meetings
                   </h3>
-                  <h3 className="text-2xl lg:text-3xl text-justify text-black/[0.6] tracking-tight">
+                  <h3 className="text-2xl lg:text-3xl text-justify text-neutral-400 tracking-tight">
                     Secure Online conferencing from any device on even low
                     bandwidth network at an unbelievable price.
                   </h3>
                 </div>
 
-                <div className="bg-slate-200/[0.5] p-2 rounded-lg ">
-                  <ul className="text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-outside list-disc">
+                <div className="bg-slate-200/[0.3] p-2 rounded-lg ">
+                  <ul className="text-black/[0.8] text-justify font-semibold text-sm md:text-md space-y-2 list-outside list-disc">
                     <li>
                       Secure: 2-factor authentication based access,
                       organizational role based access control, encryption over
@@ -315,7 +316,7 @@ export default function Home() {
                 alt="image"
                 width={400}
                 height={400}
-                className="max-w-xs lg:max-w-7xl"
+                className="max-w-xs lg:max-w-7xl h-[300px] object-contain"
               />
             </div>
 
@@ -326,7 +327,7 @@ export default function Home() {
                   alt="image"
                   width={400}
                   height={400}
-                  className="max-w-xs lg:max-w-7xl"
+                  className="max-w-xs lg:max-w-7xl h-[300px] object-contain"
                 />
               </div>
 
@@ -335,14 +336,14 @@ export default function Home() {
                   <h3 className="text-black/[0.8] text-justify text-3xl lg:text-5xl font-bold font-sans capitalize">
                     Virtual University
                   </h3>
-                  <h3 className="text-2xl lg:text-3xl text-justify text-black/[0.6] tracking-tight">
+                  <h3 className="text-2xl lg:text-3xl text-justify text-neutral-400 tracking-tight">
                     Online Classes + LMS + Assessments + Remote Proctoring +
                     Interactive Courses
                   </h3>
                 </div>
 
-                <div className="bg-slate-200/[0.5] p-2 rounded-lg ">
-                  <ul className="text-black/[0.8] text-justify font-semibold text-sm md:text-lg space-y-2 list-outside list-disc">
+                <div className="bg-slate-200/[0.3] p-2 rounded-lg ">
+                  <ul className="text-black/[0.8] text-justify font-semibold text-sm md:text-md space-y-2 list-outside list-disc">
                     <li>
                       Powerful learning management system (LMS) with complete
                       data isolation between different schools

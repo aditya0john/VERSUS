@@ -38,14 +38,15 @@ function Coding() {
   return (
     <main>
       <Layout4>
-        <div className="bg-white p-3">
+        <div className="bg-white p-3 grid grid-cols-[2fr_1fr] gap-2">
           <CodeEditor onCompile={handleCompile} err={err} status={statusCode} />
           <div>
             <h3>Output</h3>
-            <div className="relative">
+            <div>
               <textarea
+                readOnly
                 id="txt"
-                className="border border-black rounded-lg w-full h-40 resize-none overflow-hidden p-2 bg-black text-white"
+                className="rounded-lg w-full min-h-[40vh] max-h-screen resize-none overflow-y-scroll p-2 bg-black text-white placeholder-white/[0.4] select-none"
                 placeholder="//the output is shown here"
                 value={output}
               />

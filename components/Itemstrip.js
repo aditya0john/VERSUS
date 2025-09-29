@@ -7,11 +7,11 @@ function Itemstrip() {
 
   if (route.asPath == "/Courses") {
     return (
-      <div className="m-1 seashell rounded flex justify-center items-center overflow-hidden  select-none">
+      <div className="bg-white border-b-2 flex justify-center items-center overflow-hidden select-none">
         <div className="uppercase text-black hdg thdg">
           <h1 className="text-4xl lg:text-7xl tracking-tight flex flex-col items-center">
             <div>
-              <span className="flex justify-center font-extrabold bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
+              <span className="flex justify-center font-extrabold text-green-800 bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
                 <Image
                   alt="image"
                   className="hidden lg:flex z-10 p-1 h-20 w-20 rotate-[130deg] lg:rotate-[180deg] absolute -bottom-10 left-50   lg:-top-20 lg:-left-40 top-10 lg:h-[200px] lg:w-[200px]"
@@ -35,11 +35,11 @@ function Itemstrip() {
     );
   } else if (route.asPath == "/Test") {
     return (
-      <div className="m-1 seashell rounded flex justify-center items-center overflow-hidden  select-none">
+      <div className="m-1 seashell border-b-2 rounded flex justify-center items-center overflow-hidden  select-none">
         <div className="uppercase text-black hdg thdg">
           <h1 className="text-4xl lg:text-7xl tracking-tight flex flex-col items-center">
             <div>
-              <span className="flex justify-center font-extrabold bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
+              <span className="flex justify-center font-extrabold text-green-800 bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
                 <Image
                   alt="image"
                   className="hidden lg:flex z-10 p-1 h-20 w-20 rotate-[130deg] lg:rotate-[180deg] absolute -bottom-10 left-50   lg:-top-20 lg:-left-40 top-10 lg:h-[200px] lg:w-[200px]"
@@ -63,11 +63,11 @@ function Itemstrip() {
     );
   } else if (route.asPath == "/Tools") {
     return (
-      <div className="m-1 seashell rounded flex justify-center items-center overflow-hidden  select-none">
+      <div className="m-1 seashell border-b-2 rounded flex justify-center items-center overflow-hidden  select-none">
         <div className="uppercase text-black hdg thdg">
           <h1 className="text-4xl lg:text-7xl tracking-tight flex flex-col items-center">
             <div>
-              <span className="flex justify-center font-extrabold bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
+              <span className="flex justify-center font-extrabold text-green-800 bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
                 <Image
                   alt="image"
                   className="hidden lg:flex z-10 p-1 h-20 w-20 rotate-[130deg] lg:rotate-[180deg] absolute -bottom-10 left-50   lg:-top-20 lg:-left-40 top-10 lg:h-[200px] lg:w-[200px]"
@@ -91,11 +91,11 @@ function Itemstrip() {
     );
   } else if (route.asPath == "/Help&Support") {
     return (
-      <div className="m-1 seashell rounded flex justify-center items-center overflow-hidden  select-none">
+      <div className="m-1 seashell border-b-2 rounded flex justify-center items-center overflow-hidden  select-none">
         <div className="uppercase text-black hdg thdg">
           <h1 className="text-4xl lg:text-7xl tracking-tight flex flex-col items-center">
             <div>
-              <span className="flex justify-center font-extrabold bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
+              <span className="flex justify-center font-extrabold text-green-800 bg-green-400 lg:bg-slate-200 lg:hover:bg-green-400 transform duration-200 rounded-xl p-2 my-2 w-[70vw] lg:w-full">
                 <Image
                   alt="image"
                   className="hidden lg:flex z-10 p-1 h-20 w-20 rotate-[130deg] lg:rotate-[180deg] absolute -bottom-10 left-50   lg:-top-20 lg:-left-40 top-10 lg:h-[200px] lg:w-[200px]"

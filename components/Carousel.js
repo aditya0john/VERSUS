@@ -13,21 +13,22 @@ function Carousel() {
   };
 
   const settings = {
+    easing: "linear",
     infinite: true,
     speed: 1200,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 1500,
   };
 
   const imageElements = Object.keys(images).map((key) => (
     <div key={key}>
       <Image
-        width={500}
-        height={500}
+        width={700}
+        height={700}
         src={images[key]}
-        className="p-3 image-resize-sm image-resize-lg rounded-3xl"
+        className="p-3 h-[500px] w-[80vw] object-cover rounded-3xl"
         alt={`Award ${key}`}
       />
     </div>
@@ -35,13 +36,10 @@ function Carousel() {
 
   return (
     <div className="cursor-grab active:cursor-grabbing select-none">
-      <div>
-        <span>
-          <p className="font-bold text-2xl lg:text-5xl flex justify-center items-center text-black/[0.8]">
-            GALLERY
-          </p>
-        </span>
-      </div>
+      <p className="font-bold text-2xl lg:text-5xl flex justify-center items-center text-black/[0.8]">
+        GALLERY
+      </p>
+
       <Slider {...settings} className="overflow-hidden sm:overflow-hidden">
         {imageElements}
       </Slider>
